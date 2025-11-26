@@ -1,2 +1,2 @@
 # projetointegrado
-Construção de uma aplicação web relativo a Responsabilidade Social - subárea Educação
+EduSolidario é uma Aplicação Web sobre Doação e Reaproveitamento de Materiais Escolares
