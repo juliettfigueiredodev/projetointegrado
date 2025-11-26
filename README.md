@@ -1,2 +1,2 @@
 # projetointegrado
-EduSolidario é uma Aplicação Web sobre Doação e Reaproveitamento de Materiais Escolares
+EducaSolidario é uma Aplicação Web sobre Doação e Reaproveitamento de Materiais Escolares
