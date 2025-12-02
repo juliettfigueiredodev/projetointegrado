@@ -1,13 +1,9 @@
-from classes_ import *
+from classes_hierarchy import *
 
-user = User(
-    user_id=1,
-    user_type='donor',
-    email='teste@gmail.com',
-    password='senha1234',
-    endereco='Rua A, 123',
-    telefone='8899999999'
-)
+#AREA DE TESTES, FAVOR IGNORAR
+user1 = User('1', 'donor', 'teste@gmail.com', 12345678, 'rua teste, 512, Crato', 8888888888)
 
-dados = user.send_to_bd()
+dados = user1.send_to_bd()
 print(dados)
+
+user1.password = "123()8899"
