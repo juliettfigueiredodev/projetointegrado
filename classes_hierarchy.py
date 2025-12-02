@@ -27,13 +27,24 @@ class User: #superclass
     @property
     def password(self):
        return self.__password
-    
+   
     @password.setter
     def password(self, new_password):
-       pass
+        if len(new_password) < 8: #Conta se a senha tem minimo 8 digitos
+            raise ValueError('Senha muito curta.')
+        else:
+            self.__password = new_password
+                
 
-    def send_to_bd(self):
-       pass
+    def send_to_bd(self): #Retorna os valores para o BD como um dicionario.
+        return { 
+            'user_id': self.user_id,
+            'user_type': self.user_type,
+            'email': self.email,
+            'password': self.password,
+            'endereco': self.endereco,
+            'telefone': self.telefone
+        }
 
 class Donor(User):
    def __init__(self, user_id, user_type, email, password, endereco, telefone):
@@ -48,4 +59,3 @@ class Institution(User):
       super().__init__(user_id, user_type, email, password, endereco, telefone)
       self.institution_reg_number = cnpj
       self.institution_name = institution_name
-
