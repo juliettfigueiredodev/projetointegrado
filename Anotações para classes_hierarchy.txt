@@ -1,4 +1,4 @@
-1- Métodos para melhorar:
+1- Métodos para melhorar tudo:
 @email.setter 
     def email(self, new_email):
 
