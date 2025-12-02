@@ -14,7 +14,6 @@ class User: #superclass
     
     @email.setter 
     def email(self, new_email):
-        new_email = input('Digite o email: ')
         if isinstance(new_email, str):
            if ('@' in new_email and '.' in new_email):
             self.__email = new_email
@@ -26,26 +25,46 @@ class User: #superclass
         
     @property
     def password(self):
+       
        return self.__password
-    
+   
     @password.setter
     def password(self, new_password):
-       pass
+        proibidos = "[]{}()=+\çÇ´`^~ ;'/"
+        
+        #Conta se a senha tem no minimo 8 digitos
+        if len(new_password) < 8: 
+            raise ValueError('Senha muito curta.')
+        
+        #loop para verificar se a senha tem caracteres proibidos, da para melhorar é só um rascunho
+        for caractere in new_password: 
+           if caractere in proibidos:
+              raise ValueError('Senha contém caracteres proibidos')
+           
+        self.__password = new_password
+           
 
     def send_to_bd(self):
-       pass
+        return {
+        'user_id': self.user_id,
+        'user_type': self.user_type,
+        'email': self.email,
+        'password': self.password,
+        'endereco': self.endereco,
+        'telefone': self.telefone
+        }
+
 
 class Donor(User):
-   def __init__(self, user_id, user_type, email, password, endereco, telefone):
+   def __init__(self, cpf, donor_name, date_birth, user_id, user_type, email, password, endereco, telefone):
       super().__init__(user_id, user_type, email, password, endereco, telefone)
-      self.number_id = cpf
-      self.name = name_donor
+      self.cpf = cpf
+      self.donor_name = donor_name
       self.date_birth = date_birth
 
 
 class Institution(User):
-   def __init__(self, user_id, user_type, email, password, endereco, telefone):
+   def __init__(self, cnpj, institution_name, user_id, user_type, email, password, endereco, telefone):
       super().__init__(user_id, user_type, email, password, endereco, telefone)
-      self.institution_reg_number = cnpj
+      self.cnpj = cnpj
       self.institution_name = institution_name
-

@@ -25,6 +25,6 @@ def send_to_bd(self):
     self.institution_reg_number = cnpj
     self.institution_name = institution_name
 
-
+3- Endereço não deveria ser uma lista ?
 
 
