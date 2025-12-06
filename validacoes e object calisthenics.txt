@@ -1,5 +1,8 @@
 Atributos como email, cpf, telefone precisam ser validados.
 Para esse tratamento é necessário criar uma classe para cada um deles. (Regra 3 do Object Calisthenics)
+https://bolcom.github.io/student-dojo/legacy-code/DevelopersAnonymous-ObjectCalisthenics.pdf
+https://www.youtube.com/watch?v=YGNH71KPIes
+
 Dentro dessa classe, criar o método de validação.
   
 Como validar?
