@@ -5,34 +5,64 @@ def main():
     db = UserDB()
 
     print("=== Cadastro EducaSolidário ===")
+    print("1 - Quero ser um Doador")
+    print("2 - Sou uma Instituição")
+    opcao = input("Escolha sua opção: ")
     
     try:
-        # Coleta de dados (Simulando o Frontend)
-        print("Preencha os dados do Doador:")
-        # O input fica AQUI, não dentro da classe
+        # Dados comuns a ambos (Email, Senha, Endereço, Telefone)
+        print("\n--- Dados de Acesso ---")
         email_input = input("Email: ") 
         pass_input = input("Senha: ")
+        addr_input = input("Endereço: ")
+        phone_input = input("Telefone: ")
+
+        novo_usuario = None # Variável que vai guardar o objeto criado
         
-        # Instanciação (Isso aciona as validações dos Setters nos Models)
-        # Se o email for inválido, o erro estoura aqui e é pego pelo 'except'
-        novo_doador = Donor(
-            user_id=1,
-            email=email_input,
-            password=pass_input,
-            endereco="Rua dos Bugs, 123",
-            telefone="1199999999",
-            cpf="123.456.789-00",
-            name="João Silva",
-            date_birth="1990-01-01"
-        )
+        if opcao == '1':
+            print("\n--- Dados do Doador ---")
+            cpf_input = input("CPF: ")
+            name_input = input("Nome Completo: ")
+            birth_input = input("Data de Nascimento: ")
+
+            novo_usuario = Donor(
+                user_id=1, # Num sistema real, isso seria gerado automaticamente
+                email=email_input,
+                password=pass_input,
+                endereco=addr_input,
+                telefone=phone_input,
+                cpf=cpf_input,
+                name=name_input,
+                date_birth=birth_input
+            )
+
+        elif opcao == '2':
+            print("\n--- Dados da Instituição ---")
+            cnpj_input = input("CNPJ: ")
+            inst_name_input = input("Nome da Instituição: ")
+
+            novo_usuario = Institution(
+                user_id=2,
+                email=email_input,
+                password=pass_input,
+                endereco=addr_input,
+                telefone=phone_input,
+                cnpj=cnpj_input,
+                institution_name=inst_name_input
+            )
+        else:
+            print("Opção inválida! Reinicie o programa.")
+            return
         
         # Persistência
-        db.save(novo_doador)
+        # O método .save() funciona para ambos graças ao Polimorfismo
+        if novo_usuario:
+            db.save(novo_usuario)
 
     except ValueError as e:
-        print(f"Erro de Validação: {e}")
+        print(f"\n[ERRO DE VALIDAÇÃO]: {e}")
     except Exception as e:
-        print(f"Erro inesperado: {e}")
+        print(f"\n[ERRO INESPERADO]: {e}")
 
 if __name__ == "__main__":
     main()
