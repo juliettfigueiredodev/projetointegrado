@@ -1,5 +1,5 @@
-from src.models.entities import Donor, Institution
-from src.infrastructure.user_db import UserDB
+from src.models import Donor, Institution
+from src.infrastructure import UserDB
 
 def main():
     db = UserDB()

@@ -1,5 +1,3 @@
-import re
-
 class User:
     def __init__(self, user_id, user_type, email, password, endereco, telefone):
         self.user_id = user_id
