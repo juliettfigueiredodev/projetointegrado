@@ -1,0 +1,55 @@
+Atributos como email, cpf, telefone precisam ser validados.
+Para esse tratamento é necessário criar uma classe para cada um deles. (Regra 3 do Object Calisthenics)
+Dentro dessa classe, criar o método de validação.
+  
+Como validar?
+Existem várias formas. Desde a manual, com for, if mas o Python também tem o package validators.
+https://www.geeksforgeeks.org/python/check-if-email-address-valid-or-not-in-python/
+  
+  Mas fazendo pesquisas achei interessante o uso de Expressôes Regulares
+https://blog.casadodesenvolvedor.com.br/expressoes-regulares-regex/
+https://cursos.alura.com.br/forum/topico-validando-telefones-com-expressoes-regulares-134109
+https://www.dio.me/articles/resumo-sobre-expressoes-regulares-regex
+  Resumo da IA:
+
+Expressões Regulares (Regex) são padrões de texto usados para encontrar, validar, extrair ou manipular sequências de caracteres em strings, 
+funcionando como uma mini-linguagem para definir regras de busca complexas, como verificar formatos de e-mail, CPF, datas, 
+ou realizar substituições de texto de forma eficiente e concisa em diversos contextos de programação e análise de dados. 
+O que são?
+  
+Padrões de Busca: São sequências de caracteres que definem um padrão para buscar em um texto.
+  
+Linguagem Formal: Usam caracteres literais (como 'a', 'b') e metacaracteres (como *, ?, [], ()) para criar regras complexas, 
+descrevendo um conjunto de cadeias de caracteres.
+  
+Receitas de Texto: Podem ser vistas como "receitas" ou "filtros" para textos, permitindo que você diga "encontre tudo que se parece com um e-mail"
+ou "encontre todos os números de telefone". 
+  
+Para que servem? (Exemplos de Uso)
+
+Validação de Dados:
+Verificar se um e-mail, CPF, CNPJ, CEP ou número de telefone tem o formato correto.
+Garantir que senhas atendam a requisitos (letras maiúsculas, minúsculas, números, símbolos).
+
+Busca e Substituição:
+Encontrar e substituir palavras específicas, formatação ou caracteres em um documento.
+Limpar dados, removendo espaços extras ou caracteres indesejados.
+
+Extração de Dados (Parsing):
+Extrair informações específicas de grandes volumes de texto, como datas, IPs, URLs ou números de série de arquivos de log.
+
+Análise de Texto:
+Segmentar textos em palavras ou frases para processamento posterior.
+
+Programação:
+Usadas em linguagens como JavaScript, Python, Java para manipular strings com métodos como match(), replace(), split(). 
+
+Exemplos de Metacaracteres Comuns:
+Classes: \d (dígitos), \w (caracteres de palavra), . (qualquer caractere).
+Quantificadores: * (zero ou mais vezes), + (uma ou mais vezes), ? (zero ou uma vez), {n} (exatamente n vezes).
+Âncoras: ^ (início da string), $ (fim da string).
+Agrupamento: () para agrupar partes da expressão e extrair grupos específicos. 
+
+  Em resumo, expressões regulares são uma ferramenta poderosa e flexível para automatizar tarefas de manipulação de texto, 
+economizando tempo e aumentando a precisão em tarefas que seriam tediosas ou impossíveis de fazer manualmente. 
+
