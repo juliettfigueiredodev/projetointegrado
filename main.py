@@ -1,4 +1,5 @@
 from classes_hierarchy import *
+from telefone import  TelefonesBr
 
 #AREA DE TESTES, FAVOR IGNORAR
 user1 = User('1', 'donor', 'teste@gmail.com', 12345678, 'rua teste, 512, Crato', 8888888888)
@@ -6,4 +7,8 @@ user1 = User('1', 'donor', 'teste@gmail.com', 12345678, 'rua teste, 512, Crato',
 dados = user1.send_to_bd()
 print(dados)
 
-user1.password = "123()8899"
+user1.password = "1239998899"
+
+
+telefone1 = TelefonesBr("88978645432")
+print(telefone1)
