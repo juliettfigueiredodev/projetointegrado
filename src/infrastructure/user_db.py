@@ -1,4 +1,4 @@
-class UserRepository:
+class UserDB:
     def __init__(self):
         # Simulando um banco de dados em memória
         self.database = []

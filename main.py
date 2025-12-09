@@ -1,8 +1,8 @@
 from src.models.entities import Donor, Institution
-from src.repositories.user_repository import UserRepository
+from src.infrastructure.user_db import UserDB
 
 def main():
-    repo = UserRepository()
+    db = UserDB()
 
     print("=== Cadastro EducaSolidário ===")
     
@@ -27,7 +27,7 @@ def main():
         )
         
         # Persistência
-        repo.save(novo_doador)
+        db.save(novo_doador)
 
     except ValueError as e:
         print(f"Erro de Validação: {e}")
