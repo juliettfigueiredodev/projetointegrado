@@ -1,5 +1,6 @@
 from classes_hierarchy import *
-from telefone import  TelefonesBr
+from service_Phone import  TelefonesBr
+from service_Cpf_Cnpj import Registro
 
 #AREA DE TESTES, FAVOR IGNORAR
 user1 = User('1', 'donor', 'teste@gmail.com', 12345678, 'rua teste, 512, Crato', 8888888888)
@@ -9,6 +10,9 @@ print(dados)
 
 user1.password = "1239998899"
 
-
 telefone1 = TelefonesBr("88978645432")
 print(telefone1)
+
+registro1 = Registro("12345678909")
+print(registro1)
+print(registro1.tipo())
