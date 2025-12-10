@@ -20,18 +20,24 @@ class UserDB:
             }
             
             # Adiciona campos específicos dependendo do tipo
-            if hasattr(user, 'name'): # Doador
+            if user.user_type == 'donor': # Doador
                 data['name'] = user.name
                 data['cpf'] = user.cpf
                 print(f"Salvando Doador: {user.name}")
-            elif hasattr(user, 'institution_name'): # Instituição
+                
+            elif user.user_type == 'institution': # Instituição
                 data['institution_name'] = user.institution_name
                 data['cnpj'] = user.cnpj
                 print(f"Salvando Instituição: {user.institution_name}")
-            
+
             self.database.append(data)
             print("Dados persistidos com sucesso!\n")
             return True
+        
+        except AttributeError as e:
+            # Esse erro vai acontecer se o tipo for 'donor' mas o objeto não tiver 'name'
+            print(f"Erro de Integridade: O tipo é {user.user_type}, mas faltou atributo: {e}")
+            return False
         except Exception as e:
             print(f"Erro ao salvar no banco: {e}")
             return False
