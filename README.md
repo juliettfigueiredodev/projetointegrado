@@ -1,80 +1,30 @@
-# projetointegrado
-EducaSolidario é uma Aplicação Web sobre Doação e Reaproveitamento de Materiais Escolares
+# EducaSolidario
 
+EducaSolidario é uma aplicação web voltada para a **doação e o reaproveitamento de materiais escolares** e para o fortalecimento de **projetos educacionais e comunitários**.
 
-# Título/Nome do projeto
+Na plataforma, **instituições** (como escolas, ONGs e projetos sociais) podem se cadastrar, divulgar suas **necessidades de materiais** e apresentar **projetos** como hortas comunitárias escolares, minicursos de reaproveitamento de materiais, oficinas e outras iniciativas. Já a **população em geral** pode acessar essas informações, conhecer os projetos e:
 
-Descreva brevemente o seu projeto. Aqui você pode utilizar texto e também imagens/diagramas.
+- realizar doações de materiais escolares;
+- entrar em contato com a instituição de interesse;
+- apoiar iniciativas que promovam educação, sustentabilidade e inclusão social.
 
-* O [Mermaid](https://mermaid.live/edit#pako:eNpVkE1uwjAQha9izapIZFGWWVSCBFZUVCq7mMXInjSW_Fdji6Ikp2HRg3CxmmRDZzV633uj0etBOElQQqvdRXQYIjvW3LI862bttRJ4_73fHHs9saJ4GwJ9JzrHgW1enulqMWc2DxOr-u0PGa_dOKvVFD1YGljd7NFH50_P5HhxA9s26qNzlv6TLlBO7ZoWyxYLgYFVGCYLLMFQMKhk_r5_KBxiR4Y4lHmV1GLSkQO3Y7Ziiu7zagWUMSRaQvISI9UKvwIayLf1OaskVXThfW5kKmb8AyAeX3o) é uma opção bem legal para diagramas e você consegue utilizar diretamente no README.md:
+Além disso, a plataforma também permite que **instituições troquem recursos entre si**, facilitando o reaproveitamento de materiais e a construção de uma rede colaborativa.
 
-[![](https://mermaid.ink/img/pako:eNpVkE1uwjAQha9izapIZFGWWVSCBFZUVCq7mMXInjSW_Fdji6Ikp2HRg3CxmmRDZzV633uj0etBOElQQqvdRXQYIjvW3LI862bttRJ4_73fHHs9saJ4GwJ9JzrHgW1enulqMWc2DxOr-u0PGa_dOKvVFD1YGljd7NFH50_P5HhxA9s26qNzlv6TLlBO7ZoWyxYLgYFVGCYLLMFQMKhk_r5_KBxiR4Y4lHmV1GLSkQO3Y7Ziiu7zagWUMSRaQvISI9UKvwIayLf1OaskVXThfW5kKmb8AyAeX3o?type=png)](https://mermaid.live/edit#pako:eNpVkE1uwjAQha9izapIZFGWWVSCBFZUVCq7mMXInjSW_Fdji6Ikp2HRg3CxmmRDZzV633uj0etBOElQQqvdRXQYIjvW3LI862bttRJ4_73fHHs9saJ4GwJ9JzrHgW1enulqMWc2DxOr-u0PGa_dOKvVFD1YGljd7NFH50_P5HhxA9s26qNzlv6TLlBO7ZoWyxYLgYFVGCYLLMFQMKhk_r5_KBxiR4Y4lHmV1GLSkQO3Y7Ziiu7zagWUMSRaQvISI9UKvwIayLf1OaskVXThfW5kKmb8AyAeX3o)
+## Possíveis usos da nossa solução
 
-- No site, vá no campo: Actions > Copy Markdown. Copie o link e cole no seu arquivo README.md e o diagrama estará lá.
+Um primeiro uso seria por **famílias em situação de vulnerabilidade socioeconômica** que têm dificuldade para comprar materiais escolares para crianças e adolescentes. Por meio da plataforma, essas famílias podem encontrar instituições próximas que recebem doações de mochilas, cadernos, lápis, livros e outros itens, facilitando o acesso a recursos básicos para a permanência na escola.
 
+Do lado das **instituições de ensino, ONGs e projetos sociais**, a aplicação pode ser usada para organizar e divulgar suas demandas de forma clara. Uma escola, por exemplo, pode cadastrar um projeto de *horta comunitária escolar* ou de *minicurso de reaproveitamento de materiais*, especificando os materiais necessários (ferramentas, sementes, materiais recicláveis, etc.). Assim, pessoas da comunidade e outras instituições conseguem visualizar essas necessidades e direcionar suas doações ou apoio de maneira mais eficiente.
+
+Como se trata de um **projeto universitário**, a solução também pode ser utilizada por **laboratórios, grupos de pesquisa e projetos de extensão** que atuam junto a escolas em situação de vulnerabilidade. Um laboratório universitário que tenha uma linha de atuação com escolas públicas, por exemplo, pode utilizar a aplicação para cadastrar as escolas parceiras, mapear suas necessidades e divulgar projetos em andamento. Nesse cenário, o laboratório funciona como uma ponte entre a universidade, as escolas e potenciais doadores, centralizando informações e facilitando a articulação das ações.
+
+A solução também pode ser útil para **negócios do mundo real**, como papelarias, gráficas e empresas que lidam com estoques de material escolar. Esses estabelecimentos poderiam utilizar a plataforma para doar materiais excedentes, coleções antigas ou itens próximos ao fim de linha, reduzindo desperdícios e fortalecendo sua responsabilidade social. Além disso, a participação da empresa nesses projetos pode gerar visibilidade positiva e aproximação com a comunidade local.
+
+Por fim, a plataforma pode atuar como uma **rede de troca entre instituições**, não apenas de materiais, mas também de projetos e conhecimento. Por exemplo, uma escola que já possua estrutura e know-how para montar uma **rádio estudantil** pode, por meio da aplicação, entrar em contato com outra instituição interessada em implementar um projeto semelhante. A primeira escola pode compartilhar sua experiência, orientações e até recursos excedentes, enquanto a segunda recebe apoio para colocar a iniciativa em prática. Dessa forma, nossa solução contribui para um uso mais sustentável dos recursos, incentiva o reaproveitamento de materiais e fortalece iniciativas educacionais e comunitárias no mundo real.
 
 ### Tecnologias Utilizadas
 
-Liste as tecnologias (linguagens, ferramentas, bibliotecas) que você utilizou para elaborar o projeto. Essa parte é importante para quando um recrutador (que não tem conhecimento de programação) acessar o seu projeto, ele vai saber só olhando a documentação quais tecnologias você já conhece!
-
-Exemplo:
-* [Python](https://www.python.org/)
-* [Github](https://github.com/)
-* [Git](https://git-scm.com/)
-
-## Dependências e Versões Necessárias
-
-Liste as dependências necessárias para rodar o projeto e as versões que você utilizou.
-
-* Docker - Versão: X.X
-
-## Como rodar o projeto ✅
-
-Descreva o passo a passo necessário para rodar sua aplicação. Lembre-se: a pessoa nunca rodou seu projeto. Não tenha medo de detalhar o máximo possível. Isso é necessário!
-
-Uma boa forma de descrever o passo a passo é:
-
-```
-Comando 1
-```
-
-Depois, rode o seguinte comando:
-
-```
-Comando 2
-```
-
-Deixe claro como a pessoa pode confirmar que a aplicação está rodando da forma correta. Pode ser com prints ou a mensagem que ela deve esperar.
-
-## Como rodar os testes
-
-Explique como rodar os testes da aplicação. Exemplo de um comando usando Makefile para rodar os testes:
-
-```
-make test
-```
-
-## 📌 (Título) - Informações importantes sobre a aplicação (exemplo) 📌
-
-Esse é o local para você preencher com outras informações que possam ser importantes para a aplicação. Coloquei um exemplo de título, mas você deve preencher de acordo com a necessidade do projeto. Pode ser que não seja necessário.
-
-Um bom exemplo: se você estiver construindo uma API, liste as rotas da aplicação e quais serão os seus retornos. Isso facilita para quem vai consumir a API.
-
-
-## ⚠️ Problemas enfrentados
-
-Liste os problemas que você enfrentou construindo a aplicação e como você resolveu cada um deles. Você que desenvolveu o projeto é a pessoa que mais conhece/entende os possíveis problemas que uma pessoa pode enfrentar rodando a aplicação. Compartilhe esse conhecimento e facilite a vida da pessoa descrevendo-os.
-
-Exemplo:
-
-### Problema 1:
-Descrição do problema
-* Como solucionar: explicar a solução.
-
-### Problema 2:
-Descrição do problema
-* Como solucionar: explicar a solução.
-
-## ⏭️ Próximos passos
-
-Descreva se você pretende, pensou ou gostaria de elaborar uma nova feature para o seu projeto definindo os próximos passos.
+- [Python 3.x](https://www.python.org/) — linguagem utilizada no backend da aplicação.
+- [Git](https://git-scm.com/) — controle de versão do código-fonte.
+- [GitHub](https://github.com/) — hospedagem do repositório e colaboração entre os membros do time.
+- [VS Code](https://code.visualstudio.com/) — editor de código utilizado no desenvolvimento.
