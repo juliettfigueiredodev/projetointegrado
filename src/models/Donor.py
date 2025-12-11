@@ -1,4 +1,4 @@
-import User #Classe mãe
+from .User import User #Classe mãe
 from src.services import Email #validação
 from src.services import Cpf #validação
 from src.services import Phone #validação
