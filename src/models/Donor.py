@@ -1,7 +1,7 @@
 import User #Classe mãe
-import Email #validação
-import Cpf #validação
-import TelefonesBr #validação
+from src.services import Email #validação
+from src.services import Cpf #validação
+from src.services import Phone #validação
 
 class Donor(User): #Herança - classe filha de User
    #inicializa a classe Donor
@@ -14,7 +14,7 @@ class Donor(User): #Herança - classe filha de User
       #chama método de validação de Cpf
       Cpf.valida_cpf(cpf)
       #chama método de validação de Telefone
-      TelefonesBr.valida_telefone(telefone)
+      Phone.valida_telefone(telefone)
 
       self.donor_name = donor_name
       self.date_birth = date_birth
