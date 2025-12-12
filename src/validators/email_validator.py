@@ -3,7 +3,7 @@ import re #módulo de expressões regulares
 #classe para validar email para as classes Donor e Institution
 class EmailValidator: 
     # antes e depois do @ recebe letras e alguns caracteres especiais, espera-se . e depois apenas letras limitando a quantidade (2 a 3)
-    regex = r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z][2-3]'
+    regex = r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}(?:\.[A-Za-z]{2,})*$'
 
     #inicializa o objeto da classe
     def __init__(self, email):
