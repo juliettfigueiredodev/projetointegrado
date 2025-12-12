@@ -1,6 +1,6 @@
 import re #Importa a  biblioteca de expressões regulares
 
-class Phone: #Define a classe para validar e formatar telefones brasileiros
+class PhoneValidator: #Define a classe para validar e formatar telefones brasileiros
 
     PADRAO = re.compile(r"^(\d{2})(9\d{8}|[2-5]\d{7})$") #Define o padrão regex para telefones brasileiros
 
