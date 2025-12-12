@@ -20,5 +20,5 @@ class EmailValidator:
     def valida_email(self, email):
          
         #compara o regex com a entrada e caso email seguir a expressão retorna verdadeiro, caso contrário, retorna falso
-        return bool(self.regex.fullmatch(email))
+        return bool(re.fullmatch(self.regex, email))
         
