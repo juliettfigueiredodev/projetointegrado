@@ -9,7 +9,7 @@ class Donor(User): #Herança - classe filha de User
       # herda atributos da classe mãe
       super().__init__(user_id, user_type, email, password, endereco, telefone) 
       #chama método de validação de Email
-      EmailValidator(email).valida_email() 
+      EmailValidator(email) 
 
       #chama método de validação de Cpf
       CPFValidator(cpf).valida_cpf()
