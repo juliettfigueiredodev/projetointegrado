@@ -27,6 +27,7 @@ def main():
 
             novo_usuario = Donor(
                 user_id=1, # Num sistema real, isso seria gerado automaticamente
+                user_type="donor",
                 email=email_input,
                 password=pass_input,
                 endereco=addr_input,
@@ -43,6 +44,7 @@ def main():
 
             novo_usuario = Institution(
                 user_id=2,
+                user_type="institution",
                 email=email_input,
                 password=pass_input,
                 endereco=addr_input,
@@ -65,4 +67,5 @@ def main():
         print(f"\n[ERRO INESPERADO]: {e}")
 
 if __name__ == "__main__":
+
     main()
