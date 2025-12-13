@@ -28,3 +28,43 @@ Por fim, a plataforma pode atuar como uma **rede de troca entre instituições**
 - [Git](https://git-scm.com/) — controle de versão do código-fonte.
 - [GitHub](https://github.com/) — hospedagem do repositório e colaboração entre os membros do time.
 - [VS Code](https://code.visualstudio.com/) — editor de código utilizado no desenvolvimento.
+
+
+
+
+
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone https://github.com/juliettfigueiredodev/projetointegrado.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd projetointegrado
+```
+
+Inicie o servidor
+
+```bash
+  python app.py
+```
+
+
+
+
+## Etiquetas
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+## Autores
+
+- [@Juliett Figueirêdo](https://github.com/juliettfigueiredodev)
+- [@Juan Carlos](https://github.com/JuanCostaDev)
+- [@Linderval Matias](https://github.com/Linderval-Moura)
+- [@Leandro Pereira](https://github.com/leandropereira-alt)
+- [@Levi Brito](https://github.com/juliettfigueiredodev)
+
