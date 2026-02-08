@@ -1,1 +1,14 @@
 .vscode
+
+# Ambientes virtuais e Variáveis de ambiente
+.venv/
+venv/
+env/
+.env
+
+# Compilados do Python
+__pycache__/
+*.pyc
+
+# Dados locais
+*.sqlite3
