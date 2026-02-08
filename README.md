@@ -34,18 +34,18 @@ Para quem está aprendendo a programar, o projeto físico é fundamental porque 
 
 ### Tecnologias Utilizadas
 
-- [Python 3.x](https://www.python.org/) — linguagem utilizada no backend da aplicação.
-- [Git](https://git-scm.com/) — controle de versão do código-fonte.
-- [GitHub](https://github.com/) — hospedagem do repositório e colaboração entre os membros do time.
-- [VS Code](https://code.visualstudio.com/) — editor de código utilizado no desenvolvimento.
-
-
-
+- **[Python 3.x](https://www.python.org/)** — linguagem utilizada no backend da aplicação.
+- **[PostgreSQL](https://www.postgresql.org/)** — banco de dados relacional robusto utilizado para persistência dos dados.
+- **[Psycopg2](https://pypi.org/project/psycopg2/)** — adaptador de banco de dados PostgreSQL para Python.
+- **[Python-dotenv](https://pypi.org/project/python-dotenv/)** — gerenciamento de variáveis de ambiente para segurança das credenciais.
+- **[Git](https://git-scm.com/)** — controle de versão do código-fonte.
+- **[GitHub](https://github.com/)** — hospedagem do repositório e colaboração entre os membros do time.
+- **[VS Code](https://code.visualstudio.com/)** — editor de código utilizado no desenvolvimento.
 
 
 ## Rodando localmente
 
-Clone o projeto
+### 1. Clone o projeto
 
 ```bash
   git clone https://github.com/juliettfigueiredodev/projetointegrado.git
@@ -57,17 +57,54 @@ Entre no diretório do projeto
   cd projetointegrado
 ```
 
-Inicie o servidor
+### 2. Configuração do Ambiente Virtual (Python)
 
+```bash
+  # Criar o ambiente virtual
+  python3 -m venv .venv
+
+  # Ativar o ambiente (Linux/Mac)
+  source .venv/bin/activate
+  
+  # Ativar o ambiente (Windows)
+  # .\.venv\Scripts\activate
+```
+
+Instale as dependências do projeto:
+
+```bash
+  pip install -r requirements.txt
+```
+
+### 3. Configuração de Variáveis de Ambiente
+
+* Crie um arquivo .env como o 'exemplo' na raiz do projeto (baseado no .env.example) e configure as credenciais do banco:
+
+```Ini
+DB_NAME=educasolidario_db
+DB_USER=admin
+DB_PASS=admin123
+DB_HOST=localhost
+DB_PORT=5432
+```
+
+### Importante: A criação das tabelas e a estrutura do banco deve ser feita manualmente via linha de comando na primeira execução. 
+
+* Execute o script de infraestrutura para criar o schema:
+```bash
+python src/infrastructure/user_db.py
+```
+Você deverá ver a mensagem: "Tabelas, Types e Triggers criados com sucesso!"
+
+
+### 5. Inicie a Aplicação
+Com o banco configurado, inicie o sistema:
 ```bash
   python app.py
 ```
 
 
-
-
 ## Etiquetas
-
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ## Autores
