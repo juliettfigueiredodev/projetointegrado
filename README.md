@@ -22,6 +22,16 @@ A solução também pode ser útil para **negócios do mundo real**, como papela
 
 Por fim, a plataforma pode atuar como uma **rede de troca entre instituições**, não apenas de materiais, mas também de projetos e conhecimento. Por exemplo, uma escola que já possua estrutura e know-how para montar uma **rádio estudantil** pode, por meio da aplicação, entrar em contato com outra instituição interessada em implementar um projeto semelhante. A primeira escola pode compartilhar sua experiência, orientações e até recursos excedentes, enquanto a segunda recebe apoio para colocar a iniciativa em prática. Dessa forma, nossa solução contribui para um uso mais sustentável dos recursos, incentiva o reaproveitamento de materiais e fortalece iniciativas educacionais e comunitárias no mundo real.
 
+## Projeto físico de banco de dados e sua importância para quem está aprendendo a programar.
+
+O projeto físico de banco de dados é a última etapa do processo de modelagem de um banco. Nela, o modelo criado anteriormente é implementado em um sistema de gerenciamento de banco de dados (como MySQL, PostgreSQL ou Oracle), definindo como os dados serão armazenados no computador.
+
+Essa fase envolve decisões importantes, como a criação de tabelas, definição de tipos de dados, uso de índices e estratégias para melhorar o desempenho das consultas, além de considerar o uso de memória e espaço em disco.
+
+Para quem está aprendendo a programar, o projeto físico é fundamental porque mostra como a estrutura do banco influencia diretamente o funcionamento da aplicação. Um bom projeto físico pode deixar o sistema mais rápido, estável e eficiente, enquanto um projeto mal feito pode causar lentidão e problemas de desempenho, mesmo com um código bem escrito.
+
+
+
 ### Tecnologias Utilizadas
 
 - [Python 3.x](https://www.python.org/) — linguagem utilizada no backend da aplicação.
