@@ -22,7 +22,6 @@ class Donor(User): #Herança - classe filha de User
       #chama método de validação de Telefone
       PhoneValidator(telefone)
 
-      self.cpf = cpf
       self.name = name
       self.cpf = cpf
       self.date_birth = converted_data
