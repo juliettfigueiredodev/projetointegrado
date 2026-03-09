@@ -30,6 +30,26 @@ Essa fase envolve decisões importantes, como a criação de tabelas, definiçã
 
 Para quem está aprendendo a programar, o projeto físico é fundamental porque mostra como a estrutura do banco influencia diretamente o funcionamento da aplicação. Um bom projeto físico pode deixar o sistema mais rápido, estável e eficiente, enquanto um projeto mal feito pode causar lentidão e problemas de desempenho, mesmo com um código bem escrito.
 
+## 🎨 Interface Humano-Computador (IHC) e Prototipação
+
+Como parte do nosso compromisso em criar uma aplicação que realmente atenda às necessidades da comunidade, aplicamos conceitos de Interface Humano-Computador (IHC) e Design Centrado no Usuário no desenvolvimento do EducaSolidário.
+
+### Como prototipar um Wireframe? (Guia Prático)
+Um wireframe é como o "esqueleto" ou a planta baixa de um site ou aplicativo. Ele serve para organizar as informações na tela antes de nos preocuparmos com cores ou imagens. Se você deseja prototipar um, siga estes passos:
+
+1. **Entenda o Objetivo:** Antes de desenhar, saiba o que o usuário precisa fazer naquela tela (ex: fazer login, encontrar um projeto para apoiar).
+2. **Faça um rascunho no papel (Baixa Fidelidade):** Não vá direto para o computador. Desenhe caixas e rabiscos em um caderno para testar ideias de layout de forma rápida e barata.
+3. **Use ferramentas digitais (Média Fidelidade):** Utilize softwares gratuitos como Figma, Balsamiq ou Draw.io. Crie retângulos para imagens, linhas para textos e formas simples para botões.
+4. **Foque na estrutura, não na estética:** Evite usar cores (trabalhe em escala de cinza) e não perca tempo escolhendo fontes bonitas. O objetivo é validar a hierarquia da informação e onde cada elemento vai ficar.
+5. **Peça feedback:** Mostre o "esqueleto" para outras pessoas e veja se elas conseguem entender como navegar de forma intuitiva.
+
+### O Impacto do Design Centrado no Usuário na Sociedade
+*(Por: Equipe EducaSolidário)*
+
+O Design Centrado no Usuário (DCU) vai muito além de criar telas visualmente agradáveis. Ele trata de colocar as necessidades, limitações e contextos das pessoas reais no centro do desenvolvimento de software. No nosso dia a dia, sistemas mal desenhados causam frustração, exclusão e perda de tempo — pense em um idoso tentando usar um aplicativo de banco confuso ou uma pessoa com deficiência visual que não consegue navegar em um site governamental porque ele não tem suporte a leitores de tela.
+
+Quando aplicamos o design centrado no usuário, criamos sistemas mais intuitivos, eficientes e acessíveis. No contexto do **EducaSolidário**, isso significa projetar interfaces onde uma escola com poucos recursos tecnológicos consiga cadastrar suas necessidades de forma fácil. Significa garantir alto contraste e botões claros para que qualquer doador realize sua ação sem confusão. Em resumo, melhorar a qualidade da Interface Humano-Computador é promover cidadania e inclusão digital, garantindo que a tecnologia sirva à sociedade como uma ponte facilitadora, e não como uma barreira.
+
 
 
 ### Tecnologias Utilizadas
