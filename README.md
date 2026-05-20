@@ -50,7 +50,13 @@ O Design Centrado no Usuário (DCU) vai muito além de criar telas visualmente a
 
 Quando aplicamos o design centrado no usuário, criamos sistemas mais intuitivos, eficientes e acessíveis. No contexto do **EducaSolidário**, isso significa projetar interfaces onde uma escola com poucos recursos tecnológicos consiga cadastrar suas necessidades de forma fácil. Significa garantir alto contraste e botões claros para que qualquer doador realize sua ação sem confusão. Em resumo, melhorar a qualidade da Interface Humano-Computador é promover cidadania e inclusão digital, garantindo que a tecnologia sirva à sociedade como uma ponte facilitadora, e não como uma barreira.
 
+### Importância da Experiência do Usuário (UX)
 
+A Experiência do Usuário (UX) está relacionada à maneira como as pessoas percebem e utilizam um sistema, site ou aplicativo durante a interação com a interface. Isso envolve facilidade de uso, organização das informações, acessibilidade, eficiência e satisfação do usuário. Dessa forma, a UX não se preocupa apenas com a aparência visual da interface, mas também com o funcionamento do sistema e com a forma como o usuário se sente ao utilizá-lo.
+
+A UX é importante pois busca tornar os produtos mais intuitivos, funcionais e agradáveis de usar. Quando uma interface é bem planejada, os usuários conseguem realizar tarefas com mais rapidez, segurança e menos dificuldades, evitando erros e frustrações. Além disso, uma boa experiência aumenta a satisfação e a confiança das pessoas no sistema, contribuindo para que ele seja mais utilizado e aceito pelos usuários.
+
+Nos dias atuais, as pessoas têm a necessidade de tecnologias rápidas e intuitivas, por isso um bom design de interface facilita o acesso e melhora a interação com diferentes sistemas no dia a dia, impactando positivamenta suas vidas. Em ambientes como escolas, empresas, hospitais e aplicativos de serviços, interfaces simples e organizadas ajudam na produtividade, na comunicação e na eficiência das atividades. Por isso, pensar na experiência do usuário é essencial para desenvolver sistemas mais acessíveis, úteis e eficientes no mundo real.
 
 ### Tecnologias Utilizadas
 
