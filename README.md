@@ -58,6 +58,14 @@ A UX é importante pois busca tornar os produtos mais intuitivos, funcionais e a
 
 Nos dias atuais, as pessoas têm a necessidade de tecnologias rápidas e intuitivas, por isso um bom design de interface facilita o acesso e melhora a interação com diferentes sistemas no dia a dia, impactando positivamenta suas vidas. Em ambientes como escolas, empresas, hospitais e aplicativos de serviços, interfaces simples e organizadas ajudam na produtividade, na comunicação e na eficiência das atividades. Por isso, pensar na experiência do usuário é essencial para desenvolver sistemas mais acessíveis, úteis e eficientes no mundo real.
 
+### Decisões Tomadas ao longo do desenvolvimento
+
+O Design do protótipo de alta fidelidade feito no Figma foi pensado no conforto visual e clareza de navegação dos usuários. Nesse sentido, as seguintes decisões foram tomadas: 
+
+- **Logo:** Símbolo de mãos dadas e ligações - representa conexão e colaboração;
+- **Paleta de cores:** o azul representa conhecimento, o verde, colaboração, trazendo ainda mais sentido à logo. Assim, adicionando as cores âmbar e grafite, para destaques e textos, a escolha da paleta traz um padrão visual e funcional para a plataforma, proporcionando consistência entre as interfaces;
+- **Fontes:** as fontes selecionadas foram a **Poppins** para os títulos e a **Inter** para textos e interfaces. A primeira por ser moderna, geométrica e amigável; a segunda por sua legibilidade, limpeza e tecnologia.
+
 ### Tecnologias Utilizadas
 
 - **[Python 3.x](https://www.python.org/)** — linguagem utilizada no backend da aplicação.
