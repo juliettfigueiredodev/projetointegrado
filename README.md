@@ -60,7 +60,7 @@ Nos dias atuais, as pessoas têm a necessidade de tecnologias rápidas e intuiti
 
 ### Decisões Tomadas ao longo do desenvolvimento
 
-O Design do protótipo de alta fidelidade feito no Figma foi pensado no conforto visual e clareza de navegação dos usuários. Nesse sentido, as seguintes decisões foram tomadas: 
+O Design do protótipo de alta fidelidade feito no Figma foi pensado no conforto visual e clareza na navegação dos usuários. Nesse sentido, as seguintes decisões foram tomadas: 
 
 - **Logo:** Símbolo de mãos dadas e ligações - representa conexão e colaboração;
 - **Paleta de cores:** o azul representa conhecimento, o verde, colaboração, trazendo ainda mais sentido à logo. Assim, adicionando as cores âmbar e grafite, para destaques e textos, a escolha da paleta traz um padrão visual e funcional para a plataforma, proporcionando consistência entre as interfaces;
