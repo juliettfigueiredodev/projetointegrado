@@ -44,7 +44,6 @@ Um wireframe é como o "esqueleto" ou a planta baixa de um site ou aplicativo. E
 5. **Peça feedback:** Mostre o "esqueleto" para outras pessoas e veja se elas conseguem entender como navegar de forma intuitiva.
 
 ### O Impacto do Design Centrado no Usuário na Sociedade
-*(Por: Equipe EducaSolidário)*
 
 O Design Centrado no Usuário (DCU) vai muito além de criar telas visualmente agradáveis. Ele trata de colocar as necessidades, limitações e contextos das pessoas reais no centro do desenvolvimento de software. No nosso dia a dia, sistemas mal desenhados causam frustração, exclusão e perda de tempo — pense em um idoso tentando usar um aplicativo de banco confuso ou uma pessoa com deficiência visual que não consegue navegar em um site governamental porque ele não tem suporte a leitores de tela.
 
@@ -60,22 +59,26 @@ Nos dias atuais, as pessoas têm a necessidade de tecnologias rápidas e intuiti
 
 ### Decisões Tomadas ao longo do desenvolvimento
 
+#### Design e Identidade Visual
 O Design do protótipo de alta fidelidade feito no Figma foi pensado no conforto visual e clareza na navegação dos usuários. Nesse sentido, as seguintes decisões foram tomadas: 
 
 - **Logo:** Símbolo de mãos dadas e ligações - representa conexão e colaboração;
 - **Paleta de cores:** o azul representa conhecimento, o verde, colaboração, trazendo ainda mais sentido à logo. Assim, adicionando as cores âmbar e grafite, para destaques e textos, a escolha da paleta traz um padrão visual e funcional para a plataforma, proporcionando consistência entre as interfaces;
 - **Fontes:** as fontes selecionadas foram a **Poppins** para os títulos e a **Inter** para textos e interfaces. A primeira por ser moderna, geométrica e amigável; a segunda por sua legibilidade, limpeza e tecnologia.
 
+#### Arquitetura e Código (Foco Técnico)
+- **Escolha do Modelo Relacional:** Optou-se pela utilização de um banco de dados relacional para mapear com precisão matemática os relacionamentos lógicos do ecossistema do EducaSolidario. A integridade referencial garante que entidades complexas (como as relações N:N entre doadores, materiais cadastrados e as necessidades específicas de cada instituição) mantenham consistência absoluta através de chaves estrangeiras (`FOREIGN KEY`).
+- **Otimização de Desempenho:** A estrutura do banco de dados foi projetada visando alto desempenho em consultas frequentes. Áreas críticas do sistema utilizam tipos enumerados (`ENUM`) para categorias e status, o que otimiza o armazenamento em disco e agiliza a indexação. Além disso, o posicionamento estratégico de índices nos campos de busca e login (como `email`, `cpf`, `cnpj` e status de campanhas) garante tempos de resposta mínimos na renderização dos painéis e dashboards.
+
 ### Tecnologias Utilizadas
 
-- **[Python 3.x](https://www.python.org/)** — linguagem utilizada no backend da aplicação.
-- **[PostgreSQL](https://www.postgresql.org/)** — banco de dados relacional robusto utilizado para persistência dos dados.
-- **[Psycopg2](https://pypi.org/project/psycopg2/)** — adaptador de banco de dados PostgreSQL para Python.
-- **[Python-dotenv](https://pypi.org/project/python-dotenv/)** — gerenciamento de variáveis de ambiente para segurança das credenciais.
-- **[Git](https://git-scm.com/)** — controle de versão do código-fonte.
-- **[GitHub](https://github.com/)** — hospedagem do repositório e colaboração entre os membros do time.
-- **[VS Code](https://code.visualstudio.com/)** — editor de código utilizado no desenvolvimento.
-
+- **[Python 3.x](https://www.python.org/)** — Linguagem principal utilizada no backend devido à sua legibilidade, rapidez de desenvolvimento e ecossistema robusto para a estruturação de regras de negócio.
+- **[PostgreSQL](https://www.postgresql.org/)** — Sistema de Gerenciamento de Banco de Dados Relacional (SGBDR) escolhido por sua alta confiabilidade, conformidade ACID estrita e excelente suporte para indexação avançada e integridade de dados complexos.
+- **[Psycopg2](https://pypi.org/project/psycopg2/)** — Adaptador oficial do PostgreSQL para Python que permite uma comunicação nativa, segura e de alto desempenho entre a camada da aplicação e o banco de dados.
+- **[Python-dotenv](https://pypi.org/project/python-dotenv/)** — Utilizado para o gerenciamento seguro de variáveis de ambiente, garantindo que credenciais sensíveis de infraestrutura nunca fiquem expostas no código-fonte.
+- **[Git](https://git-scm.com/)** — Ferramenta essencial para o controle de versão distribuído do código-fonte durante o ciclo de desenvolvimento.
+- **[GitHub](https://github.com/)** — Plataforma para hospedagem segura do repositório remoto e facilitação do trabalho colaborativo entre os membros da equipe.
+- **[VS Code](https://code.visualstudio.com/)** — Ambiente de desenvolvimento integrado (IDE) leve e altamente customizável adotado para a escrita e depuração do projeto.
 
 ## Rodando localmente
 
