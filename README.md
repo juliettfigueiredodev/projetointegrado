@@ -66,7 +66,7 @@ O Design do protótipo de alta fidelidade feito no Figma foi pensado no conforto
 - **Paleta de cores:** o azul representa conhecimento, o verde, colaboração, trazendo ainda mais sentido à logo. Assim, adicionando as cores âmbar e grafite, para destaques e textos, a escolha da paleta traz um padrão visual e funcional para a plataforma, proporcionando consistência entre as interfaces;
 - **Fontes:** as fontes selecionadas foram a **Poppins** para os títulos e a **Inter** para textos e interfaces. A primeira por ser moderna, geométrica e amigável; a segunda por sua legibilidade, limpeza e tecnologia.
 
-#### Arquitetura e Código (Foco Técnico)
+#### Arquitetura e Código
 - **Escolha do Modelo Relacional:** Optou-se pela utilização de um banco de dados relacional para mapear com precisão matemática os relacionamentos lógicos do ecossistema do EducaSolidario. A integridade referencial garante que entidades complexas (como as relações N:N entre doadores, materiais cadastrados e as necessidades específicas de cada instituição) mantenham consistência absoluta através de chaves estrangeiras (`FOREIGN KEY`).
 - **Otimização de Desempenho:** A estrutura do banco de dados foi projetada visando alto desempenho em consultas frequentes. Áreas críticas do sistema utilizam tipos enumerados (`ENUM`) para categorias e status, o que otimiza o armazenamento em disco e agiliza a indexação. Além disso, o posicionamento estratégico de índices nos campos de busca e login (como `email`, `cpf`, `cnpj` e status de campanhas) garante tempos de resposta mínimos na renderização dos painéis e dashboards.
 
