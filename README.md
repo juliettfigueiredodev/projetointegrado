@@ -10,6 +10,18 @@ Na plataforma, **instituições** (como escolas, ONGs e projetos sociais) podem 
 
 Além disso, a plataforma também permite que **instituições troquem recursos entre si**, facilitando o reaproveitamento de materiais e a construção de uma rede colaborativa.
 
+## Problema
+A desigualdade socioeconômica impõe barreiras signficativas ao desenvolvimento educacional, fazendo com que diversas crianças e jovens em situação de vulnerabilidade iniciem o ano letivo sem os recursos básicos necessários para o aprendizado. Em contrapartida, observa-se um ciclo contínuo de desperdício na sociedade: materiais em bom estado de conservação que poderiam ser reaproveitados e que infelizmente acabam sendo descartados ou esquecidos ao final de cada período letivo por famílias que não precisam mais deles. A solução proposta atua justamente nessa problemátca, conectando o excedente de material à escassez do mesmo de maneira promover não somente a sustentabilidade ambiental, mas também a equidade e a dignidadde no acesso à Educação.
+
+## Objetivo do Sistema
+O principal objetivo do sistema é promover a missão do EducaSolidário, atuando com uma plataforma web facilitadora entre quem deseja ajudar e quem precisa do apoio. O sistema tem como visão estruturar e apoiar o processo de doação e reaproveitamento de materias escolares, transformando a solidariedade em uma ação prática, acessível e além de tudo organizada. Portanto, o projeto busca diminuir a exclusão escolar motivada pela falta de recursos básicos, ao mesmo tempo em que incentiva práticas de consumo consciente e economia dentro da comunidade.
+
+## Visão Geral do Sistema e Jornada do Usuário
+O Educasolidário funciona como uma ponte de encontro digital que centraliza e cruza informações de oferta e demanda de materiais escolares. A jornada se dá no sistema por meio de duas pespectivas complementares:
+
+* Para Instituições (quem recebe): Organizações sociais,cnpjs, escolas ou projetos comunitários que atendem famílias vulneráveis realizam um cadastro na plataforma. Após o cadastramento, essas instituções podem registrar suas demandas, criando listas de itens necessários que ficam na fila como prioridade para os seus assistidos.
+* Para os Doadores: Pessoas físicas ou jurídicas que possuem materiais em bom estado acessam a plataforma e visualizam uma tela com as demandas existentes. O doador pode explorar esses pedidos, selecionar a instituição que deseja apoiar e formalizar a sua intenção de doação no sistema. A partir desse momento, a plataforma fornece as orientações e as informações necessárias para que a entrega do material seja organizada e finalizada de forma segura entre as partes.
+
 ## Possíveis usos da nossa solução
 
 Um primeiro uso seria por **famílias em situação de vulnerabilidade socioeconômica** que têm dificuldade para comprar materiais escolares para crianças e adolescentes. Por meio da plataforma, essas famílias podem encontrar instituições próximas que recebem doações de mochilas, cadernos, lápis, livros e outros itens, facilitando o acesso a recursos básicos para a permanência na escola.
