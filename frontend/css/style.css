@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F8FAFC;
+    color:#1E293B;
+    font-family:'Inter', sans-serif;
+}
+
+.titulo h1{
+    font-family:'Poppins', sans-serif;
+    font-size:80px;
+    font-weight:800;
+    line-height:1.05;
+    color:#2563EB;
+}
+
+.titulo h1 span{
+    font-style:italic;
+}
+
+h1,h2,h3,h4{
+    font-family:'Poppins', sans-serif;
+}
+
+p,a,li,button{
+    font-family:'Inter', sans-serif;
+}
+
+/* MENU */
+header{
+    background:white;
+    padding:20px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo img{
+    width:220px;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1E293B;
+    font-weight:600;
+}
+
+.botoes-menu{
+    display:flex;
+    gap:15px;
+}
+
+.btn-entrar,
+.btn-cadastrar{
+    padding:12px 28px;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-entrar{
+    background:white;
+    border:2px solid #2563EB;
+    color:#2563EB;
+}
+
+.btn-cadastrar{
+    background:#2563EB;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:70px 8%;
+}
+
+.titulo h1{
+    font-size:58px;
+    line-height:1.1;
+}
+
+.estatisticas{
+    display:flex;
+    gap:60px;
+}
+
+.estatisticas h2{
+    color:#2563EB;
+    font-size:42px;
+}
+
+.estatisticas p{
+    color:#64748B;
+}
+
+/* BANNER */
+.banner img{
+    width:100%;
+    height:800px;
+    object-fit:cover;
+}
+
+/* AÇÕES */
+.acoes{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:50px;
+}
+
+.btn-azul,
+.btn-verde{
+    padding:18px 35px;
+    border-radius:35px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-azul{
+    background:#2563EB;
+    color:white;
+}
+
+.btn-verde{
+    background:#22C55E;
+    color:white;
+}
+
+/* TITULO */
+.titulo-instituicoes{
+    text-align:center;
+    margin-top:20px;
+}
+
+.titulo-instituicoes h2{
+    font-size:38px;
+}
+
+.titulo-instituicoes p{
+    font-size:20px;
+    color:#64748B;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    padding:60px 8%;
+}
+
+.card{
+    width:340px;
+}
+
+.categoria{
+    background:#22C55E;
+    color:white;
+    text-align:center;
+    padding:12px;
+    border-radius:12px 12px 0 0;
+    font-weight:bold;
+}
+
+.conteudo-card{
+    background:#2563EB;
+    color:white;
+    padding:30px;
+    text-align:center;
+    border-radius:0 0 12px 12px;
+}
+
+.conteudo-card img{
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:20px;
+}
+
+.conteudo-card h4{
+    color:#F59E0B;
+    margin:20px 0;
+}
+
+.botoes-card{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.botoes-card button{
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.botoes-card button:first-child{
+    background:white;
+    color:#2563EB;
+}
+
+.botoes-card button:last-child{
+    background:#22C55E;
+    color:white;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+.menu{
+    flex-direction:column;
+    gap:20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.estatisticas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.estatisticas div {
+    text-align: center;
+}
+
+.estatisticas h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    color: #2563EB;
+    margin-bottom: 5px;
+}
+
+.estatisticas p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #64748B;
+}
+
+.estatisticas{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    justify-content:center;
+}
+
+.estatisticas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.estatisticas > div {
+    width: 150px;
+    text-align: center;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
+
+/* RODAPÉ */
+footer {
+    width:100%;
+    background:#F8FAFC;
+    padding:30px 0;
+    margin-top:50px;
+}
+
+footer .rodape {
+    width:100%;
+    text-align:center;
+}
+
+footer .rodape p {
+    margin:10px 0;
+    text-align:center;
+    color:#1E293B;
+    font-family:'Inter', sans-serif;
+}
