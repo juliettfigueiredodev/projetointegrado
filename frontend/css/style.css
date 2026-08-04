@@ -315,11 +315,9 @@ footer .rodape p {
     font-family:'Inter', sans-serif;
 }
 
-/* =====================================================
-   PÁGINAS DE PERFIL (Doador / Instituição) - Tela 02 e 03
-   ===================================================== */
+/* PÁGINAS DE PERFIL (Tela 02 e 03) */
 
-/* CABEÇALHO LOGADO (variação do header da Tela 01) */
+/* CABEÇALHO LOGADO */
 .menu-logado nav ul{
     align-items:center;
 }
@@ -465,17 +463,154 @@ footer .rodape p {
     gap:4px;
 }
 
-.perfil-abas a{
-    padding:12px 20px;
+.perfil-abas button{
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:14px 20px;
     font-size:14px;
+    font-family:'Inter', sans-serif;
     color:#777;
-    text-decoration:none;
 }
 
-.perfil-abas a.ativa{
+.perfil-abas button.ativa{
     color:#1E293B;
     font-weight:bold;
     border-bottom:3px solid #222;
+}
+
+/* PAINÉIS */
+.painel{
+    display:none;
+}
+
+.painel.visivel{
+    display:block;
+}
+
+/* ABA HISTÓRICO */
+.tabela-historico{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    border-collapse:collapse;
+    font-size:13px;
+    background:#fff;
+    border:2px solid #1E293B;
+}
+
+.tabela-historico th{
+    background:#2563EB;
+    color:#fff;
+    text-align:left;
+    padding:10px 14px;
+}
+
+.tabela-historico td{
+    border-bottom:1px solid #eee;
+    padding:10px 14px;
+}
+
+/* ABA FAVORITOS */
+.grade-favoritos{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    gap:16px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.item-favorito{
+    border:2px solid #1E293B;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.item-favorito .icone-inst{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#F8FAFC;
+    border:1px solid #1E293B;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.item-favorito .icone-inst svg{
+    width:24px;
+    height:24px;
+}
+
+.item-favorito h5{
+    font-size:14px;
+    color:#1E293B;
+}
+
+.item-favorito p{
+    font-size:12px;
+    color:#777;
+}
+
+/* ABA IMPACTO */
+.grade-impacto{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+    gap:16px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.impacto-numero{
+    background:#2563EB;
+    color:#fff;
+    border:2px solid #1E293B;
+    padding:20px;
+    text-align:center;
+}
+
+.impacto-numero h3{
+    font-size:28px;
+    font-family:'Poppins', sans-serif;
+}
+
+.impacto-numero p{
+    font-size:12px;
+    margin-top:6px;
+    opacity:.9;
+}
+
+/* ABA CONQUISTAS */
+.card-conquistas.card-conquistas-grande{
+    max-width:700px;
+    margin:0 auto;
+}
+
+.card-conquistas-grande .grade-conquistas{
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+}
+
+.card-conquistas-grande .conquista{
+    padding:16px 8px;
+}
+
+.card-conquistas-grande .estrela{
+    font-size:28px;
+}
+
+.card-conquistas-grande p{
+    font-size:11px;
+}
+
+/* CAMPANHAS E DOAÇÕES (abas isoladas) */
+.painel .card-azul,
+.painel .card-verde{
+    max-width:900px;
+    margin:0 auto;
 }
 
 /* DUAS COLUNAS */
@@ -502,7 +637,7 @@ footer .rodape p {
     gap:20px;
 }
 
-/* CARD AZUL (dados e campanhas) */
+/* CARD AZUL */
 .card-azul{
     background:#2563EB;
     color:#F8FAFC;
@@ -525,7 +660,7 @@ footer .rodape p {
     font-size:13px;
 }
 
-/* CAMPANHAS (lista dentro do card azul) */
+/* LISTA DE CAMPANHAS */
 .campanha-item{
     background:#F5F5F5;
     border:1px solid #ccc;
@@ -569,7 +704,7 @@ footer .rodape p {
     margin-top:8px;
 }
 
-/* CONQUISTAS (coluna lateral - perfil do doador) */
+/* CONQUISTAS */
 .card-conquistas{
     background:#1565C0;
     color:#fff;
@@ -630,7 +765,7 @@ footer .rodape p {
     margin-top:10px;
 }
 
-/* CARD VERDE (doações recebidas/realizadas - perfil da instituição) */
+/* CARD VERDE */
 .card-verde{
     background:rgba(34,197,94,.6);
     border:2px solid #1E293B;
@@ -673,7 +808,7 @@ footer .rodape p {
     display:inline-block;
 }
 
-/* RESPONSIVO - PERFIL */
+/* RESPONSIVO PERFIL */
 @media(max-width:900px){
     .perfil-colunas{
         flex-direction:column;

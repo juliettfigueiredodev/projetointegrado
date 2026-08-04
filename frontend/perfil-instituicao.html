@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<!-- CABEÇALHO (usuário logado) -->
+<!-- CABEÇALHO -->
 <header>
     <div class="menu menu-logado">
         <div class="logo">
@@ -85,115 +85,192 @@
 
     <!-- ABAS -->
     <nav class="perfil-abas">
-        <a href="#" class="ativa">Visão geral</a>
-        <a href="#">Campanhas</a>
-        <a href="#">Doações recebidas</a>
-        <a href="#">Doações realizadas</a>
+        <button class="ativa" data-alvo="painel-visao">Visão geral</button>
+        <button data-alvo="painel-campanhas">Campanhas</button>
+        <button data-alvo="painel-recebidas">Doações recebidas</button>
+        <button data-alvo="painel-realizadas">Doações realizadas</button>
     </nav>
 
-    <!-- DUAS COLUNAS -->
-    <section class="perfil-colunas">
+    <!-- PAINEL: VISÃO GERAL -->
+    <div id="painel-visao" class="painel visivel">
+        <section class="perfil-colunas">
 
-        <!-- COLUNA PRINCIPAL -->
-        <div class="coluna-principal">
+            <!-- COLUNA PRINCIPAL -->
+            <div class="coluna-principal">
 
-            <!-- DADOS DA INSTITUIÇÃO -->
-            <div class="card-azul">
-                <h4>Dados da Instituição</h4>
-                <div class="linha-dado"><span>CNPJ</span><span>000.000.000/00</span></div>
-                <div class="linha-dado"><span>Telefone</span><span>+55 (88) 9.0000-0000</span></div>
-                <div class="linha-dado"><span>E-mail</span><span>emef.joao.de.deus@email.com</span></div>
-                <div class="linha-dado"><span>Responsável</span><span>Vanderlúcia Feitosa da Silva</span></div>
-                <div class="linha-dado"><span>Membro desde</span><span>2025</span></div>
-            </div>
-
-            <!-- CAMPANHAS ATIVAS -->
-            <div class="card-azul">
-                <h4>Campanhas Ativas</h4>
-
-                <div class="campanha-item">
-                    <div class="campanha-topo">
-                        <span class="titulo-campanha">Renovação de Fardamento Escolar</span>
-                    </div>
-                    <div class="barra-fundo">
-                        <div class="barra-preenchida" style="width:70%"></div>
-                    </div>
-                    <p>70% de R$12.000</p>
+                <!-- DADOS DA INSTITUIÇÃO -->
+                <div class="card-azul">
+                    <h4>Dados da Instituição</h4>
+                    <div class="linha-dado"><span>CNPJ</span><span>000.000.000/00</span></div>
+                    <div class="linha-dado"><span>Telefone</span><span>+55 (88) 9.0000-0000</span></div>
+                    <div class="linha-dado"><span>E-mail</span><span>emef.joao.de.deus@email.com</span></div>
+                    <div class="linha-dado"><span>Responsável</span><span>Vanderlúcia Feitosa da Silva</span></div>
+                    <div class="linha-dado"><span>Membro desde</span><span>2025</span></div>
                 </div>
 
-                <div class="campanha-item">
-                    <div class="campanha-topo">
-                        <span class="titulo-campanha">Kits escolares 2025</span>
+                <!-- CAMPANHAS ATIVAS -->
+                <div class="card-azul">
+                    <h4>Campanhas Ativas</h4>
+
+                    <div class="campanha-item">
+                        <div class="campanha-topo">
+                            <span class="titulo-campanha">Renovação de Fardamento Escolar</span>
+                        </div>
+                        <div class="barra-fundo">
+                            <div class="barra-preenchida" style="width:70%"></div>
+                        </div>
+                        <p>70% de R$12.000</p>
                     </div>
-                    <div class="barra-fundo">
-                        <div class="barra-preenchida" style="width:36%"></div>
+
+                    <div class="campanha-item">
+                        <div class="campanha-topo">
+                            <span class="titulo-campanha">Kits escolares 2025</span>
+                        </div>
+                        <div class="barra-fundo">
+                            <div class="barra-preenchida" style="width:36%"></div>
+                        </div>
+                        <p>36% de R$5.000</p>
                     </div>
-                    <p>36% de R$5.000</p>
                 </div>
             </div>
-        </div>
 
-        <!-- COLUNA LATERAL -->
-        <div class="coluna-lateral">
+            <!-- COLUNA LATERAL -->
+            <div class="coluna-lateral">
 
-            <!-- DOAÇÕES RECEBIDAS -->
-            <div class="card-verde">
-                <h4>Doações recebidas</h4>
-                <table class="tabela-mini">
-                    <thead>
-                        <tr>
-                            <th>Doador</th>
-                            <th>Itens</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Maria R.</td>
-                            <td>150</td>
-                            <td><span class="status-badge">Concluída</span></td>
-                        </tr>
-                        <tr>
-                            <td>Anônimo</td>
-                            <td>50</td>
-                            <td><span class="status-badge">Concluída</span></td>
-                        </tr>
-                        <tr>
-                            <td>João P.</td>
-                            <td>300</td>
-                            <td><span class="status-badge">Pendente</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- DOAÇÕES RECEBIDAS -->
+                <div class="card-verde">
+                    <h4>Doações recebidas</h4>
+                    <table class="tabela-mini">
+                        <thead>
+                            <tr>
+                                <th>Doador</th>
+                                <th>Itens</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maria R.</td>
+                                <td>150</td>
+                                <td><span class="status-badge">Concluída</span></td>
+                            </tr>
+                            <tr>
+                                <td>Anônimo</td>
+                                <td>50</td>
+                                <td><span class="status-badge">Concluída</span></td>
+                            </tr>
+                            <tr>
+                                <td>João P.</td>
+                                <td>300</td>
+                                <td><span class="status-badge">Pendente</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- DOAÇÕES REALIZADAS -->
+                <div class="card-verde">
+                    <h4>Doações realizadas</h4>
+                    <table class="tabela-mini">
+                        <thead>
+                            <tr>
+                                <th>Instituição</th>
+                                <th>Itens</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Creche Lar...</td>
+                                <td>200</td>
+                                <td>12/01</td>
+                            </tr>
+                            <tr>
+                                <td>Inst. Semente</td>
+                                <td>150</td>
+                                <td>03/11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PAINEL: CAMPANHAS -->
+    <div id="painel-campanhas" class="painel" style="padding:24px 8%;">
+        <div class="card-azul">
+            <h4>Todas as Campanhas</h4>
+
+            <div class="campanha-item">
+                <div class="campanha-topo">
+                    <span class="titulo-campanha">Renovação de Fardamento Escolar</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-preenchida" style="width:70%"></div>
+                </div>
+                <p>70% de R$12.000 · Ativa</p>
             </div>
 
-            <!-- DOAÇÕES REALIZADAS -->
-            <div class="card-verde">
-                <h4>Doações realizadas</h4>
-                <table class="tabela-mini">
-                    <thead>
-                        <tr>
-                            <th>Instituição</th>
-                            <th>Itens</th>
-                            <th>Data</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Creche Lar...</td>
-                            <td>200</td>
-                            <td>12/01</td>
-                        </tr>
-                        <tr>
-                            <td>Inst. Semente</td>
-                            <td>150</td>
-                            <td>03/11</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="campanha-item">
+                <div class="campanha-topo">
+                    <span class="titulo-campanha">Kits escolares 2025</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-preenchida" style="width:36%"></div>
+                </div>
+                <p>36% de R$5.000 · Ativa</p>
+            </div>
+
+            <div class="campanha-item">
+                <div class="campanha-topo">
+                    <span class="titulo-campanha">Reforma da Biblioteca</span>
+                </div>
+                <div class="barra-fundo">
+                    <div class="barra-preenchida" style="width:100%"></div>
+                </div>
+                <p>100% de R$8.000 · Concluída</p>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- PAINEL: DOAÇÕES RECEBIDAS -->
+    <div id="painel-recebidas" class="painel" style="padding:24px 8%;">
+        <table class="tabela-historico">
+            <thead>
+                <tr>
+                    <th>Doador</th>
+                    <th>Itens</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Maria R.</td><td>150</td><td>15/01/2026</td><td><span class="status-badge">Concluída</span></td></tr>
+                <tr><td>Anônimo</td><td>50</td><td>10/01/2026</td><td><span class="status-badge">Concluída</span></td></tr>
+                <tr><td>João P.</td><td>300</td><td>05/01/2026</td><td><span class="status-badge">Pendente</span></td></tr>
+                <tr><td>Ana Beatriz</td><td>90</td><td>20/12/2025</td><td><span class="status-badge">Concluída</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PAINEL: DOAÇÕES REALIZADAS -->
+    <div id="painel-realizadas" class="painel" style="padding:24px 8%;">
+        <table class="tabela-historico">
+            <thead>
+                <tr>
+                    <th>Instituição</th>
+                    <th>Itens</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Creche Lar da Criança</td><td>200</td><td>12/01/2026</td></tr>
+                <tr><td>Instituto Semente</td><td>150</td><td>03/11/2025</td></tr>
+                <tr><td>ONG Reviver</td><td>80</td><td>22/09/2025</td></tr>
+            </tbody>
+        </table>
+    </div>
 
 </main>
 
