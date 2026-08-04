@@ -314,3 +314,517 @@ footer .rodape p {
     color:#1E293B;
     font-family:'Inter', sans-serif;
 }
+
+/* PÁGINAS DE PERFIL (Tela 02 e 03) */
+
+/* CABEÇALHO LOGADO */
+.menu-logado nav ul{
+    align-items:center;
+}
+
+.menu-logado nav a.ativo{
+    border-bottom:2px solid #222;
+    padding-bottom:6px;
+}
+
+.avatar-usuario{
+    width:32px;
+    height:32px;
+    border:2px solid #aaa;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    color:#1E293B;
+    font-weight:600;
+    flex-shrink:0;
+}
+
+/* FAIXA DE TOPO DO PERFIL */
+.perfil-topo{
+    background:rgba(245,158,11,.6);
+    border-bottom:2px solid #1E293B;
+    padding:22px 8%;
+}
+
+.perfil-topo .container{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    max-width:1150px;
+    margin:0 auto;
+}
+
+.perfil-avatar{
+    width:70px;
+    height:70px;
+    flex-shrink:0;
+    background:#F8FAFC;
+    border:1px solid #1E293B;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.perfil-avatar svg{
+    width:55px;
+    height:55px;
+}
+
+.perfil-info{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.perfil-info h2{
+    font-size:24px;
+    color:#1E293B;
+}
+
+.perfil-tags{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.perfil-tags span{
+    border:1px solid #aaa;
+    padding:1px 8px;
+    font-size:12px;
+    color:#1E293B;
+}
+
+.perfil-acoes{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.perfil-acoes button{
+    border:2px solid #222;
+    border-radius:20px;
+    padding:8px 16px;
+    font-weight:bold;
+    font-size:14px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.btn-acao-azul{
+    background:#2563EB;
+    color:#fff;
+}
+
+.btn-acao-verde{
+    background:#22C55E;
+    color:#000;
+}
+
+/* ESTATÍSTICAS DO PERFIL */
+.perfil-stats{
+    display:flex;
+    justify-content:center;
+    border-bottom:2px solid #ddd;
+    padding:0 8%;
+}
+
+.perfil-stats > div{
+    flex:1;
+    max-width:220px;
+    text-align:center;
+    padding:12px;
+    border-right:1px solid #ddd;
+}
+
+.perfil-stats > div:last-child{
+    border-right:none;
+}
+
+.perfil-stats h3{
+    font-size:18px;
+    color:#1E293B;
+}
+
+.perfil-stats p{
+    font-size:12px;
+    color:#777;
+}
+
+/* ABAS DO PERFIL */
+.perfil-abas{
+    display:flex;
+    border-bottom:2px solid #ddd;
+    padding:0 8%;
+    gap:4px;
+}
+
+.perfil-abas button{
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:14px 20px;
+    font-size:14px;
+    font-family:'Inter', sans-serif;
+    color:#777;
+}
+
+.perfil-abas button.ativa{
+    color:#1E293B;
+    font-weight:bold;
+    border-bottom:3px solid #222;
+}
+
+/* PAINÉIS */
+.painel{
+    display:none;
+}
+
+.painel.visivel{
+    display:block;
+}
+
+/* ABA HISTÓRICO */
+.tabela-historico{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    border-collapse:collapse;
+    font-size:13px;
+    background:#fff;
+    border:2px solid #1E293B;
+}
+
+.tabela-historico th{
+    background:#2563EB;
+    color:#fff;
+    text-align:left;
+    padding:10px 14px;
+}
+
+.tabela-historico td{
+    border-bottom:1px solid #eee;
+    padding:10px 14px;
+}
+
+/* ABA FAVORITOS */
+.grade-favoritos{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    gap:16px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.item-favorito{
+    border:2px solid #1E293B;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.item-favorito .icone-inst{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#F8FAFC;
+    border:1px solid #1E293B;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.item-favorito .icone-inst svg{
+    width:24px;
+    height:24px;
+}
+
+.item-favorito h5{
+    font-size:14px;
+    color:#1E293B;
+}
+
+.item-favorito p{
+    font-size:12px;
+    color:#777;
+}
+
+/* ABA IMPACTO */
+.grade-impacto{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+    gap:16px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.impacto-numero{
+    background:#2563EB;
+    color:#fff;
+    border:2px solid #1E293B;
+    padding:20px;
+    text-align:center;
+}
+
+.impacto-numero h3{
+    font-size:28px;
+    font-family:'Poppins', sans-serif;
+}
+
+.impacto-numero p{
+    font-size:12px;
+    margin-top:6px;
+    opacity:.9;
+}
+
+/* ABA CONQUISTAS */
+.card-conquistas.card-conquistas-grande{
+    max-width:700px;
+    margin:0 auto;
+}
+
+.card-conquistas-grande .grade-conquistas{
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+}
+
+.card-conquistas-grande .conquista{
+    padding:16px 8px;
+}
+
+.card-conquistas-grande .estrela{
+    font-size:28px;
+}
+
+.card-conquistas-grande p{
+    font-size:11px;
+}
+
+/* CAMPANHAS (aba isolada) */
+#painel-campanhas .card-azul{
+    max-width:900px;
+    margin:0 auto;
+}
+
+/* DUAS COLUNAS */
+.perfil-colunas{
+    display:flex;
+    gap:24px;
+    padding:24px 8%;
+    align-items:flex-start;
+}
+
+.coluna-principal{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    min-width:0;
+}
+
+.coluna-lateral{
+    width:300px;
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* CARD AZUL */
+.card-azul{
+    background:#2563EB;
+    color:#F8FAFC;
+    border:2px solid #1E293B;
+    padding:18px;
+}
+
+.card-azul h4{
+    font-size:17px;
+    border-bottom:2px solid #F8FAFC;
+    padding-bottom:6px;
+    margin-bottom:10px;
+}
+
+.linha-dado{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:6px 0;
+    font-size:13px;
+}
+
+/* LISTA DE CAMPANHAS */
+.campanha-item{
+    background:#F5F5F5;
+    border:1px solid #ccc;
+    padding:13px;
+    margin-top:12px;
+}
+
+.campanha-item:first-of-type{
+    margin-top:0;
+}
+
+.campanha-topo{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    font-weight:bold;
+    color:#222;
+    margin-bottom:8px;
+}
+
+.campanha-topo span{
+    color:#85BB65;
+}
+
+.barra-fundo{
+    background:#C8C8C8;
+    height:8px;
+    border-radius:1px;
+    margin-bottom:5px;
+}
+
+.barra-preenchida{
+    background:#888;
+    height:5px;
+    border-radius:1px;
+}
+
+.campanha-item p{
+    font-size:12px;
+    color:#777;
+    margin-top:8px;
+}
+
+/* CONQUISTAS */
+.card-conquistas{
+    background:#1565C0;
+    color:#fff;
+    border:2px solid #1E293B;
+    padding:18px;
+}
+
+.card-conquistas h4{
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.grade-conquistas{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:8px;
+}
+
+.conquista{
+    background:rgba(255,255,255,.1);
+    border-radius:6px;
+    text-align:center;
+    padding:10px 4px;
+}
+
+.conquista.bloqueada{
+    opacity:.45;
+    filter:grayscale(1);
+}
+
+.conquista .estrela{
+    font-size:20px;
+}
+
+.conquista p{
+    font-size:9px;
+    margin-top:4px;
+}
+
+.conquista .progresso{
+    background:rgba(255,255,255,.2);
+    height:4px;
+    border-radius:3px;
+    margin-top:6px;
+}
+
+.conquista .progresso span{
+    display:block;
+    background:#F59E0B;
+    height:4px;
+    border-radius:3px;
+}
+
+.conquistas-legenda{
+    text-align:center;
+    font-size:9px;
+    color:rgba(255,255,255,.6);
+    margin-top:10px;
+}
+
+/* CARD VERDE */
+.card-verde{
+    background:rgba(34,197,94,.6);
+    border:2px solid #1E293B;
+    padding:18px;
+}
+
+.card-verde h4{
+    font-size:17px;
+    color:#222;
+    border-bottom:2px solid #222;
+    padding-bottom:6px;
+    margin-bottom:12px;
+}
+
+.tabela-mini{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+}
+
+.tabela-mini th{
+    background:#eee;
+    border:1px solid #ddd;
+    text-align:left;
+    padding:6px 9px;
+    color:#1E293B;
+}
+
+.tabela-mini td{
+    border:1px solid #ddd;
+    padding:6px 9px;
+    color:#1E293B;
+}
+
+.status-badge{
+    border:1px solid #aaa;
+    font-size:11px;
+    color:#666;
+    padding:1px 8px;
+    display:inline-block;
+}
+
+/* RESPONSIVO PERFIL */
+@media(max-width:900px){
+    .perfil-colunas{
+        flex-direction:column;
+    }
+    .coluna-lateral{
+        width:100%;
+    }
+    .perfil-topo .container{
+        flex-wrap:wrap;
+    }
+    .perfil-stats{
+        flex-wrap:wrap;
+    }
+    .perfil-stats > div{
+        max-width:none;
+        width:50%;
+        border-right:none;
+        border-bottom:1px solid #ddd;
+    }
+}

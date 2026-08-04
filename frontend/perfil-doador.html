@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaSolidário - Perfil do Doador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- CABEÇALHO -->
+<header>
+    <div class="menu menu-logado">
+        <div class="logo">
+            <a href="index.html"><img src="img/logoEducaSolidario.jpg" alt="Logo EducaSolidário"></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="#" class="ativo">INSTITUIÇÕES</a></li>
+            </ul>
+        </nav>
+
+        <div class="avatar-usuario" title="Maria R.">MR</div>
+    </div>
+</header>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main>
+
+    <!-- FAIXA DE TOPO DO PERFIL -->
+    <section class="perfil-topo">
+        <div class="container">
+            <div class="perfil-avatar">
+                <!-- ÍCONE GENÉRICO DE USUÁRIO -->
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="8" r="4" fill="#1E293B"/>
+                    <path d="M4 20c0-3.31 3.58-6 8-6s8 2.69 8 6" stroke="#1E293B" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="perfil-info">
+                <h2>Maria R.</h2>
+                <div class="perfil-tags">
+                    <span>Doadora</span>
+                    <span>Fortaleza, CE</span>
+                    <span>Membro desde 2024</span>
+                </div>
+            </div>
+
+            <div class="perfil-acoes">
+                <button class="btn-acao-azul">Editar perfil</button>
+                <button class="btn-acao-verde">♡ Favoritos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTATÍSTICAS -->
+    <section class="perfil-stats">
+        <div>
+            <h3>R$2.450</h3>
+            <p>Total Doado</p>
+        </div>
+        <div>
+            <h3>5</h3>
+            <p>Inst. apoiadas</p>
+        </div>
+        <div>
+            <h3>12</h3>
+            <p>Doações recebidas</p>
+        </div>
+        <div>
+            <h3>3</h3>
+            <p>Favoritos</p>
+        </div>
+        <div>
+            <h3>4,9 ★</h3>
+            <p>Reputação</p>
+        </div>
+    </section>
+
+    <!-- ABAS -->
+    <nav class="perfil-abas">
+        <button class="ativa" data-alvo="painel-visao">Visão geral</button>
+        <button data-alvo="painel-historico">Histórico</button>
+        <button data-alvo="painel-favoritos">Favoritos</button>
+        <button data-alvo="painel-impacto">Impacto</button>
+        <button data-alvo="painel-conquistas">Conquistas</button>
+    </nav>
+
+    <!-- PAINEL: VISÃO GERAL -->
+    <div id="painel-visao" class="painel visivel">
+        <section class="perfil-colunas">
+
+            <!-- COLUNA PRINCIPAL -->
+            <div class="coluna-principal">
+
+                <!-- DADOS DO DOADOR -->
+                <div class="card-azul">
+                    <h4>Dados do Doador</h4>
+                    <div class="linha-dado"><span>CPF</span><span>***.456.789-**</span></div>
+                    <div class="linha-dado"><span>Telefone</span><span>+55 (88) 99999-0000</span></div>
+                    <div class="linha-dado"><span>E-mail</span><span>maria.r@email.com</span></div>
+                    <div class="linha-dado"><span>Endereço</span><span>Fortaleza, CE</span></div>
+                    <div class="linha-dado"><span>Membro desde</span><span>2024</span></div>
+                </div>
+
+                <!-- CAMPANHAS QUE APOIEI -->
+                <div class="card-azul">
+                    <h4>Campanhas que apoiei</h4>
+
+                    <div class="campanha-item">
+                        <div class="campanha-topo">
+                            <span class="titulo-campanha">Renovação de Fardamento Escolar</span>
+                            <span>R$150</span>
+                        </div>
+                        <div class="barra-fundo">
+                            <div class="barra-preenchida" style="width:70%"></div>
+                        </div>
+                        <p>EMEF João de Deus · 70% de R$12.000</p>
+                    </div>
+
+                    <div class="campanha-item">
+                        <div class="campanha-topo">
+                            <span class="titulo-campanha">Horta Comunitária Escolar</span>
+                            <span>R$80</span>
+                        </div>
+                        <div class="barra-fundo">
+                            <div class="barra-preenchida" style="width:36%"></div>
+                        </div>
+                        <p>Instituto Semente · 36% de R$5.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUNA LATERAL -->
+            <div class="coluna-lateral">
+
+                <!-- CONQUISTAS -->
+                <div class="card-conquistas">
+                    <h4>CONQUISTAS</h4>
+
+                    <div class="grade-conquistas">
+                        <div class="conquista">
+                            <div class="estrela">⭐</div>
+                            <p>Primeira Doação</p>
+                        </div>
+                        <div class="conquista">
+                            <div class="estrela">⭐</div>
+                            <p>Apoiador Fiel</p>
+                        </div>
+                        <div class="conquista">
+                            <div class="estrela">⭐</div>
+                            <p>5 Instituições</p>
+                        </div>
+                        <div class="conquista">
+                            <div class="estrela">⭐</div>
+                            <p>Mestre Doador</p>
+                            <div class="progresso"><span style="width:60%"></span></div>
+                        </div>
+                        <div class="conquista bloqueada">
+                            <div class="estrela">⭐</div>
+                            <p>Diamante</p>
+                            <div class="progresso"><span style="width:20%"></span></div>
+                        </div>
+                        <div class="conquista bloqueada">
+                            <div class="estrela">⭐</div>
+                            <p>Top Doador</p>
+                            <div class="progresso"><span style="width:10%"></span></div>
+                        </div>
+                    </div>
+
+                    <p class="conquistas-legenda">3 de 6 conquistas desbloqueadas</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PAINEL: HISTÓRICO -->
+    <div id="painel-historico" class="painel" style="padding:24px 8%;">
+        <table class="tabela-historico">
+            <thead>
+                <tr>
+                    <th>Instituição</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>EMEF João de Deus</td><td>R$150</td><td>15/01/2026</td><td><span class="status-badge">Concluída</span></td></tr>
+                <tr><td>Instituto Semente</td><td>R$80</td><td>02/01/2026</td><td><span class="status-badge">Concluída</span></td></tr>
+                <tr><td>Creche Lar da Criança</td><td>R$200</td><td>10/12/2025</td><td><span class="status-badge">Concluída</span></td></tr>
+                <tr><td>ONG Reviver</td><td>R$60</td><td>28/11/2025</td><td><span class="status-badge">Concluída</span></td></tr>
+                <tr><td>EMEF João de Deus</td><td>R$100</td><td>05/10/2025</td><td><span class="status-badge">Cancelada</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PAINEL: FAVORITOS -->
+    <div id="painel-favoritos" class="painel" style="padding:24px 8%;">
+        <div class="grade-favoritos">
+            <div class="item-favorito">
+                <div class="icone-inst">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2 2 7l10 5 10-5-10-5Z" fill="#1E293B"/>
+                    </svg>
+                </div>
+                <div>
+                    <h5>EMEF João de Deus</h5>
+                    <p>Fortaleza, CE</p>
+                </div>
+            </div>
+            <div class="item-favorito">
+                <div class="icone-inst">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2 2 7l10 5 10-5-10-5Z" fill="#1E293B"/>
+                    </svg>
+                </div>
+                <div>
+                    <h5>Instituto Semente</h5>
+                    <p>Crato, CE</p>
+                </div>
+            </div>
+            <div class="item-favorito">
+                <div class="icone-inst">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2 2 7l10 5 10-5-10-5Z" fill="#1E293B"/>
+                    </svg>
+                </div>
+                <div>
+                    <h5>Creche Lar da Criança</h5>
+                    <p>Juazeiro do Norte, CE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAINEL: IMPACTO -->
+    <div id="painel-impacto" class="painel" style="padding:24px 8%;">
+        <div class="grade-impacto">
+            <div class="impacto-numero">
+                <h3>~440</h3>
+                <p>Crianças beneficiadas</p>
+            </div>
+            <div class="impacto-numero">
+                <h3>8</h3>
+                <p>Campanhas apoiadas</p>
+            </div>
+            <div class="impacto-numero">
+                <h3>5</h3>
+                <p>Instituições alcançadas</p>
+            </div>
+            <div class="impacto-numero">
+                <h3>3</h3>
+                <p>Cidades do CRAJUBAR</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAINEL: CONQUISTAS -->
+    <div id="painel-conquistas" class="painel" style="padding:24px 8%;">
+        <div class="card-conquistas card-conquistas-grande">
+            <h4>CONQUISTAS</h4>
+            <div class="grade-conquistas">
+                <div class="conquista">
+                    <div class="estrela">⭐</div>
+                    <p>Primeira Doação</p>
+                </div>
+                <div class="conquista">
+                    <div class="estrela">⭐</div>
+                    <p>Apoiador Fiel</p>
+                </div>
+                <div class="conquista">
+                    <div class="estrela">⭐</div>
+                    <p>5 Instituições</p>
+                </div>
+                <div class="conquista">
+                    <div class="estrela">⭐</div>
+                    <p>Mestre Doador</p>
+                    <div class="progresso"><span style="width:60%"></span></div>
+                </div>
+                <div class="conquista bloqueada">
+                    <div class="estrela">⭐</div>
+                    <p>Diamante</p>
+                    <div class="progresso"><span style="width:20%"></span></div>
+                </div>
+                <div class="conquista bloqueada">
+                    <div class="estrela">⭐</div>
+                    <p>Top Doador</p>
+                    <div class="progresso"><span style="width:10%"></span></div>
+                </div>
+            </div>
+            <p class="conquistas-legenda">3 de 6 conquistas desbloqueadas</p>
+        </div>
+    </div>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+    <div class="rodape">
+        <p>© 2026 EducaSolidário. Todos os direitos reservados.</p>
+        <p>Desenvolvido por EducaSolidário</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
