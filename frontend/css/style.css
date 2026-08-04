@@ -606,9 +606,8 @@ footer .rodape p {
     font-size:11px;
 }
 
-/* CAMPANHAS E DOAÇÕES (abas isoladas) */
-.painel .card-azul,
-.painel .card-verde{
+/* CAMPANHAS (aba isolada) */
+#painel-campanhas .card-azul{
     max-width:900px;
     margin:0 auto;
 }
