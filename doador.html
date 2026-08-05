@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educa Solidário — Login</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --blue: #3B5FE0;
+    --blue-dark: #2D4BC7;
+    --green: #4CAF50;
+    --green-dark: #43A047;
+    --gray-bg: #D9D9D9;
+    --gray-text: #6B7280;
+    --text-dark: #1F2430;
+    --link-blue: #3B5FE0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
+    background: #fff;
+  }
+
+  .screen {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ---------- Painel esquerdo (branding) ---------- */
+  .brand-panel {
+    flex: 0 0 42%;
+    background: var(--blue);
+    color: #fff;
+    padding: 56px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .brand-top .logo {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .brand-top .logo strong {
+    display: block;
+    font-size: 32px;
+    font-weight: 800;
+    color: #6FE07A;
+  }
+
+  .brand-mid { margin-top: 60px; }
+  .brand-mid h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.18;
+    margin-bottom: 24px;
+  }
+  .brand-mid p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #E7ECFC;
+    max-width: 420px;
+  }
+
+  .brand-features { margin-top: auto; padding-top: 64px; }
+  .feature { margin-bottom: 22px; }
+  .feature:last-child { margin-bottom: 0; }
+  .feature h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .feature p {
+    font-size: 14px;
+    color: #DCE3FA;
+    line-height: 1.4;
+  }
+
+  /* ---------- Painel direito (formulário) ---------- */
+  .form-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    background: #fff;
+  }
+
+  .form-wrap {
+    width: 100%;
+    max-width: 470px;
+  }
+
+  .form-wrap h2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .form-wrap > p.subtitle {
+    font-size: 15px;
+    color: var(--gray-text);
+    margin-bottom: 28px;
+  }
+
+  .field { margin-bottom: 22px; }
+  .field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .profile-toggle {
+    display: flex;
+    gap: 12px;
+  }
+  .profile-toggle button {
+    flex: 1;
+    padding: 14px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--gray-bg);
+    color: var(--text-dark);
+    transition: background .15s ease, color .15s ease;
+  }
+  .profile-toggle button.active {
+    background: var(--blue);
+    color: #fff;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: none;
+    background: var(--gray-bg);
+    font-size: 14px;
+    color: var(--text-dark);
+    outline: none;
+  }
+  input::placeholder { color: #8A8A8A; }
+  input:focus {
+    box-shadow: 0 0 0 2px var(--blue);
+  }
+
+  .forgot {
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--link-blue);
+    text-decoration: none;
+  }
+  .forgot:hover { text-decoration: underline; }
+
+  .btn-primary {
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    border-radius: 10px;
+    background: var(--green);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background .15s ease;
+  }
+  .btn-primary:hover { background: var(--green-dark); }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 26px 0;
+    color: var(--gray-text);
+    font-size: 13px;
+  }
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #C9C9C9;
+  }
+
+  .btn-google {
+    width: 100%;
+    padding: 15px 0;
+    border: 1.5px solid #1F2430;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+    cursor: pointer;
+  }
+  .btn-google:hover { background: #F7F7F7; }
+
+  .signup {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    color: var(--text-dark);
+  }
+  .signup a {
+    color: var(--link-blue);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .signup a:hover { text-decoration: underline; }
+
+  @media (max-width: 900px) {
+    .screen { flex-direction: column; }
+    .brand-panel { flex: none; padding: 40px 28px; }
+    .brand-mid h1 { font-size: 34px; }
+    .form-panel { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="screen">
+
+  <!-- Painel de marca -->
+  <aside class="brand-panel">
+    <div class="brand-top">
+      <div class="logo">Educa<strong>Solidário</strong></div>
+    </div>
+
+    <div class="brand-mid">
+      <h1>Faça parte de<br>algo maior</h1>
+      <p>Conectando doadores a instituições de ensino que precisam de apoio</p>
+    </div>
+
+    <div class="brand-features">
+      <div class="feature">
+        <h3>Encontre instituições</h3>
+        <p>Descubra escolas e projetos que precisam do seu apoio</p>
+      </div>
+      <div class="feature">
+        <h3>Doe com segurança</h3>
+        <p>Transparência total em cada contribuição realizada</p>
+      </div>
+      <div class="feature">
+        <h3>Acompanhe o impacto</h3>
+        <p>Veja o resultado das suas doações em tempo real</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Painel do formulário -->
+  <main class="form-panel">
+    <div class="form-wrap">
+      <h2>Bem-vindo de volta</h2>
+      <p class="subtitle">Entre na sua conta para continuar</p>
+
+      <div class="field">
+        <label>Perfil</label>
+        <div class="profile-toggle">
+          <button type="button" id="btn-doador" class="active">Doador</button>
+          <button type="button" id="btn-instituicao">Instituição</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="">
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="">
+        <a href="#" class="forgot">Esqueci minha senha</a>
+      </div>
+
+      <button type="button" class="btn-primary">Entrar</button>
+
+      <div class="divider">ou</div>
+
+      <button type="button" class="btn-google">Continuar com Google</button>
+
+      <p class="signup">Não tem conta? <a href="#">Cadastre-se gratuitamente</a></p>
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>
