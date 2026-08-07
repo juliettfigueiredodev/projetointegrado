@@ -10,7 +10,19 @@ Na plataforma, **instituições** (como escolas, ONGs e projetos sociais) podem 
 
 Além disso, a plataforma também permite que **instituições troquem recursos entre si**, facilitando o reaproveitamento de materiais e a construção de uma rede colaborativa.
 
-## Possíveis usos da nossa solução
+## 1. Problema
+A desigualdade socioeconômica impõe barreiras signficativas ao desenvolvimento educacional, fazendo com que diversas crianças e jovens em situação de vulnerabilidade iniciem o ano letivo sem os recursos básicos necessários para o aprendizado. Em contrapartida, observa-se um ciclo contínuo de desperdício na sociedade: materiais em bom estado de conservação que poderiam ser reaproveitados e que infelizmente acabam sendo descartados ou esquecidos ao final de cada período letivo por famílias que não precisam mais deles. A solução proposta atua justamente nessa problemátca, conectando o excedente de material à escassez do mesmo de maneira promover não somente a sustentabilidade ambiental, mas também a equidade e a dignidadde no acesso à Educação.
+
+## 2. Objetivo do Sistema
+O principal objetivo do sistema é promover a missão do EducaSolidário, atuando com uma plataforma web facilitadora entre quem deseja ajudar e quem precisa do apoio. O sistema tem como visão estruturar e apoiar o processo de doação e reaproveitamento de materias escolares, transformando a solidariedade em uma ação prática, acessível e além de tudo organizada. Portanto, o projeto busca diminuir a exclusão escolar motivada pela falta de recursos básicos, ao mesmo tempo em que incentiva práticas de consumo consciente e economia dentro da comunidade.
+
+## 3. Visão Geral do Sistema e Jornada do Usuário
+O Educasolidário funciona como uma ponte de encontro digital que centraliza e cruza informações de oferta e demanda de materiais escolares. A jornada se dá no sistema por meio de duas pespectivas complementares:
+
+* Para Instituições (quem recebe): Organizações sociais,cnpjs, escolas ou projetos comunitários que atendem famílias vulneráveis realizam um cadastro na plataforma. Após o cadastramento, essas instituções podem registrar suas demandas, criando listas de itens necessários que ficam na fila como prioridade para os seus assistidos.
+* Para os Doadores: Pessoas físicas ou jurídicas que possuem materiais em bom estado acessam a plataforma e visualizam uma tela com as demandas existentes. O doador pode explorar esses pedidos, selecionar a instituição que deseja apoiar e formalizar a sua intenção de doação no sistema. A partir desse momento, a plataforma fornece as orientações e as informações necessárias para que a entrega do material seja organizada e finalizada de forma segura entre as partes.
+
+## 4. Possíveis usos da nossa solução
 
 Um primeiro uso seria por **famílias em situação de vulnerabilidade socioeconômica** que têm dificuldade para comprar materiais escolares para crianças e adolescentes. Por meio da plataforma, essas famílias podem encontrar instituições próximas que recebem doações de mochilas, cadernos, lápis, livros e outros itens, facilitando o acesso a recursos básicos para a permanência na escola.
 
@@ -22,7 +34,7 @@ A solução também pode ser útil para **negócios do mundo real**, como papela
 
 Por fim, a plataforma pode atuar como uma **rede de troca entre instituições**, não apenas de materiais, mas também de projetos e conhecimento. Por exemplo, uma escola que já possua estrutura e know-how para montar uma **rádio estudantil** pode, por meio da aplicação, entrar em contato com outra instituição interessada em implementar um projeto semelhante. A primeira escola pode compartilhar sua experiência, orientações e até recursos excedentes, enquanto a segunda recebe apoio para colocar a iniciativa em prática. Dessa forma, nossa solução contribui para um uso mais sustentável dos recursos, incentiva o reaproveitamento de materiais e fortalece iniciativas educacionais e comunitárias no mundo real.
 
-## Projeto físico de banco de dados e sua importância para quem está aprendendo a programar.
+## 5. Projeto físico de banco de dados e sua importância para quem está aprendendo a programar.
 
 O projeto físico de banco de dados é a última etapa do processo de modelagem de um banco. Nela, o modelo criado anteriormente é implementado em um sistema de gerenciamento de banco de dados (como MySQL, PostgreSQL ou Oracle), definindo como os dados serão armazenados no computador.
 
@@ -30,26 +42,26 @@ Essa fase envolve decisões importantes, como a criação de tabelas, definiçã
 
 Para quem está aprendendo a programar, o projeto físico é fundamental porque mostra como a estrutura do banco influencia diretamente o funcionamento da aplicação. Um bom projeto físico pode deixar o sistema mais rápido, estável e eficiente, enquanto um projeto mal feito pode causar lentidão e problemas de desempenho, mesmo com um código bem escrito.
 
-## 🎨 Interface Humano-Computador (IHC) e Prototipação
+## 6. 🎨 Interface Humano-Computador (IHC) e Prototipação
 
 Como parte do nosso compromisso em criar uma aplicação que realmente atenda às necessidades da comunidade, aplicamos conceitos de Interface Humano-Computador (IHC) e Design Centrado no Usuário no desenvolvimento do EducaSolidário.
 
-### Como prototipar um Wireframe? (Guia Prático)
+### 6.1. Como prototipar um Wireframe? (Guia Prático)
 Um wireframe é como o "esqueleto" ou a planta baixa de um site ou aplicativo. Ele serve para organizar as informações na tela antes de nos preocuparmos com cores ou imagens. Se você deseja prototipar um, siga estes passos:
 
-1. **Entenda o Objetivo:** Antes de desenhar, saiba o que o usuário precisa fazer naquela tela (ex: fazer login, encontrar um projeto para apoiar).
-2. **Faça um rascunho no papel (Baixa Fidelidade):** Não vá direto para o computador. Desenhe caixas e rabiscos em um caderno para testar ideias de layout de forma rápida e barata.
-3. **Use ferramentas digitais (Média Fidelidade):** Utilize softwares gratuitos como Figma, Balsamiq ou Draw.io. Crie retângulos para imagens, linhas para textos e formas simples para botões.
-4. **Foque na estrutura, não na estética:** Evite usar cores (trabalhe em escala de cinza) e não perca tempo escolhendo fontes bonitas. O objetivo é validar a hierarquia da informação e onde cada elemento vai ficar.
-5. **Peça feedback:** Mostre o "esqueleto" para outras pessoas e veja se elas conseguem entender como navegar de forma intuitiva.
+6.1.1. **Entenda o Objetivo:** Antes de desenhar, saiba o que o usuário precisa fazer naquela tela (ex: fazer login, encontrar um projeto para apoiar).
+6.2.2. **Faça um rascunho no papel (Baixa Fidelidade):** Não vá direto para o computador. Desenhe caixas e rabiscos em um caderno para testar ideias de layout de forma rápida e barata.
+6.3.3. **Use ferramentas digitais (Média Fidelidade):** Utilize softwares gratuitos como Figma, Balsamiq ou Draw.io. Crie retângulos para imagens, linhas para textos e formas simples para botões.
+6.4.4. **Foque na estrutura, não na estética:** Evite usar cores (trabalhe em escala de cinza) e não perca tempo escolhendo fontes bonitas. O objetivo é validar a hierarquia da informação e onde cada elemento vai ficar.
+6.5.5. **Peça feedback:** Mostre o "esqueleto" para outras pessoas e veja se elas conseguem entender como navegar de forma intuitiva.
 
-### O Impacto do Design Centrado no Usuário na Sociedade
+### 6.2. O Impacto do Design Centrado no Usuário na Sociedade
 
 O Design Centrado no Usuário (DCU) vai muito além de criar telas visualmente agradáveis. Ele trata de colocar as necessidades, limitações e contextos das pessoas reais no centro do desenvolvimento de software. No nosso dia a dia, sistemas mal desenhados causam frustração, exclusão e perda de tempo — pense em um idoso tentando usar um aplicativo de banco confuso ou uma pessoa com deficiência visual que não consegue navegar em um site governamental porque ele não tem suporte a leitores de tela.
 
 Quando aplicamos o design centrado no usuário, criamos sistemas mais intuitivos, eficientes e acessíveis. No contexto do **EducaSolidário**, isso significa projetar interfaces onde uma escola com poucos recursos tecnológicos consiga cadastrar suas necessidades de forma fácil. Significa garantir alto contraste e botões claros para que qualquer doador realize sua ação sem confusão. Em resumo, melhorar a qualidade da Interface Humano-Computador é promover cidadania e inclusão digital, garantindo que a tecnologia sirva à sociedade como uma ponte facilitadora, e não como uma barreira.
 
-### Importância da Experiência do Usuário (UX)
+### 6.3. Importância da Experiência do Usuário (UX)
 
 A Experiência do Usuário (UX) está relacionada à maneira como as pessoas percebem e utilizam um sistema, site ou aplicativo durante a interação com a interface. Isso envolve facilidade de uso, organização das informações, acessibilidade, eficiência e satisfação do usuário. Dessa forma, a UX não se preocupa apenas com a aparência visual da interface, mas também com o funcionamento do sistema e com a forma como o usuário se sente ao utilizá-lo.
 
@@ -57,20 +69,46 @@ A UX é importante pois busca tornar os produtos mais intuitivos, funcionais e a
 
 Nos dias atuais, as pessoas têm a necessidade de tecnologias rápidas e intuitivas, por isso um bom design de interface facilita o acesso e melhora a interação com diferentes sistemas no dia a dia, impactando positivamenta suas vidas. Em ambientes como escolas, empresas, hospitais e aplicativos de serviços, interfaces simples e organizadas ajudam na produtividade, na comunicação e na eficiência das atividades. Por isso, pensar na experiência do usuário é essencial para desenvolver sistemas mais acessíveis, úteis e eficientes no mundo real.
 
-### Decisões Tomadas ao longo do desenvolvimento
+## 7. Decisões Tomadas ao longo do desenvolvimento
 
-#### Design e Identidade Visual
+#### 7.1. Design e Identidade Visual
 O Design do protótipo de alta fidelidade feito no Figma foi pensado no conforto visual e clareza na navegação dos usuários. Nesse sentido, as seguintes decisões foram tomadas: 
 
 - **Logo:** Símbolo de mãos dadas e ligações - representa conexão e colaboração;
 - **Paleta de cores:** o azul representa conhecimento, o verde, colaboração, trazendo ainda mais sentido à logo. Assim, adicionando as cores âmbar e grafite, para destaques e textos, a escolha da paleta traz um padrão visual e funcional para a plataforma, proporcionando consistência entre as interfaces;
 - **Fontes:** as fontes selecionadas foram a **Poppins** para os títulos e a **Inter** para textos e interfaces. A primeira por ser moderna, geométrica e amigável; a segunda por sua legibilidade, limpeza e tecnologia.
 
-#### Arquitetura e Código
+#### 7.2. Arquitetura e Código
 - **Escolha do Modelo Relacional:** Optou-se pela utilização de um banco de dados relacional para mapear com precisão matemática os relacionamentos lógicos do ecossistema do EducaSolidario. A integridade referencial garante que entidades complexas (como as relações N:N entre doadores, materiais cadastrados e as necessidades específicas de cada instituição) mantenham consistência absoluta através de chaves estrangeiras (`FOREIGN KEY`).
 - **Otimização de Desempenho:** A estrutura do banco de dados foi projetada visando alto desempenho em consultas frequentes. Áreas críticas do sistema utilizam tipos enumerados (`ENUM`) para categorias e status, o que otimiza o armazenamento em disco e agiliza a indexação. Além disso, o posicionamento estratégico de índices nos campos de busca e login (como `email`, `cpf`, `cnpj` e status de campanhas) garante tempos de resposta mínimos na renderização dos painéis e dashboards.
 
-### Tecnologias Utilizadas
+## 8. O que é Arquitetura de Software?
+
+Quando o sistema *educaSolidário* começou a ser desenvolvido, uma das primeiras preocupações que tivemos que lidar não foi a escolha da linguagem de programação a ser utilizada, mas sim **como as partes do sistema vão se organizar entre si**. Essa preocupação é, no fundo, sobre arquitetura de software, que pode ser definida como o conjunto de decisões que define como um sistema é estruturado internamente - quais peças existem, o que cada uma faz e como os módulos conversam entre si.
+
+Nesse ponto, o princípio do equilíbrio entre os conceitos de **coesão** e **acoplamento**, estudados em Análise e Modelagem de Sistemas nos ajudaram na busca da qualidade e organização na codificação do sistema.
+
+A **coesão** está relacionada ao foco, ou seja, cada camada faz uma coisa só, enquanto que o **acoplamento** mede a dependência entre os módulos. Em Engenharia de Software, o desejável é a **alta coesão** e **baixo acoplamento**, uma vez que ajuda na manutenibilidade, reutilização, testabilidade e legibilidade do código.
+
+No âmbito do *educaSolidário*, esses conceitos significaram decidir, por exemplo, que a tela de login nunca acessa o banco
+de dados diretamente.  Ela passa por uma camada de aplicação, que delega para uma camada de domínio (onde vivem as regras de negócio, como validar um CPF ou um CNPJ), que só então aciona a camada de persistência para falar com o PostgreSQL. Em síntese, cada camada faz uma coisa só e isso impede que uma pequena mudança em um trecho de código implique na quebra de na quebra de outras funcionalidades não relacionadas em partes distintas do sistema.
+
+Essa organização tem consequências práticas para o projeto:
+
+- **Escalabilidade:** se o número de usuários do sistema crescer, sabemos onde otimizar primeiro, por exemplo, adicionando índices na camada de persistência, evitando a reescrita completa da aplicação;
+
+- **Segurança:** como o acesso ao banco está centralizado em uma única camada, as validações (como checar se um CPF é válido antes de gravar) são aplicadas sempre no mesmo lugar. Com isso, reduz-se o risco de algum desenvolvedor esquecer de validar algo em um ponto isolado do código.
+
+- **Desempenho:** a estrutura do banco de dados foi rigorosamente pensada antes da implementação da aplicação que a utiliza. Logo, decisões como a utilização de tipos enumerados para status de doação (pendente, em trânsito, entregue) são possíveis e eficientes porque a estrutura de dados foi definida previamente.
+
+- **Manutenção:** quando um novo integrante da equipe precisa entender o projeto, a separação em camadas ajuda na legibilidade, ao deixar claro onde está a regra de negócio de uma doação, por exemplo. 
+
+- **Evolução do sistema:** com a separação em módulos, o código fica manutenível para correção de *bugs*, para a atualização de recursos e para a integração de novas funcionalidades (ex.: login social), sem precisar reescrever todo o código. A arquitetura já isola onde cada novo recurso deve entrar. Um exemplo consta no protótipo, onde o botão "Continuar com Google" na tela de login indica, desde o início, a previsão da autenticação via terceiros (*third-party authentication*).
+
+Portanto, a Arquitetura de Software impacta e é impactada por cada uma das fases do ciclo de vida de um software. Em última análise, o design da arquitetura do sistema (de como ele será estruturado, de como os módulos conversarão entre si) é o que decidirá se o projeto vai envelhecer bem ou se será entendido apenas por quem escreveu o código original.
+
+
+## 9. Tecnologias Utilizadas
 
 - **[Python 3.x](https://www.python.org/)** — Linguagem principal utilizada no backend devido à sua legibilidade, rapidez de desenvolvimento e ecossistema robusto para a estruturação de regras de negócio.
 - **[PostgreSQL](https://www.postgresql.org/)** — Sistema de Gerenciamento de Banco de Dados Relacional (SGBDR) escolhido por sua alta confiabilidade, conformidade ACID estrita e excelente suporte para indexação avançada e integridade de dados complexos.
@@ -80,9 +118,9 @@ O Design do protótipo de alta fidelidade feito no Figma foi pensado no conforto
 - **[GitHub](https://github.com/)** — Plataforma para hospedagem segura do repositório remoto e facilitação do trabalho colaborativo entre os membros da equipe.
 - **[VS Code](https://code.visualstudio.com/)** — Ambiente de desenvolvimento integrado (IDE) leve e altamente customizável adotado para a escrita e depuração do projeto.
 
-## Rodando localmente
+## 10. Rodando localmente
 
-### 1. Clone o projeto
+### 10.1. Clone o projeto
 
 ```bash
   git clone https://github.com/juliettfigueiredodev/projetointegrado.git
@@ -94,7 +132,7 @@ Entre no diretório do projeto
   cd projetointegrado
 ```
 
-### 2. Configuração do Ambiente Virtual (Python)
+### 10.2. Configuração do Ambiente Virtual (Python)
 
 ```bash
   # Criar o ambiente virtual
@@ -113,7 +151,7 @@ Instale as dependências do projeto:
   pip install -r requirements.txt
 ```
 
-### 3. Configuração de Variáveis de Ambiente
+### 10.3. Configuração de Variáveis de Ambiente
 
 * Crie um arquivo .env como o 'exemplo' na raiz do projeto (baseado no .env.example) e configure as credenciais do banco:
 
@@ -125,7 +163,7 @@ DB_HOST=localhost
 DB_PORT=5432
 ```
 
-### Importante: A criação das tabelas e a estrutura do banco deve ser feita manualmente via linha de comando na primeira execução. 
+### 10.4. Importante: A criação das tabelas e a estrutura do banco deve ser feita manualmente via linha de comando na primeira execução. 
 
 * Execute o script de infraestrutura para criar o schema:
 ```bash
@@ -134,17 +172,17 @@ python src/infrastructure/user_db.py
 Você deverá ver a mensagem: "Tabelas, Types e Triggers criados com sucesso!"
 
 
-### 5. Inicie a Aplicação
+### 10.5. Inicie a Aplicação
 Com o banco configurado, inicie o sistema:
 ```bash
   python app.py
 ```
 
 
-## Etiquetas
+## 11. Etiquetas
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-## Autores
+## 12. Autores
 
 - [@Juliett Figueirêdo](https://github.com/juliettfigueiredodev)
 - [@Juan Carlos](https://github.com/JuanCostaDev)
