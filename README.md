@@ -197,7 +197,6 @@ projetointegrado/
     │   ├── login.html
     │   ├── cadastro.html
     │   ├── recuperacao-senha.html
-    │   ├── home.html
     │   ├── perfil-doador.html
     │   └── perfil-instituicao.html
     ├── css/                      # Folhas de estilo
@@ -219,19 +218,19 @@ A sprint goal #3, tendo como arcabouço teórico contido na disciplina de Desenv
 
 ### Divisão das tarefas em Projeto Integrado III
 
-**Sprint #1**
+**Sprint #1** - 
 Foram concentrados esforços na identidade visual, no protótipo de alta fidelidade e na documentação inicial do projeto. Alana elaborou a proposta de identidade visual — paleta de cores, fontes e logotipo — e desenvolveu a página inicial no Figma em colaboração com Juan, que também criou as telas de perfil do doador e de recuperação de senha e colaborou na tela de perfil da instituição. André ficou responsável pelas telas de autenticação: login e cadastro para os dois perfis (Doador e Instituição), que serviram de base para as telas de feedback de confirmação e de recuperação de senha. Juliett coordenou a distribuição de tarefas, elaborou a tela de perfil da instituição, configurou a navegação do protótipo e produziu um vídeo de orientação sobre o Figma para os colegas sem familiaridade com a ferramenta. Na documentação, Eduardo contribuiu com a visão geral do sistema e o componente extensionista no relatório; Linderval explicou as classes implementadas, o código-fonte e as decisões de arquitetura no README; Flávia contextualizou o projeto no README e no relatório.
 
-**Sprint #2**
+**Sprint #2** - 
 O time se voltou para a documentação arquitetural do sistema. A coordenação da sprint ficou com Juliett e Juan. André ficou responsável pela atualização do README, incluindo a seção extensionista "O que é Arquitetura de Software?". No preenchimento do relatório, Eduardo tratou da visão geral da arquitetura; Juan e Flávia desenvolveram o modelo arquitetural do sistema, abrangendo estrutura em camadas, componentes, tecnologias e integrações; Juliett ficou com as decisões arquiteturais; e Alana e Linderval cuidaram das boas práticas e padrões arquiteturais adotados no projeto.
 
-**Sprint #3**
+**Sprint #3** - 
 Na Sprint 3, a equipe concentrou esforços no desenvolvimento do MVP Web funcional. O frontend foi o foco principal: cada integrante ficou responsável por um conjunto de páginas HTML, implementando o visual definido no protótipo de alta fidelidade da Sprint 1 e seguindo a arquitetura documentada na Sprint 2. André ficou encarregado da atualização do README com as novas seções exigidas pela sprint — incluindo o componente extensionista "Como utilizar a aplicação".
 
-**Uso do GitHub**
+**Uso do GitHub** - 
 O versionamento foi feito inteiramente via Git e GitHub. A equipe adotou a prática de criar branches separados para cada conjunto de alterações e abrir pull requests para revisão antes de integrar ao branch principal. Esse histórico de commits e pull requests está disponível no repositório e evidencia a evolução incremental do projeto ao longo das sprints.
 
-**Dificuldades encontradas e soluções adotadas**
+**Dificuldades encontradas e soluções adotadas** - 
 Uma das principais dificuldades foi a curva de aprendizado com o Figma para os integrantes que não tinham familiaridade com a ferramenta. A Juliett preparou um vídeo com orientações básicas de uso do Figma para a equipe, o que acelerou o início do trabalho no protótipo. Outra dificuldade foi a adaptação do wireframe de baixa fidelidade — desenvolvido na sprint anterior — para a alta fidelidade, mantendo a consistência visual sem retrabalhar a estrutura já validada. A solução foi trabalhar em duas fases separadas: estrutura primeiro, estética depois.
 
 ### Demonstração do MVP
@@ -239,27 +238,27 @@ Uma das principais dificuldades foi a curva de aprendizado com o Figma para os i
 As imagens abaixo mostram as principais telas do EducaSolidário em funcionamento, evidenciando o fluxo de navegação da aplicação.
 
 **Página inicial**
-![index.html](screenshots/1.screenshot-index.PNG)
+![index.html](frontend/img/screenshots/screenshots/1.screenshot-index.PNG)
 
 **Login Doador e Instituição**
-![doador.html](screenshots/screenshot-login-doador.PNG)
+![doador.html](frontend/img/screenshots/screenshot-login-doador.PNG)
 
-![instituicao.html](screenshots/screenshot-login-instituicao.PNG)
+![instituicao.html](frontend/img/screenshots/screenshot-login-instituicao.PNG)
 
 **Perfil do Doador**
-![perfil-doador.html](screenshots/screenshot-perfil-doador.PNG)
+![perfil-doador.html](frontend/img/screenshots/screenshot-perfil-doador.PNG)
 
 **Perfil da Instituição**
-![perfil-instituicao.html](screenshots/screenshot-perfil-instituicao.PNG)
+![perfil-instituicao.html](frontend/img/screenshots/screenshot-perfil-instituicao.PNG)
 
 **Cadastro — perfil Doador (campo CPF visível)**
-![cadastro.html](screenshots/screenshot-cadastro-doador.PNG)
+![cadastro.html](frontend/img/screenshots/screenshot-cadastro-doador.PNG)
 
 **Cadastro — perfil Instituição (campo CNPJ visível)**
-![cadastro.html](screenshots/screenshot-cadastro-instituicao.PNG)
+![cadastro.html](frontend/img/screenshots/screenshot-cadastro-instituicao.PNG)
 
 **Cadastro realizado com sucesso**
-![cadastro.html](screenshots/screenshot-cadastro-sucesso.PNG)
+![cadastro.html](frontend/img/screenshots/screenshot-cadastro-sucesso.PNG)
 
 A navegação entre as telas segue o fluxo: página inicial → login → home/perfis (após autenticação), com acesso ao cadastro a partir do login.
 
