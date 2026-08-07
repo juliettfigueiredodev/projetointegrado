@@ -1,0 +1,342 @@
+/* ==========================================================================
+   Autor: Linderval Moura Matias
+   
+   CSS das Telas: 04 - Cadastro Instituição Selecionada; 
+                  05 - Cadastro Doador Selecionada; 
+                  08 - Cadastro Bem Sucedido;
+   ========================================================================== */
+
+/* ==========================================================================
+   Variáveis Globais (Design Tokens)
+   ========================================================================== */
+:root {
+    --color-primary: #22c55e; /* Verde principal */
+    --color-primary-hover: #16a34a;
+    --color-secondary: #3b82f6; /* Azul */
+    --color-bg: #ffffff;
+    --color-bg-input: #e5e7eb;
+    --color-bg-toggle: #f3f4f6;
+    
+    --color-text-dark: #1f2937;
+    --color-text-light: #ffffff;
+    --color-text-muted: #6b7280;
+    
+    --font-family: 'Inter', sans-serif;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Reset CSS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-text-dark);
+    background-color: var(--color-bg);
+    line-height: 1.5;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Layout Principal (Split Screen)
+   ========================================================================== */
+.auth-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Painel Esquerdo (Verde) --- */
+.auth-sidebar {
+    flex: 1;
+    max-width: 45%;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 4rem;
+}
+
+.logo span {
+    color: var(--color-secondary);
+}
+
+.sidebar-content .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.sidebar-content .subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.features-list strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.features-list p {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* --- Painel Direito (Formulário) --- */
+.auth-forms-container {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.auth-header {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 2rem;
+}
+
+.back-link {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.form-title {
+    font-size: 1.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Componentes de Formulário
+   ========================================================================== */
+.form-screen {
+    width: 100%;
+    max-width: 450px;
+    display: none; /* Oculta todas as telas por padrão */
+}
+
+.form-screen.active {
+    display: block; /* Mostra apenas a tela ativa */
+}
+
+/* Toggle (Doador / Instituição) */
+.profile-toggle {
+    display: flex;
+    background-color: var(--color-bg-toggle);
+    border-radius: var(--border-radius);
+    padding: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: var(--transition);
+}
+
+.toggle-btn.active {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-dark);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.875rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-bg-input);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-group input:focus {
+    outline: 2px solid var(--color-secondary);
+    background-color: var(--color-bg);
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Botões Principais */
+.btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-google {
+    background-color: transparent;
+    border: 1px solid #d1d5db;
+    color: var(--color-text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.btn-google:hover {
+    background-color: #f9fafb;
+}
+
+/* Divisor "ou" */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin: 0.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.divider::before { margin-right: 1rem; }
+.divider::after { margin-left: 1rem; }
+
+/* Rodapé do form */
+.auth-footer {
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
+   Tela de Sucesso
+   ========================================================================== */
+.success-screen {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #a7f3d0; /* Verde claro */
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+}
+
+.success-screen h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.success-screen p {
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================================================
+   Responsividade (Mobile)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .auth-layout {
+        flex-direction: column;
+    }
+    
+    .auth-sidebar {
+        max-width: 100%;
+        padding: 2rem;
+    }
+    
+    .logo {
+        margin-bottom: 2rem;
+    }
+
+    .auth-forms-container {
+        padding: 2rem;
+    }
+}
