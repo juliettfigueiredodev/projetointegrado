@@ -34,6 +34,64 @@ A solução também pode ser útil para **negócios do mundo real**, como papela
 
 Por fim, a plataforma pode atuar como uma **rede de troca entre instituições**, não apenas de materiais, mas também de projetos e conhecimento. Por exemplo, uma escola que já possua estrutura e know-how para montar uma **rádio estudantil** pode, por meio da aplicação, entrar em contato com outra instituição interessada em implementar um projeto semelhante. A primeira escola pode compartilhar sua experiência, orientações e até recursos excedentes, enquanto a segunda recebe apoio para colocar a iniciativa em prática. Dessa forma, nossa solução contribui para um uso mais sustentável dos recursos, incentiva o reaproveitamento de materiais e fortalece iniciativas educacionais e comunitárias no mundo real.
 
+## Como utilizar a aplicação (Componente Extensionista Sprint #3 PI III)
+
+O *educaSolidario* foi desenvolvido para ser simples e intuitivo ao acessar e usar, bastando apenas nível básico de familiaridade com computador e internet.
+
+Esta seção explica como qualquer pessoa pode utilizar a plataforma, para quem ela foi pensada para atender e como a solução pode gerar impacto real na comunidade.
+
+**Quem pode usar a plataforma?**
+
+A aplicação atende a dois perfis de usuário, com necessidades complementares a saber:
+
+- Doadores: qualquer pessoa física que tenha materiais escolares, livros ou demais recursos educacionais em bom estado e queira direcioná-los a quem precisa. Não é necessário conhecer previamente a instituição que vai receber a doação - a plataforma cuida dessa conexão.
+
+- Instituições: escolas, ONGs, projetos sociais ou qualquer organização de caráter educacional que atendam famílias em situação de vulnerabilidade e precise de materiais escolares para as suas atividades. O cadastro das instituições é feito com CNPJ, garantindo que as demandas publicas provenham de organizações reais e verificáveis.
+
+**Como acessar o sistema**
+
+Qualquer pessoa pode acessar a página inicial da aplicação pela internet através de um navegador, sem precisar instalar nada. A partir daí, o usuário pode se cadastrar como Doador (informando CPF) ou como Instituição (informando CNPJ). Após o cadastro e o login, cada perfil tem acesso às funcionalidades adequadas ao seu perfil.
+
+**Como usar as principais funcionalidades**
+
+*Nessa subseção, explicamos as funcionalidades de consultar e doar (para o doador) e de cadastramento de solicitação de doação e acompanhamento do status (para a instituição).*
+
+- Para doador: 
+1. Acessar o dashboard após o login e consulte as instituições com necessidades cadastradas;
+2. Escolha a instituição que deseja apoiar e veja os itens que ela precisa;
+3. Registre sua intenção de doação. A plataforma fornecerá as informações de contato e as orientações a respeito da entrega da doação;
+4. Acompanhe o histórico das suas doações e veja o impacto acumulado no seu perfil.
+
+- Para instituição:
+1. Faça o cadastro e crie o perfil da sua organização com dados de contato e localização;
+2. Cadastre as necessidades: informe os tipos de materiais que precisam, a quantidade e o nível de urgência;
+3. Aguarde a conexão com doadores interessados — a plataforma exibirá as suas demandas para todos os usuários cadastrados;
+4. Atualize o status dos itens conforme as doações chegam, de modo a se manter sempre disponível para novas doações.
+
+**Quem se beneficia**
+
+Os dois perfis (Doadores e Instituições) representam diversos beneficiários, como:
+
+- Crianças e adolescentes em situação de vulnerabilidade que começam o ano letivo com os materiais que precisam, sem que a família precise escolher entre as despesas básicas e a lista escolar;
+
+- A comunidade local como um todo, que passa a ter um canal organizado para transformar a solidariedade em ação prática, sem depender de campanhas pontuais ou de contatos informais;
+
+- Negócios locais (ex.: papelarias) e escolas particulares, que podem usar a plataforma para dar destino útil a estoques parados, reduzindo desperdício e fortalecendo a sua relação com a comunidade.
+
+**Exemplos de uso em cenários reais**
+
+Cenário 1 — Família doadora: ao final do ano letivo, uma família percebe que os livros do 6º ano ainda estão em ótimo estado, mas os filhos não vão mais precisar deles. Em vez de guardar na prateleira ou descartar, acessam o *educaSolidário*, encontram uma escola que cadastrou esses livros como necessidade urgente e registram a intenção de doação em poucos minutos;
+
+Cenário 2 — ONG educacional: um projeto social que oferece aulas de teatro para crianças de 6 a 12 anos precisa de roupas temáticas, tecidos e sapatos. Após se cadastrarem no *educaSolidário*, aparecem três doadores (famílias nas quais os filhos cresceram e não mais usam esses materiais), atendendo a necessidade urgente da ONG para a realização de suas aulas;
+
+Cenário 3 — Rede entre instituições: uma escola estadual que renovou seus materiais de ciências tem microscópios antigos que ainda funcionam bem. Por meio da plataforma, entra em contato com uma escola municipal que precisa exatamente desse equipamento para montar um laboratório, e as duas instituições combinam a transferência diretamente.
+
+**Reflexão sobre o impacto**
+
+O *educaSolidario* parte da premissa de que o material que sobra em um lugar falta em outro. E que a falta de informações e grupos dedicados a otimizar o uso desses materiais implica em desperdício, de um lado, e de carência, em outro. A tecnologia da plataforma, portanto, é o meio que torna essa conexão mais rápida, organizada e confiável do que se fosse feita por outros meios (como telefone ou redes sociais genéricas). A cada doação concluída, o sistema reduz não só a carência de recursos escolares, mas também o desperdício de materiais que ainda têm muito uso pela frente.
+
+Entendemos que é uma contribuição pequena, mas concreta, para um problema que afeta diretamente o acesso à educação no Brasil.
+
 ## 5. Projeto físico de banco de dados e sua importância para quem está aprendendo a programar.
 
 O projeto físico de banco de dados é a última etapa do processo de modelagem de um banco. Nela, o modelo criado anteriormente é implementado em um sistema de gerenciamento de banco de dados (como MySQL, PostgreSQL ou Oracle), definindo como os dados serão armazenados no computador.
@@ -82,7 +140,7 @@ O Design do protótipo de alta fidelidade feito no Figma foi pensado no conforto
 - **Escolha do Modelo Relacional:** Optou-se pela utilização de um banco de dados relacional para mapear com precisão matemática os relacionamentos lógicos do ecossistema do EducaSolidario. A integridade referencial garante que entidades complexas (como as relações N:N entre doadores, materiais cadastrados e as necessidades específicas de cada instituição) mantenham consistência absoluta através de chaves estrangeiras (`FOREIGN KEY`).
 - **Otimização de Desempenho:** A estrutura do banco de dados foi projetada visando alto desempenho em consultas frequentes. Áreas críticas do sistema utilizam tipos enumerados (`ENUM`) para categorias e status, o que otimiza o armazenamento em disco e agiliza a indexação. Além disso, o posicionamento estratégico de índices nos campos de busca e login (como `email`, `cpf`, `cnpj` e status de campanhas) garante tempos de resposta mínimos na renderização dos painéis e dashboards.
 
-## 8. O que é Arquitetura de Software?
+## 8. O que é Arquitetura de Software? (Componente Extensionista Sprint #2 PI III)
 
 Quando o sistema *educaSolidário* começou a ser desenvolvido, uma das primeiras preocupações que tivemos que lidar não foi a escolha da linguagem de programação a ser utilizada, mas sim **como as partes do sistema vão se organizar entre si**. Essa preocupação é, no fundo, sobre arquitetura de software, que pode ser definida como o conjunto de decisões que define como um sistema é estruturado internamente - quais peças existem, o que cada uma faz e como os módulos conversam entre si.
 
@@ -90,8 +148,7 @@ Nesse ponto, o princípio do equilíbrio entre os conceitos de **coesão** e **a
 
 A **coesão** está relacionada ao foco, ou seja, cada camada faz uma coisa só, enquanto que o **acoplamento** mede a dependência entre os módulos. Em Engenharia de Software, o desejável é a **alta coesão** e **baixo acoplamento**, uma vez que ajuda na manutenibilidade, reutilização, testabilidade e legibilidade do código.
 
-No âmbito do *educaSolidário*, esses conceitos significaram decidir, por exemplo, que a tela de login nunca acessa o banco
-de dados diretamente.  Ela passa por uma camada de aplicação, que delega para uma camada de domínio (onde vivem as regras de negócio, como validar um CPF ou um CNPJ), que só então aciona a camada de persistência para falar com o PostgreSQL. Em síntese, cada camada faz uma coisa só e isso impede que uma pequena mudança em um trecho de código implique na quebra de na quebra de outras funcionalidades não relacionadas em partes distintas do sistema.
+No âmbito do *educaSolidário*, esses conceitos significaram decidir, por exemplo, que a tela de login nunca acessa o banco de dados diretamente.  Ela passa por uma camada de aplicação, que delega para uma camada de domínio (onde vivem as regras de negócio, como validar um CPF ou um CNPJ), que só então aciona a camada de persistência para falar com o PostgreSQL. Em síntese, cada camada faz uma coisa só e isso impede que uma pequena mudança em um trecho de código implique na quebra de na quebra de outras funcionalidades não relacionadas em partes distintas do sistema.
 
 Essa organização tem consequências práticas para o projeto:
 
@@ -107,6 +164,104 @@ Essa organização tem consequências práticas para o projeto:
 
 Portanto, a Arquitetura de Software impacta e é impactada por cada uma das fases do ciclo de vida de um software. Em última análise, o design da arquitetura do sistema (de como ele será estruturado, de como os módulos conversarão entre si) é o que decidirá se o projeto vai envelhecer bem ou se será entendido apenas por quem escreveu o código original.
 
+### Estrutura do projeto (Srint #3 PI III)
+
+O repositório está organizado para separar claramente o código de backend, a interface web (frontend) e a documentação do sistema:
+
+```
+projetointegrado/
+├── app.py                        # Ponto de entrada da aplicação
+├── requirements.txt              # Dependências Python do projeto
+├── .env.example                  # Modelo de configuração de ambiente
+├── .gitignore
+├── README.md
+│
+├── src/                          # Código-fonte do backend
+│   ├── models/                   # Classes de domínio (User, Donor, Institution)
+│   │   ├── user.py
+│   │   ├── donor.py
+│   │   └── institution.py
+│   ├── infrastructure/           # Conexão e estrutura do banco de dados
+│   │   ├── user_db.py
+│   │   └── educasolidario_database.sql
+│   ├── services/                 # Regras de negócio (ex.: donation_service)
+│   │   └── donation_service.py
+│   └── validators/               # Validações de entrada (CPF, e-mail, telefone)
+│       ├── cpf_validator.py
+│       ├── email_validator.py
+│       └── phone_validator.py
+│
+└── frontend/                     # Interface web da aplicação
+    ├── index.html                # Página inicial (landing page)
+    ├── pages/                    # Demais telas da aplicação
+    │   ├── login.html
+    │   ├── cadastro.html
+    │   ├── recuperacao-senha.html
+    │   ├── home.html
+    │   ├── perfil-doador.html
+    │   └── perfil-instituicao.html
+    ├── css/                      # Folhas de estilo
+    ├── js/                       # Scripts de interação
+    └── img/                      # Imagens e ícones
+```
+
+A separação em `src/models`, `src/services` e `src/validators` reflete a arquitetura em camadas definida na Sprint 2: cada pasta tem uma responsabilidade única, o que facilita a manutenção e a evolução do sistema sem que mudanças em uma área afetem as demais.
+
+### Processo de desenvolvimento
+
+O desenvolvimento do MVP foi organizado em três sprints ao longo do semestre, com tarefas distribuídas entre os integrantes da equipe conforme as habilidades e as responsabilidades de cada etapa.
+
+A sprint goal #1 referiu-se à concepção da identidade visual do *educaSolidario*, compreendendo concepção do logo, fontes, cores, etc. Em seguida, com base nos wireframes de baixa fidelidade desenvolvido ao longo de Projeto Integrado II, foram desenvolvidos os wireframes de alta fidelidade e protótipos navegáveis, já com o uso da identidade visual estabelecida, com o uso da ferramenta Figma. Os conceitos teóricos para finalização do trabalho foram trabalhados no âmbito da disciplina de Design de Interface e UX.
+
+A sprint goal #2 esteve relacionada à documentação arquitetural do sistema. O time equipe elaborou o modelo arquitetural do MVP Web, evidenciando as decisões técnicas adotadas, as tecnologias escolhidas e a organização dos componentes da aplicação. Foram produzidos diagramas de arquitetura em camadas, de componentes, de fluxo de requisição e de contexto do sistema, além da atualização do repositório no GitHub com a documentação gerada. Disciplina integradora: Engenharia de Software.
+
+A sprint goal #3, tendo como arcabouço teórico contido na disciplina de Desenvolvimento Web, iniciou-se o desenvolvimento do MVP Web funcional propriamente dito. Com base na arquitetura definida na sprint anterior e nos protótipos já validados, a equipe iniciou a implementação das páginas HTML com navegação entre telas, aplicando a identidade visual do educaSolidário e as boas práticas de organização de código discutidas nas disciplinas integradoras.
+
+### Divisão das tarefas em Projeto Integrado III
+
+**Sprint #1**
+Foram concentrados esforços na identidade visual, no protótipo de alta fidelidade e na documentação inicial do projeto. Alana elaborou a proposta de identidade visual — paleta de cores, fontes e logotipo — e desenvolveu a página inicial no Figma em colaboração com Juan, que também criou as telas de perfil do doador e de recuperação de senha e colaborou na tela de perfil da instituição. André ficou responsável pelas telas de autenticação: login e cadastro para os dois perfis (Doador e Instituição), que serviram de base para as telas de feedback de confirmação e de recuperação de senha. Juliett coordenou a distribuição de tarefas, elaborou a tela de perfil da instituição, configurou a navegação do protótipo e produziu um vídeo de orientação sobre o Figma para os colegas sem familiaridade com a ferramenta. Na documentação, Eduardo contribuiu com a visão geral do sistema e o componente extensionista no relatório; Linderval explicou as classes implementadas, o código-fonte e as decisões de arquitetura no README; Flávia contextualizou o projeto no README e no relatório.
+
+**Sprint #2**
+O time se voltou para a documentação arquitetural do sistema. A coordenação da sprint ficou com Juliett e Juan. André ficou responsável pela atualização do README, incluindo a seção extensionista "O que é Arquitetura de Software?". No preenchimento do relatório, Eduardo tratou da visão geral da arquitetura; Juan e Flávia desenvolveram o modelo arquitetural do sistema, abrangendo estrutura em camadas, componentes, tecnologias e integrações; Juliett ficou com as decisões arquiteturais; e Alana e Linderval cuidaram das boas práticas e padrões arquiteturais adotados no projeto.
+
+**Sprint #3**
+Na Sprint 3, a equipe concentrou esforços no desenvolvimento do MVP Web funcional. O frontend foi o foco principal: cada integrante ficou responsável por um conjunto de páginas HTML, implementando o visual definido no protótipo de alta fidelidade da Sprint 1 e seguindo a arquitetura documentada na Sprint 2. André ficou encarregado da atualização do README com as novas seções exigidas pela sprint — incluindo o componente extensionista "Como utilizar a aplicação".
+
+**Uso do GitHub**
+O versionamento foi feito inteiramente via Git e GitHub. A equipe adotou a prática de criar branches separados para cada conjunto de alterações e abrir pull requests para revisão antes de integrar ao branch principal. Esse histórico de commits e pull requests está disponível no repositório e evidencia a evolução incremental do projeto ao longo das sprints.
+
+**Dificuldades encontradas e soluções adotadas**
+Uma das principais dificuldades foi a curva de aprendizado com o Figma para os integrantes que não tinham familiaridade com a ferramenta. A Juliett preparou um vídeo com orientações básicas de uso do Figma para a equipe, o que acelerou o início do trabalho no protótipo. Outra dificuldade foi a adaptação do wireframe de baixa fidelidade — desenvolvido na sprint anterior — para a alta fidelidade, mantendo a consistência visual sem retrabalhar a estrutura já validada. A solução foi trabalhar em duas fases separadas: estrutura primeiro, estética depois.
+
+### Demonstração do MVP
+
+As imagens abaixo mostram as principais telas do EducaSolidário em funcionamento, evidenciando o fluxo de navegação da aplicação.
+
+**Página inicial**
+![index.html](screenshots/1.screenshot-index.PNG)
+
+**Login Doador e Instituição**
+![doador.html](screenshots/screenshot-login-doador.PNG)
+
+![instituicao.html](screenshots/screenshot-login-instituicao.PNG)
+
+**Perfil do Doador**
+![perfil-doador.html](screenshots/screenshot-perfil-doador.PNG)
+
+**Perfil da Instituição**
+![perfil-instituicao.html](screenshots/screenshot-perfil-instituicao.PNG)
+
+**Cadastro — perfil Doador (campo CPF visível)**
+![cadastro.html](screenshots/screenshot-cadastro-doador.PNG)
+
+**Cadastro — perfil Instituição (campo CNPJ visível)**
+![cadastro.html](screenshots/screenshot-cadastro-instituicao.PNG)
+
+**Cadastro realizado com sucesso**
+![cadastro.html](screenshots/screenshot-cadastro-sucesso.PNG)
+
+A navegação entre as telas segue o fluxo: página inicial → login → home/perfis (após autenticação), com acesso ao cadastro a partir do login.
 
 ## 9. Tecnologias Utilizadas
 
@@ -189,4 +344,8 @@ Com o banco configurado, inicie o sistema:
 - [@Linderval Matias](https://github.com/Linderval-Moura)
 - [@Leandro Pereira](https://github.com/leandropereira-alt)
 - [@Levi Brito](https://github.com/juliettfigueiredodev)
+- [@André Felipe](https://github.com/andretorre102)
+- [@Alana Lucas](https://github.com/alanalucasdev)
+- [@Francisco Eduardo](https://github.com/eduardofrancisco-collab)
+- [@Flavia Amaro](https://github.com/Flavia-Amaro)
 
