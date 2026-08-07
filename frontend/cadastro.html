@@ -1,0 +1,182 @@
+<!--========================================================================== 
+    Autor: Linderval Moura Matias
+   
+    HTML das Telas: 04 - Cadastro Instituição Selecionada; 
+                    05 - Cadastro Doador Selecionada; 
+                    08 - Cadastro Bem Sucedido;
+    ==========================================================================--> 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educa Solidário - Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <!-- Fonte Inter do Google Fonts (Padrão moderno de UI) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="auth-layout">
+        
+        <!-- PAINEL ESQUERDO (Apresentação / Branding) -->
+        <aside class="auth-sidebar">
+            <div class="brand">
+                <h1 class="logo">Educa<br><span>Solidário</span></h1>
+            </div>
+            
+            <div class="sidebar-content">
+                <h2 class="title">Comece a fazer<br>a diferença hoje</h2>
+                <p class="subtitle">Crie sua conta e conecte-se a instituições de ensino<br>que precisam de apoio</p>
+                
+                <ul class="features-list">
+                    <li>
+                        <strong>Encontre instituições</strong>
+                        <p>Descubra escolas e projetos que precisam do seu apoio</p>
+                    </li>
+                    <li>
+                        <strong>Doe com segurança</strong>
+                        <p>Transparência total em cada contribuição realizada</p>
+                    </li>
+                    <li>
+                        <strong>Acompanhe o impacto</strong>
+                        <p>Veja o resultado das suas doações em tempo real</p>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- PAINEL DIREITO (Formulários) -->
+        <section class="auth-forms-container">
+            
+            <header class="auth-header">
+                <a href="#" class="back-link">← Voltar ao login</a>
+                <h2 class="form-title" id="main-form-title">Crie sua conta</h2>
+                <p class="form-subtitle" id="main-form-subtitle">Preencha os dados abaixo para começar</p>
+            </header>
+
+            <!-- TELA 04: CADASTRO INSTITUIÇÃO -->
+            <div id="screen-instituicao" class="form-screen active">
+                <div class="profile-toggle">
+                    <button class="toggle-btn" onclick="switchScreen('doador')">Doador</button>
+                    <button class="toggle-btn active" onclick="switchScreen('instituicao')">Instituição</button>
+                </div>
+
+                <form class="auth-form" action="#" onsubmit="event.preventDefault(); switchScreen('sucesso');">
+                    <div class="input-group">
+                        <label for="inst-nome">Nome da Instituição</label>
+                        <input type="text" id="inst-nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="inst-email">E-mail</label>
+                        <input type="email" id="inst-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="inst-cnpj">CNPJ</label>
+                        <input type="text" id="inst-cnpj" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="inst-tel">Telefone</label>
+                        <input type="tel" id="inst-tel" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="inst-senha">Senha</label>
+                        <input type="password" id="inst-senha" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="inst-conf-senha">Confirmar senha</label>
+                        <input type="password" id="inst-conf-senha" required>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="inst-terms" required>
+                        <label for="inst-terms">Concordo com os <a href="#">Termos de Uso e Política de Privacidade</a></label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Criar Conta</button>
+                    
+                    <div class="divider">ou</div>
+                    
+                    <button type="button" class="btn btn-google">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" width="20">
+                        Continuar com Google
+                    </button>
+                    
+                    <p class="auth-footer">Já tem conta? <a href="#">Entre agora</a></p>
+                </form>
+            </div>
+
+            <!-- TELA 05: CADASTRO DOADOR -->
+            <div id="screen-doador" class="form-screen">
+                <div class="profile-toggle">
+                    <button class="toggle-btn active" onclick="switchScreen('doador')">Doador</button>
+                    <button class="toggle-btn" onclick="switchScreen('instituicao')">Instituição</button>
+                </div>
+
+                <form class="auth-form" action="#" onsubmit="event.preventDefault(); switchScreen('sucesso');">
+                    <div class="input-group">
+                        <label for="doa-nome">Nome Completo</label>
+                        <input type="text" id="doa-nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="doa-email">E-mail</label>
+                        <input type="email" id="doa-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="doa-cpf">CPF</label>
+                        <input type="text" id="doa-cpf" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="doa-senha">Senha</label>
+                        <input type="password" id="doa-senha" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="doa-conf-senha">Confirmar senha</label>
+                        <input type="password" id="doa-conf-senha" required>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="doa-terms" required>
+                        <label for="doa-terms">Concordo com os <a href="#">Termos de Uso e Política de Privacidade</a></label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Criar Conta</button>
+                    
+                    <div class="divider">ou</div>
+                    
+                    <button type="button" class="btn btn-google">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" width="20">
+                        Continuar com Google
+                    </button>
+                    
+                    <p class="auth-footer">Já tem conta? <a href="#">Entre agora</a></p>
+                </form>
+            </div>
+
+            <!-- TELA 08: SUCESSO -->
+            <div id="screen-sucesso" class="form-screen success-screen">
+                <div class="success-icon"></div>
+                <h2>Cadastro realizado com sucesso!</h2>
+                <p>Parabéns! Agora você pode acessar a sua conta</p>
+                <button type="button" class="btn btn-primary" onclick="switchScreen('instituicao')">Ir para o Login</button>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Script para alternar as telas -->
+    <script>
+        function switchScreen(screenName) {
+            document.querySelectorAll('.form-screen').forEach(el => el.classList.remove('active'));
+            document.getElementById(`screen-${screenName}`).classList.add('active');
+            
+            const header = document.querySelector('.auth-header');
+            if (screenName === 'sucesso') {
+                header.style.display = 'none';
+            } else {
+                header.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
