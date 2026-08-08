@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educa Solidário — Login</title>
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="screen">
+
+  <!-- Painel de marca -->
+  <aside class="brand-panel">
+    <div class="brand-top">
+      <div class="logo">Educa<strong>Solidário</strong></div>
+    </div>
+
+    <div class="brand-mid">
+      <h1>Faça parte de<br>algo maior</h1>
+      <p>Conectando doadores a instituições de ensino que precisam de apoio</p>
+    </div>
+
+    <div class="brand-features">
+      <div class="feature">
+        <h3>Encontre instituições</h3>
+        <p>Descubra escolas e projetos que precisam do seu apoio</p>
+      </div>
+      <div class="feature">
+        <h3>Doe com segurança</h3>
+        <p>Transparência total em cada contribuição realizada</p>
+      </div>
+      <div class="feature">
+        <h3>Acompanhe o impacto</h3>
+        <p>Veja o resultado das suas doações em tempo real</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Painel do formulário -->
+  <main class="form-panel">
+    <div class="form-wrap">
+      <h2>Bem-vindo de volta</h2>
+      <p class="subtitle">Entre na sua conta para continuar</p>
+
+      <div class="field">
+        <label>Perfil</label>
+        <div class="profile-toggle">
+          <button type="button" id="btn-doador">Doador</button>
+          <button type="button" id="btn-instituicao" class="active">Instituição</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="">
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="">
+        <a href="#" class="forgot">Esqueci minha senha</a>
+      </div>
+
+      <button type="button" class="btn-primary">Entrar</button>
+
+      <div class="divider">ou</div>
+
+      <button type="button" class="btn-google">Continuar com Google</button>
+
+      <p class="signup">Não tem conta? <a href="#">Cadastre-se gratuitamente</a></p>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/login.js"></script>
+</body>
+</html>
