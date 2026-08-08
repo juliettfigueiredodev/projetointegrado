@@ -238,26 +238,34 @@ Uma das principais dificuldades foi a curva de aprendizado com o Figma para os i
 As imagens abaixo mostram as principais telas do EducaSolidário em funcionamento, evidenciando o fluxo de navegação da aplicação.
 
 **Página inicial**
-![index.html](frontend/img/screenshots/screenshots/1.screenshot-index.PNG)
+
+![index.html](frontend/img/screenshots/1.screenshot-index.PNG)
 
 **Login Doador e Instituição**
+
 ![doador.html](frontend/img/screenshots/screenshot-login-doador.PNG)
+
 
 ![instituicao.html](frontend/img/screenshots/screenshot-login-instituicao.PNG)
 
 **Perfil do Doador**
+
 ![perfil-doador.html](frontend/img/screenshots/screenshot-perfil-doador.PNG)
 
 **Perfil da Instituição**
+
 ![perfil-instituicao.html](frontend/img/screenshots/screenshot-perfil-instituicao.PNG)
 
 **Cadastro — perfil Doador (campo CPF visível)**
+
 ![cadastro.html](frontend/img/screenshots/screenshot-cadastro-doador.PNG)
 
 **Cadastro — perfil Instituição (campo CNPJ visível)**
+
 ![cadastro.html](frontend/img/screenshots/screenshot-cadastro-instituicao.PNG)
 
 **Cadastro realizado com sucesso**
+
 ![cadastro.html](frontend/img/screenshots/screenshot-cadastro-sucesso.PNG)
 
 A navegação entre as telas segue o fluxo: página inicial → login → home/perfis (após autenticação), com acesso ao cadastro a partir do login.
