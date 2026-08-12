@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* LAYOUT PRINCIPAL */
+
+.recuperacao {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LADO AZUL */
+
+.lateral {
+    width: 32%;
+    background-color: #2864e8;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 150px;
+    margin-bottom: 45px;
+}
+
+.lateral h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.lateral p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* INFORMAÇÕES DO LADO AZUL */
+
+.informacoes {
+    margin-top: auto;
+}
+
+.informacoes h3 {
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.informacoes p {
+    font-size: 9px;
+    margin-bottom: 12px;
+}
+
+/* ÁREA DIREITA */
+
+.conteudo {
+    width: 68%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+/* LINK VOLTAR */
+
+.voltar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #2864e8;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+/* CAIXA CENTRAL */
+
+.caixa {
+    width: 85%;
+    max-width: 650px;
+    background-color: #f8fafc;
+    padding: 50px;
+}
+
+.caixa h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.descricao {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+/* CAMPOS */
+
+label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #d9d9d9;
+    padding: 10px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 0 2px #20c95c;
+}
+
+/* BOTÃO */
+
+.botao {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #20c95c;
+    color: #000000;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.botao:hover {
+    background-color: #18b650;
+}
+
+/* TEXTOS PEQUENOS */
+
+.pequeno {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.pequeno a {
+    color: #2864e8;
+    text-decoration: none;
+}
+
+.pequeno a:hover {
+    text-decoration: underline;
+}
+
+/* CAMPOS DO CÓDIGO */
+
+.codigo {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.codigo input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    padding: 0;
+}
+
+/* TELA DE SUCESSO */
+
+.sucesso {
+    text-align: center;
+}
+
+.circulo {
+    width: 45px;
+    height: 45px;
+    background-color: #9be5ba;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.sucesso h2 {
+    margin-bottom: 5px;
+}
+
+.sucesso p {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .recuperacao {
+        flex-direction: column;
+    }
+
+    .lateral {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .conteudo {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .caixa {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .codigo {
+        justify-content: center;
+    }
+
+}
