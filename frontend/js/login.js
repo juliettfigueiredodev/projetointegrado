@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Entrar / Continuar com Google -> ainda sem validação de e-mail e senha,
     // Ao clicar em Entrar, dependendo do toggle Doador/Instituição direciona para o perfil doador/instituição
     // Continuar com Google, direciona para a tela principal (index)
-    
+
     const btnPrimary = document.querySelector('.btn-primary');
     const btnGoogle = document.querySelector('.btn-google');
 
@@ -39,6 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btnGoogle) {
         btnGoogle.addEventListener('click', function () {
             window.location.href = 'index.html';
+        });
+    }
+
+    const forgot = document.querySelector('.forgot');
+
+    if (forgot){
+        forgot.addEventListener('click', function (){
+            window.location.href = 'tela09.html';
         });
     }
 });
