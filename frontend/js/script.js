@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (btnEntrar) {
         btnEntrar.addEventListener('click', function () {
-            window.location.href = 'cadastro-doador.html';
+            window.location.href = 'login_doador.html';
         });
     }
 
     if (btnCadastrar) {
         btnCadastrar.addEventListener('click', function () {
-            window.location.href = 'cadastro-doador.html';
+            window.location.href = 'cadastro.html';
         });
     }
 });
