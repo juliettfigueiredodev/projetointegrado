@@ -1,14 +1,8 @@
-/* ==========================================================================
-   Autor: Linderval Moura Matias
-   
-   CSS das Telas: 04 - Cadastro Instituição Selecionada; 
+/* CSS das Telas: 04 - Cadastro Instituição Selecionada; 
                   05 - Cadastro Doador Selecionada; 
-                  08 - Cadastro Bem Sucedido;
-   ========================================================================== */
+                  08 - Cadastro Bem Sucedido; (todas produzidas em PI III) */
 
-/* ==========================================================================
-   Variáveis Globais (Design Tokens)
-   ========================================================================== */
+/* Variáveis Globais (Design Tokens) */
 :root {
     --color-primary: #22c55e; /* Verde principal */
     --color-primary-hover: #16a34a;
@@ -26,9 +20,7 @@
     --transition: all 0.3s ease;
 }
 
-/* ==========================================================================
-   Reset CSS
-   ========================================================================== */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -51,9 +43,14 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   Layout Principal (Split Screen)
-   ========================================================================== */
+/* RESPONSIVIDADE: Para que toda imagem encolha junto do contêiner. */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Layout Principal (Split Screen) */
 .auth-layout {
     display: flex;
     min-height: 100vh;
@@ -70,8 +67,9 @@ a:hover {
     flex-direction: column;
 }
 
+/* RESPONSIVIDADE: clamp para a logo encolher suavemente em telas menores */
 .logo {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 4rem;
@@ -81,8 +79,9 @@ a:hover {
     color: var(--color-secondary);
 }
 
+/* RESPONSIVIDADE: clamp para título de destaque do painel esquerdo */
 .sidebar-content .title {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -145,9 +144,7 @@ a:hover {
     color: var(--color-text-muted);
 }
 
-/* ==========================================================================
-   Componentes de Formulário
-   ========================================================================== */
+/* Componentes de Formulário */
 .form-screen {
     width: 100%;
     max-width: 450px;
@@ -214,6 +211,54 @@ a:hover {
 .input-group input:focus {
     outline: 2px solid var(--color-secondary);
     background-color: var(--color-bg);
+}
+/* VALIDAÇÃO JS para campos inválidos [PF3]
+Incluí elementos de estilo do sistema de validação de formulário
+- .input-invalid: destaca em vermelho o campo que falhou na validação
+- .field-error: mensagem de erro específica de cada campo
+- .form-message: mensagem geral do formulário, no topo (erro ou sucesso,
+controlado pelas classes .error / .success; .empty a esconde quando
+não há mensagem) */
+
+.input-invalid {
+    outline: 2px solid #ef4444;
+    background-color: #fef2f2;
+}
+
+.field-error {
+    display: block;
+    min-height: 1rem;
+    font-size: 0.75rem;
+    color: #ef4444;
+    margin-top: 0.25rem;
+}
+
+.form-message {
+    font-size: 0.875rem;
+    padding: 0;
+    border-radius: var(--border-radius);
+    margin-bottom: 0;
+    transition: var(--transition);
+}
+
+.form-message:empty {
+    display: none;
+}
+
+.form-message.error {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.form-message.success {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
 }
 
 /* Checkbox */
@@ -293,9 +338,7 @@ a:hover {
     margin-top: 1rem;
 }
 
-/* ==========================================================================
-   Tela de Sucesso
-   ========================================================================== */
+/* Tela de Sucesso */
 .success-screen {
     text-align: center;
     margin-top: 4rem;
@@ -319,17 +362,18 @@ a:hover {
     margin-bottom: 2.5rem;
 }
 
-/* ==========================================================================
-   Responsividade (Mobile)
-   ========================================================================== */
+/* Responsividade (Tablet) */
 @media (max-width: 900px) {
     .auth-layout {
         flex-direction: column;
     }
     
     .auth-sidebar {
+        order: 2; /* Em telas menores, a barra lateral ficará embaixo, após os campos de formulário */
         max-width: 100%;
         padding: 2rem;
+        align-items: center; /* centralizando... */
+        text-align: center;
     }
     
     .logo {
@@ -337,6 +381,34 @@ a:hover {
     }
 
     .auth-forms-container {
+        order: 1; /* Em telas menores, os campos de formulário aparecem primeiro na tela, e somente embaixo a barra lateral */
         padding: 2rem;
+    }
+}
+
+/* RESPONSIVIDADE: Breakpoint de celular (480px). O breakpoint de
+   900px acima já resolve tablet, mas em telas de celular (~375-414px) o
+   padding de 2rem no painel verde e a lista de features ainda tomam espaço
+   demais antes de chegar ao formulário. Reduz padding, oculta a lista de
+   features (secundária nessa largura) e ajusta o subtítulo do painel. */
+
+@media (max-width: 480px) {
+    .auth-sidebar {
+        padding: 1.5rem;
+        align-items: center; /* centralizando... */
+        text-align: center;
+    }
+
+    .sidebar-content .subtitle,  /* escondi informações que tem em telas menores para deixar o visual menos poluído */
+    .features-list {
+        display: none;
+    }
+
+    .auth-forms-container {
+        padding: 1.5rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
     }
 }

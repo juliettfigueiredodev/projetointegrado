@@ -24,15 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnPrimary = document.querySelector('.btn-primary');
     const btnGoogle = document.querySelector('.btn-google');
 
-    if (btnDoador.classList.contains('active') && btnPrimary) {
+    if (btnPrimary) {
         btnPrimary.addEventListener('click', function () {
-            window.location.href = 'perfil-doador.html';
-        });
-    }
-
-    if (btnInstituicao.classList.contains('active') && btnPrimary){
-        btnPrimary.addEventListener('click', function(){
-            window.location.href = 'perfil-instituicao.html';
+            if (btnDoador.classList.contains('active')) {
+                window.location.href = 'perfil-doador.html';
+            } else {
+                window.location.href = 'perfil-instituicao.html';
+            }
         });
     }
 
