@@ -272,9 +272,19 @@ A navegação entre as telas segue o fluxo: página inicial → login → home/p
 
 ## 9. Tecnologias Utilizadas
 
+**Frontend & Design**
+- **[HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)** — Estruturação semântica e acessível das páginas da aplicação.
+- **[CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)** — Estilização das interfaces, garantindo um design responsivo e fiel ao protótipo de alta fidelidade.
+- **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)** — Criação de interatividade, validações no lado do cliente e manipulação do DOM sem dependência de frameworks pesados.
+- **[Figma](https://www.figma.com/)** — Plataforma de design colaborativo utilizada para a prototipagem (wireframes de baixa e alta fidelidade).
+- **[Vercel](https://vercel.com/)** — Plataforma de hospedagem em nuvem utilizada para o deploy contínuo e disponibilização do frontend.
+
+**Backend & Banco de Dados**
 - **[Python 3.x](https://www.python.org/)** — Linguagem principal utilizada no backend devido à sua legibilidade, rapidez de desenvolvimento e ecossistema robusto para a estruturação de regras de negócio.
 - **[PostgreSQL](https://www.postgresql.org/)** — Sistema de Gerenciamento de Banco de Dados Relacional (SGBDR) escolhido por sua alta confiabilidade, conformidade ACID estrita e excelente suporte para indexação avançada e integridade de dados complexos.
 - **[Psycopg2](https://pypi.org/project/psycopg2/)** — Adaptador oficial do PostgreSQL para Python que permite uma comunicação nativa, segura e de alto desempenho entre a camada da aplicação e o banco de dados.
+
+**Infraestrutura & Ferramentas**
 - **[Python-dotenv](https://pypi.org/project/python-dotenv/)** — Utilizado para o gerenciamento seguro de variáveis de ambiente, garantindo que credenciais sensíveis de infraestrutura nunca fiquem expostas no código-fonte.
 - **[Git](https://git-scm.com/)** — Ferramenta essencial para o controle de versão distribuído do código-fonte durante o ciclo de desenvolvimento.
 - **[GitHub](https://github.com/)** — Plataforma para hospedagem segura do repositório remoto e facilitação do trabalho colaborativo entre os membros da equipe.
