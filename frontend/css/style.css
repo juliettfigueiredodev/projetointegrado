@@ -9,6 +9,13 @@ body{
     color:#1E293B;
     font-family:'Inter', sans-serif;
 }
+/* Responsividade para que toda imagem seja encolhida
+junta com o conteúdo */
+img{
+    max-width:100%;
+    height: auto;
+    display:block;
+}
 
 .titulo h1{
     font-family:'Poppins', sans-serif;
@@ -43,8 +50,10 @@ header{
     justify-content:space-between;
 }
 
+/* Responsividade no logo, colocando unidade flexível em vez 
+de largura fixa */
 .logo img{
-    width:220px;
+    width:clamp(140px, 18vw, 220px);
 }
 
 nav ul{
@@ -111,11 +120,26 @@ nav a{
     color:#64748B;
 }
 
-/* BANNER */
-.banner img{
-    width:100%;
+/* BANNER */                  /*  */
+.banner {
+    position:relative;
+    overflow: hidden;
     height:800px;
+}
+
+.banner .slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.banner .slide.active{
+    opacity:1;
 }
 
 /* AÇÕES */
@@ -151,8 +175,10 @@ nav a{
     margin-top:20px;
 }
 
+/* Responsividade: Coloquei um clamp no lugar do font-size fixo,
+para o titulo encolher em telas menores */
 .titulo-instituicoes h2{
-    font-size:38px;
+    font-size:clamp(28px, 4vw, 36px);
 }
 
 .titulo-instituicoes p{
@@ -161,14 +187,19 @@ nav a{
 }
 
 /* CARDS */
+/* Responsividade para que os cards quebrem linha em telas menores */
 .cards{
     display:flex;
     justify-content:center;
     gap:35px;
+    flex-wrap:wrap;
     padding:60px 8%;
 }
 
+/* Responsividade para que os cards encolham em telas menores
+antes de quebrar linha */
 .card{
+    flex:1 1 320px;
     width:340px;
 }
 
@@ -195,7 +226,7 @@ nav a{
     border-radius:50%;
     object-fit:cover;
     border:5px solid white;
-    margin-bottom:20px;
+    margin: 0 auto 20px; /* Centraliza a imagem no card */
 }
 
 .conteudo-card h4{
@@ -228,71 +259,160 @@ nav a{
 }
 
 /* RESPONSIVO */
-@media(max-width:900px){
-.menu{
-    flex-direction:column;
-    gap:20px;
+/* Ajuste fazendo bloco de medias queries, para 
+Desktop Grande, Notebook e Celular*/
+
+/*Para Desktop Grande, acima de 1400px */
+
+@media(min-width: 1400px){
+    .hero,
+    .cards,
+    header{
+        max-width:1400px;
+        margin: auto;
+    }
 }
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 70px 8%;
-    text-align: center;
+/* Para Notebook, entre 768px e 1400px */
+@media (max-width: 1024px) {
+    .logo img{
+        width: 180px;
+    }
+    .titulo h1{
+        font-size: 48px;
+    }
+    .hero{
+        gap: 40px;
+    }
+    .banner {
+        height: 500px;
+    }
 }
 
-.estatisticas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    width: 100%;
-    margin-top: 40px;
+/* Para Tablets abaixo de 768px */
+@media (max-width: 768px) {
+    header{
+        padding: 20px;
+    }
+    .menu{
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }  
+    
+    .botoes-menu{
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;        
+        padding: 50px 20%;
+    }
+    .titulo h1{
+        font-size:clamp(32px, 5vw, 58px);
+    }
+    .estatisticas {
+        width: 100%;
+        justify-content: center;
+        gap:40px;
+        flex-wrap:wrap;
+    }
+    .estatisticas{
+        width:100%;
+        justify-content:center;
+        gap:40px;
+        flex-wrap:wrap;
+    }
+ 
+    .banner {
+        height:400px;
+    }
+ 
+    .acoes{
+        flex-direction:column;
+        align-items:center;
+        padding:40px 20px;
+    }
+ 
+    .acoes button{
+        width:100%;
+        max-width:350px;
+    }
+ 
+    .cards{
+        flex-direction:column;
+        align-items:center;
+        padding:40px 20px;
+    }
+ 
+    .card{
+        width:100%;
+        max-width:360px;
+    }
 }
 
-.estatisticas div {
-    text-align: center;
-}
+/* Para Celulares abaixo de 480px */
+@media (max-width: 480px) {
+    .titulo h1{
+        font-size:32px;
+    }
+    .titulo-instituicoes h2{
+        font-size:28px;
+    }
+    .titulo-instituicoes p{
+        font-size:16px;
+    }
+    .logo img{
+        width: 150px;
+    }
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+        align-items:center;
+    }
 
-.estatisticas h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 42px;
-    color: #2563EB;
-    margin-bottom: 5px;
-}
-
-.estatisticas p {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    color: #64748B;
-}
-
-.estatisticas{
-    display:flex;
-    gap:50px;
-    align-items:center;
-    justify-content:center;
-}
-
-.estatisticas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-}
-
-.estatisticas > div {
-    width: 150px;
-    text-align: center;
-}
-
-.cards{
-    flex-direction:column;
-    align-items:center;
-}
-
+    .btn-entrar,
+    .btn-cadastrar,
+    .btn-azul,
+    .btn-verde{
+        width:100%;
+    }
+    .estatisticas{
+        flex-direction:column;
+        gap:25px;
+    }
+    .estatisticas h2{
+        font-size:32px;
+    }
+ 
+    .banner {
+        height:250px;
+    }
+ 
+    .conteudo-card{
+        padding:20px;
+    }
+ 
+    .conteudo-card img{
+        width:160px;
+        height:160px;
+    }
+ 
+    .botoes-card{
+        flex-direction:column;
+    }
+ 
+    .botoes-card button{
+        width:100%;
+    }
 }
 
 /* RODAPÉ */
