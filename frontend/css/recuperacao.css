@@ -130,6 +130,82 @@ input:focus {
     box-shadow: 0 0 0 2px #20c95c;
 }
 
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.password-wrapper input {
+    margin-bottom: 0;
+    padding-right: 44px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: #1f2937;
+}
+
+/* VALIDAÇÃO JS */
+.input-invalid {
+    outline: 2px solid #ef4444 !important;
+    background-color: #fef2f2 !important;
+    box-shadow: none !important;
+}
+
+.field-error {
+    display: block;
+    min-height: 1rem;
+    font-size: 11px;
+    color: #ef4444;
+    margin-top: -6px;
+    margin-bottom: 10px;
+}
+
+.form-message {
+    font-size: 12px;
+    padding: 0;
+    border-radius: 6px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.form-message:empty {
+    display: none;
+}
+
+.form-message.error {
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.form-message.success {
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    background-color: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
 /* BOTÃO */
 
 .botao {
@@ -203,30 +279,86 @@ input:focus {
     margin-bottom: 20px;
 }
 
-/* RESPONSIVIDADE */
-
-@media (max-width: 700px) {
-
+/* RESPONSIVIDADE (Tablet - ≤ 900px) */
+@media (max-width: 900px) {
     .recuperacao {
         flex-direction: column;
     }
 
-    .lateral {
+    .conteudo {
+        order: 1; /* Em telas menores, os campos aparecem em cima */
         width: 100%;
-        min-height: 250px;
+        padding: 32px 20px;
     }
 
-    .conteudo {
+    .lateral {
+        order: 2; /* A barra lateral fica embaixo */
         width: 100%;
-        padding: 20px;
+        min-height: auto;
+        padding: 32px 24px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        margin-bottom: 20px;
+    }
+
+    .lateral h1 {
+        font-size: 24px;
+    }
+
+    .informacoes {
+        margin-top: 24px;
     }
 
     .caixa {
         width: 100%;
-        padding: 30px;
+        padding: 36px 28px;
     }
 
     .codigo {
         justify-content: center;
+    }
+}
+
+/* RESPONSIVIDADE (Celular - ≤ 480px) */
+@media (max-width: 480px) {
+    .lateral {
+        padding: 24px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lateral p,
+    .lateral .informacoes {
+        display: none; /* Esconde secundários para não poluir no celular */
+    }
+
+    .lateral h1 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .conteudo {
+        padding: 24px 16px;
+    }
+
+    .caixa {
+        padding: 24px 18px;
+    }
+
+    .caixa h2 {
+        font-size: 20px;
+    }
+
+    .codigo {
+        gap: 6px;
+    }
+
+    .codigo input {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
     }
 }

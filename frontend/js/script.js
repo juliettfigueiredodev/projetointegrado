@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // Função para iniciar o slideshow do banner 
 function iniciarSlideshow() {
     const slides = document.querySelectorAll('.banner .slide');
+    if (slides.length === 0) return; // Evita erro em páginas sem banner
+
     let atual = 0;
 
     setInterval(() => {

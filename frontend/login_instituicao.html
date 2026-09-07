@@ -41,7 +41,7 @@
   <main class="form-panel">
     <div class="form-wrap">
       <h2>Bem-vindo de volta</h2>
-      <p class="subtitle">Entre na sua conta para continuar</p>
+      <p class="subtitle" id="login-subtitle">Entre na sua conta para continuar</p>
 
       <div class="field">
         <label>Perfil</label>
@@ -51,18 +51,30 @@
         </div>
       </div>
 
-      <div class="field">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="">
-      </div>
+      <form id="login-form" novalidate onsubmit="return validarLogin(event);">
+        <!-- Área de mensagem geral do formulário (erro ou sucesso) -->
+        <div id="login-form-msg" class="form-message" role="alert"></div>
 
-      <div class="field">
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="">
-        <a href="#" class="forgot">Esqueci minha senha</a>
-      </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" required>
+          <span class="field-error" id="email-error"></span>
+        </div>
 
-      <button type="button" class="btn-primary">Entrar</button>
+        <div class="field">
+          <label for="senha">Senha</label>
+          <div class="password-wrapper">
+            <input type="password" id="senha" placeholder="Sua senha (mínimo 8 caracteres)" required>
+            <button type="button" class="toggle-password" data-target="senha" aria-label="Mostrar senha">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+          <span class="field-error" id="senha-error"></span>
+          <a href="recuperar-senha.html" class="forgot">Esqueci minha senha</a>
+        </div>
+
+        <button type="submit" class="btn-primary">Entrar</button>
+      </form>
 
       <div class="divider">ou</div>
 

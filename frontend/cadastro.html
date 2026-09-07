@@ -50,7 +50,7 @@
         <section class="auth-forms-container">
             
             <header class="auth-header">
-                <a href="login_doador.html" class="back-link">← Voltar ao login</a>
+                <a href="login_instituicao.html" class="back-link">← Voltar ao login</a>
                 <h2 class="form-title" id="main-form-title">Crie sua conta</h2>
                 <p class="form-subtitle" id="main-form-subtitle">Preencha os dados abaixo para começar</p>
             </header>
@@ -95,12 +95,22 @@
                     </div>
                     <div class="input-group">
                         <label for="inst-senha">Senha</label>
-                        <input type="password" id="inst-senha" required>
+                        <div class="password-wrapper">
+                            <input type="password" id="inst-senha" placeholder="Mínimo 8 caracteres" required>
+                            <button type="button" class="toggle-password" data-target="inst-senha" aria-label="Mostrar senha">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                        </div>
                         <span class="field-error" id="inst-senha-error"></span> <!-- Mensagem de erro do campo Senha -->
                     </div>
                     <div class="input-group">
                         <label for="inst-conf-senha">Confirmar senha</label>
-                        <input type="password" id="inst-conf-senha" required>
+                        <div class="password-wrapper">
+                            <input type="password" id="inst-conf-senha" placeholder="Repita a senha" required>
+                            <button type="button" class="toggle-password" data-target="inst-conf-senha" aria-label="Mostrar senha">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                        </div>
                         <span class="field-error" id="inst-conf-senha-error"></span> <!-- Mensagem de erro do campo Confirmar senha -->
                     </div>
                     
@@ -119,7 +129,7 @@
                         Continuar com Google
                     </button>
                     
-                    <p class="auth-footer">Já tem conta? <a href="#">Entre agora</a></p>
+                    <p class="auth-footer">Já tem conta? <a href="login_instituicao.html">Entre agora</a></p>
                 </form>
             </div>
 
@@ -153,12 +163,22 @@
                     </div>
                     <div class="input-group">
                         <label for="doa-senha">Senha</label>
-                        <input type="password" id="doa-senha" required>
+                        <div class="password-wrapper">
+                            <input type="password" id="doa-senha" placeholder="Mínimo 8 caracteres" required>
+                            <button type="button" class="toggle-password" data-target="doa-senha" aria-label="Mostrar senha">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                        </div>
                         <span class="field-error" id="doa-senha-error"></span> <!-- Mensagem de erro do campo Senha -->
                     </div>
                     <div class="input-group">
                         <label for="doa-conf-senha">Confirmar senha</label>
-                        <input type="password" id="doa-conf-senha" required>
+                        <div class="password-wrapper">
+                            <input type="password" id="doa-conf-senha" placeholder="Repita a senha" required>
+                            <button type="button" class="toggle-password" data-target="doa-conf-senha" aria-label="Mostrar senha">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                        </div>
                         <span class="field-error" id="doa-conf-senha-error"></span> <!-- Mensagem de erro do campo Confirmar senha -->
                     </div>
                     
@@ -177,7 +197,7 @@
                         Continuar com Google
                     </button>
                     
-                    <p class="auth-footer">Já tem conta? <a href="#">Entre agora</a></p>
+                    <p class="auth-footer">Já tem conta? <a href="login_doador.html">Entre agora</a></p>
                 </form>
             </div>
 
@@ -186,7 +206,7 @@
                 <div class="success-icon"></div>
                 <h2>Cadastro realizado com sucesso!</h2>
                 <p>Parabéns! Agora você pode acessar a sua conta</p>
-                <button type="button" class="btn btn-primary" onclick="switchScreen('instituicao')">Ir para o Login</button>
+                <button type="button" class="btn btn-primary" onclick="irParaLogin()">Ir para o Login</button>
             </div>
 
         </section>
