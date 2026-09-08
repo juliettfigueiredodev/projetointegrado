@@ -25,7 +25,17 @@
             </ul>
         </nav>
 
-        <div class="avatar-usuario" title="Maria R.">MR</div>
+        <div class="avatar-container">
+            <div class="avatar-usuario" title="Maria R.">MR</div>
+            <div class="avatar-dropdown">
+                <div class="dropdown-info">
+                    <strong>Maria R.</strong>
+                    <span>maria.r@email.com</span>
+                </div>
+                <a href="perfil-doador.html">Ver Meu Perfil</a>
+                <button class="dropdown-sair">Sair da Conta</button>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -53,8 +63,8 @@
             </div>
 
             <div class="perfil-acoes">
-                <button class="btn-acao-azul">Editar perfil</button>
-                <button class="btn-acao-verde">♡ Favoritos</button>
+                <button id="btn-editar-perfil" class="btn-acao-azul">Editar perfil</button>
+                <button id="btn-favoritos-doador" class="btn-acao-verde">♡ Favoritos</button>
             </div>
         </div>
     </section>
@@ -182,6 +192,7 @@
 
     <!-- PAINEL: HISTÓRICO -->
     <div id="painel-historico" class="painel" style="padding:24px 8%;">
+        <div class="tabela-responsiva">
         <table class="tabela-historico">
             <thead>
                 <tr>
@@ -199,6 +210,7 @@
                 <tr><td>EMEF João de Deus</td><td>R$100</td><td>05/10/2025</td><td><span class="status-badge">Cancelada</span></td></tr>
             </tbody>
         </table>
+        </div>
     </div>
 
     <!-- PAINEL: FAVORITOS -->
@@ -309,6 +321,32 @@
     </div>
 </footer>
 
+<!-- MODAL: EDITAR PERFIL -->
+<div id="modal-editar-perfil" class="modal-overlay">
+    <div class="modal-conteudo">
+        <div class="modal-header">
+            <h3>Editar Perfil</h3>
+            <button class="modal-fechar">&times;</button>
+        </div>
+        <div class="modal-mensagem"></div>
+        <div class="modal-body">
+            <label for="editar-nome">Nome</label>
+            <input type="text" id="editar-nome" value="Maria R." placeholder="Seu nome completo">
+
+            <label for="editar-telefone">Telefone</label>
+            <input type="tel" id="editar-telefone" value="+55 (88) 99999-0000" placeholder="(00) 00000-0000">
+
+            <label for="editar-endereco">Endereço</label>
+            <input type="text" id="editar-endereco" value="Fortaleza, CE" placeholder="Cidade, Estado">
+        </div>
+        <div class="modal-footer">
+            <button class="modal-cancelar">Cancelar</button>
+            <button class="modal-salvar">Salvar</button>
+        </div>
+    </div>
+</div>
+
 <script src="js/script.js"></script>
+<script src="js/perfil.js"></script>
 </body>
 </html>
