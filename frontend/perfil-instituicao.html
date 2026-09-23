@@ -25,7 +25,17 @@
             </ul>
         </nav>
 
-        <div class="avatar-usuario" title="Maria R.">MR</div>
+        <div class="avatar-container">
+            <div class="avatar-usuario" title="Maria R.">MR</div>
+            <div class="avatar-dropdown">
+                <div class="dropdown-info">
+                    <strong>Maria R.</strong>
+                    <span>maria.r@email.com</span>
+                </div>
+                <a href="perfil-doador.html">Ver Meu Perfil</a>
+                <button class="dropdown-sair">Sair da Conta</button>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -54,8 +64,8 @@
             </div>
 
             <div class="perfil-acoes">
-                <button class="btn-acao-azul">Fazer doação</button>
-                <button class="btn-acao-verde">♡ Favoritos</button>
+                <button id="btn-fazer-doacao" class="btn-acao-azul">Fazer doação</button>
+                <button id="btn-favoritar-inst" class="btn-acao-verde">♡ Favoritar</button>
             </div>
         </div>
     </section>
@@ -237,6 +247,7 @@
 
     <!-- PAINEL: DOAÇÕES RECEBIDAS -->
     <div id="painel-recebidas" class="painel" style="padding:24px 8%;">
+        <div class="tabela-responsiva">
         <table class="tabela-historico">
             <thead>
                 <tr>
@@ -253,10 +264,12 @@
                 <tr><td>Ana Beatriz</td><td>90</td><td>20/12/2025</td><td><span class="status-badge">Concluída</span></td></tr>
             </tbody>
         </table>
+        </div>
     </div>
 
     <!-- PAINEL: DOAÇÕES REALIZADAS -->
     <div id="painel-realizadas" class="painel" style="padding:24px 8%;">
+        <div class="tabela-responsiva">
         <table class="tabela-historico">
             <thead>
                 <tr>
@@ -271,6 +284,7 @@
                 <tr><td>ONG Reviver</td><td>80</td><td>22/09/2025</td></tr>
             </tbody>
         </table>
+        </div>
     </div>
 
 </main>
@@ -283,6 +297,55 @@
     </div>
 </footer>
 
+<!-- MODAL: FAZER DOAÇÃO -->
+<div id="modal-doacao" class="modal-overlay">
+    <div class="modal-conteudo">
+        <div class="modal-header">
+            <h3>Fazer uma Doação</h3>
+            <button class="modal-fechar">&times;</button>
+        </div>
+        <div class="modal-mensagem"></div>
+        <div class="modal-body">
+            <p style="font-size:14px;color:#555;margin-bottom:14px;">Selecione os itens que deseja doar para <strong>EMEF João de Deus</strong>:</p>
+            <div class="modal-checkbox-item">
+                <input type="checkbox" id="doar-cadernos">
+                <span>📓 Cadernos</span>
+            </div>
+            <div class="modal-checkbox-item">
+                <input type="checkbox" id="doar-lapis">
+                <span>✏️ Lápis e canetas</span>
+            </div>
+            <div class="modal-checkbox-item">
+                <input type="checkbox" id="doar-mochilas">
+                <span>🎒 Mochilas</span>
+            </div>
+            <div class="modal-checkbox-item">
+                <input type="checkbox" id="doar-livros">
+                <span>📚 Livros didáticos</span>
+            </div>
+            <div class="modal-checkbox-item">
+                <input type="checkbox" id="doar-financeiro">
+                <span>💰 Apoio financeiro simbólico</span>
+            </div>
+        </div>
+        <div class="modal-sucesso">
+            <div class="icone-sucesso">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h4>Doação registrada!</h4>
+            <p>Obrigado por apoiar a EMEF João de Deus. Sua doação faz a diferença!</p>
+            <button class="modal-fechar-sucesso">Fechar</button>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-cancelar">Cancelar</button>
+            <button class="modal-confirmar">Confirmar Doação</button>
+        </div>
+    </div>
+</div>
+
 <script src="js/script.js"></script>
+<script src="js/perfil.js"></script>
 </body>
 </html>

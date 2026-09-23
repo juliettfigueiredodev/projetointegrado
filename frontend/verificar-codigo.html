@@ -7,9 +7,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Recuperar senha - EducaSolidário</title>
+    <title>Verificar código - EducaSolidário</title>
 
     <!-- Fontes -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -17,6 +18,7 @@
         rel="stylesheet">
 
     <!-- CSS -->
+
     <link rel="stylesheet" href="css/recuperacao.css">
 
 </head>
@@ -90,33 +92,78 @@
             <div class="caixa">
 
                 <h2>
-                    Esqueceu a senha?
+                    Verifique seu e-mail
                 </h2>
 
                 <p class="descricao">
-                    Informe o e-mail cadastrado para receber
-                    as instruções de recuperação.
+                    Enviamos um código de 6 dígitos
+                    para <span id="email-destinatario" style="font-weight: 600;">usuario@email.com</span>
                 </p>
 
-                <form action="tela10.html">
+                <form id="form-codigo" action="nova-senha.html" novalidate>
+                    <div id="form-msg" class="form-message" role="alert"></div>
 
-                    <label for="email">
-                        E-mail
-                    </label>
+                    <div class="codigo">
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="seu@email.com"
-                        required
-                    >
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            required
+                        >
+
+                    </div>
+
+                    <p class="pequeno">
+
+                        Não recebeu?
+
+                        <a href="#" id="btn-reenviar">
+                            Reenviar código
+                        </a>
+
+                    </p>
 
                     <button
                         type="submit"
                         class="botao">
 
-                        Enviar instruções
+                        Verificar código
 
                     </button>
 
@@ -124,10 +171,10 @@
 
                 <p class="pequeno">
 
-                    Lembrou a senha?
+                    E-mail errado?
 
-                    <a href="login_doador.html">
-                        Entre aqui
+                    <a href="recuperar-senha.html">
+                        Voltar
                     </a>
 
                 </p>
@@ -138,6 +185,7 @@
 
     </main>
 
+    <script src="js/recuperacao.js"></script>
 </body>
 
 </html>

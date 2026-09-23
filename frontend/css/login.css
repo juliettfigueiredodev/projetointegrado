@@ -148,6 +148,37 @@ input:focus {
   box-shadow: 0 0 0 2px var(--blue);
 }
 
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 46px !important;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-text);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color .2s, background-color .2s;
+}
+
+.toggle-password:hover {
+  color: var(--text-dark);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .forgot {
   display: block;
   text-align: right;
@@ -215,9 +246,113 @@ input:focus {
 }
 .signup a:hover { text-decoration: underline; }
 
+/* VALIDAÇÃO JS para campos inválidos */
+.input-invalid {
+  outline: 2px solid #ef4444 !important;
+  background-color: #fef2f2 !important;
+  box-shadow: none !important;
+}
+
+.field-error {
+  display: block;
+  min-height: 1rem;
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 4px;
+}
+
+.form-message {
+  font-size: 14px;
+  padding: 0;
+  border-radius: 8px;
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.form-message:empty {
+  display: none;
+}
+
+.form-message.error {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.form-message.success {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* Responsividade (Tablet - ≤ 900px) */
 @media (max-width: 900px) {
-  .screen { flex-direction: column; }
-  .brand-panel { flex: none; padding: 40px 28px; }
-  .brand-mid h1 { font-size: 34px; }
-  .form-panel { padding: 32px 20px; }
+  .screen {
+    flex-direction: column;
+  }
+
+  .form-panel {
+    order: 1; /* Em telas menores, os campos de formulário aparecem primeiro */
+    padding: 32px 24px;
+  }
+
+  .brand-panel {
+    order: 2; /* A barra lateral fica embaixo, após o formulário */
+    flex: none;
+    max-width: 100%;
+    padding: 32px 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-top .logo {
+    margin-bottom: 16px;
+  }
+
+  .brand-mid {
+    margin-top: 20px;
+  }
+
+  .brand-mid h1 {
+    font-size: 32px;
+  }
+
+  .brand-features {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* RESPONSIVIDADE: Breakpoint de celular (480px).
+   Oculta a lista de features e textos secundários do painel de marca
+   para deixar o visual limpo e sem poluição. */
+@media (max-width: 480px) {
+  .brand-panel {
+    padding: 24px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-mid p,
+  .brand-features {
+    display: none;
+  }
+
+  .brand-mid h1 {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+
+  .form-panel {
+    padding: 24px 20px;
+  }
+
+  .form-wrap h2 {
+    font-size: 26px;
+  }
 }

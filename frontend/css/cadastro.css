@@ -212,6 +212,37 @@ img {
     outline: 2px solid var(--color-secondary);
     background-color: var(--color-bg);
 }
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 46px !important;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.toggle-password:hover {
+    color: var(--color-text-dark);
+    background-color: rgba(0, 0, 0, 0.05);
+}
 /* VALIDAÇÃO JS para campos inválidos [PF3]
 Incluí elementos de estilo do sistema de validação de formulário
 - .input-invalid: destaca em vermelho o campo que falhou na validação
