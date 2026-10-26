@@ -1,6 +1,24 @@
 // Arquivo JavaScript do projeto EducaSolidário
 // As interações serão desenvolvidas nas próximas etapas.
 
+// Botão ENTRAR / CADASTRAR do menu -> leva para a tela de cadastro de doador
+document.addEventListener('DOMContentLoaded', function () {
+    const btnEntrar = document.querySelector('.btn-entrar');
+    const btnCadastrar = document.querySelector('.btn-cadastrar');
+
+    if (btnEntrar) {
+        btnEntrar.addEventListener('click', function () {
+            window.location.href = 'login_doador.html';
+        });
+    }
+
+    if (btnCadastrar) {
+        btnCadastrar.addEventListener('click', function () {
+            window.location.href = 'cadastro.html';
+        });
+    }
+});
+
 // Troca de abas nas páginas de perfil (doador / instituição)
 document.addEventListener('DOMContentLoaded', function () {
     const botoesAbas = document.querySelectorAll('.perfil-abas button');
@@ -25,3 +43,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Função para iniciar o slideshow do banner 
+function iniciarSlideshow() {
+    const slides = document.querySelectorAll('.banner .slide');
+    if (slides.length === 0) return; // Evita erro em páginas sem banner
+
+    let atual = 0;
+
+    setInterval(() => {
+        slides[atual].classList.remove('active');
+        atual = (atual + 1) % slides.length; // volta pro 0 depois do último
+        slides[atual].classList.add('active');
+    }, 4000); // troca a cada 4 segundos
+}
+
+iniciarSlideshow();

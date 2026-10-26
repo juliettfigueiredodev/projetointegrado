@@ -13,7 +13,7 @@
 <header>
     <div class="menu">
         <div class="logo">
-            <img src="img/logoEducaSolidario.jpg" alt="Logo EducaSolidário">
+            <a href="index.html" ><img src="img/logoEducaSolidario.jpg" alt="Logo EducaSolidário"></a>
         </div>
 
         <!-- MENU DE NAVEGAÇÃO -->
@@ -26,8 +26,8 @@
         </nav>
 
         <div class="botoes-menu">
-            <button class="btn-entrar">ENTRAR</button>
-            <button class="btn-cadastrar">CADASTRAR</button>
+            <button class="btn-entrar" onclick="window.location.href='login_doador.html'">ENTRAR</button>
+            <button class="btn-cadastrar" onclick="window.location.href='cadastro.html'">CADASTRAR</button>
         </div>
     </div>
 </header>
@@ -62,9 +62,12 @@
         </div>
     </section>
 
-    <!-- BANNER -->
+    <!-- BANNER -->      <!-- Inclusão de mais imagens para transformar o banner em slides -->      
     <section class="banner">
-        <img src="img/banner.jpg" alt="Banner Educação">
+        <img src="img/banner.jpg" alt="Banner Educação" class="slide active">
+        <img src="img/banner-2.jpg" alt="Banner Educação 2" class="slide">
+        <img src="img/banner-3.jpg" alt="Banner Educação 3" class="slide">
+        <img src="img/banner-4.jpg" alt="Banner Educação 4" class="slide">
     </section>
 
     <!-- ÁREA DE AÇÕES -->
