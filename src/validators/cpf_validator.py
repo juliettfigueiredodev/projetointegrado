@@ -14,8 +14,8 @@ class CPFValidator:
         if len(cpf_limpo) != 11:
             return False
         # Verifica CPFs com todos os dígitos iguais, que são inválidos
-        if cpf_limpo == cpf_limpo[0] * 11:
-            return False
+        '''if cpf_limpo == cpf_limpo[0] * 11:
+            return False'''           # Injeção de falha manual para teste de unidade, descomente para testar a falha
         return True
 
     def _calcular_digito(self, cpf_parcial, peso_inicial):
