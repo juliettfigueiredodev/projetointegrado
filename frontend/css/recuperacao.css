@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* LAYOUT PRINCIPAL */
+
+.recuperacao {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LADO AZUL */
+
+.lateral {
+    width: 32%;
+    background-color: #2864e8;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 150px;
+    margin-bottom: 45px;
+}
+
+.lateral h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.lateral p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* INFORMAÇÕES DO LADO AZUL */
+
+.informacoes {
+    margin-top: auto;
+}
+
+.informacoes h3 {
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.informacoes p {
+    font-size: 9px;
+    margin-bottom: 12px;
+}
+
+/* ÁREA DIREITA */
+
+.conteudo {
+    width: 68%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+/* LINK VOLTAR */
+
+.voltar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #2864e8;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+/* CAIXA CENTRAL */
+
+.caixa {
+    width: 85%;
+    max-width: 650px;
+    background-color: #f8fafc;
+    padding: 50px;
+}
+
+.caixa h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.descricao {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+/* CAMPOS */
+
+label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #d9d9d9;
+    padding: 10px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 0 2px #20c95c;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.password-wrapper input {
+    margin-bottom: 0;
+    padding-right: 44px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: #1f2937;
+}
+
+/* VALIDAÇÃO JS */
+.input-invalid {
+    outline: 2px solid #ef4444 !important;
+    background-color: #fef2f2 !important;
+    box-shadow: none !important;
+}
+
+.field-error {
+    display: block;
+    min-height: 1rem;
+    font-size: 11px;
+    color: #ef4444;
+    margin-top: -6px;
+    margin-bottom: 10px;
+}
+
+.form-message {
+    font-size: 12px;
+    padding: 0;
+    border-radius: 6px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.form-message:empty {
+    display: none;
+}
+
+.form-message.error {
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.form-message.success {
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    background-color: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+/* BOTÃO */
+
+.botao {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #20c95c;
+    color: #000000;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.botao:hover {
+    background-color: #18b650;
+}
+
+/* TEXTOS PEQUENOS */
+
+.pequeno {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.pequeno a {
+    color: #2864e8;
+    text-decoration: none;
+}
+
+.pequeno a:hover {
+    text-decoration: underline;
+}
+
+/* CAMPOS DO CÓDIGO */
+
+.codigo {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.codigo input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    padding: 0;
+}
+
+/* TELA DE SUCESSO */
+
+.sucesso {
+    text-align: center;
+}
+
+.circulo {
+    width: 45px;
+    height: 45px;
+    background-color: #9be5ba;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.sucesso h2 {
+    margin-bottom: 5px;
+}
+
+.sucesso p {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVIDADE (Tablet - ≤ 900px) */
+@media (max-width: 900px) {
+    .recuperacao {
+        flex-direction: column;
+    }
+
+    .conteudo {
+        order: 1; /* Em telas menores, os campos aparecem em cima */
+        width: 100%;
+        padding: 32px 20px;
+    }
+
+    .lateral {
+        order: 2; /* A barra lateral fica embaixo */
+        width: 100%;
+        min-height: auto;
+        padding: 32px 24px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        margin-bottom: 20px;
+    }
+
+    .lateral h1 {
+        font-size: 24px;
+    }
+
+    .informacoes {
+        margin-top: 24px;
+    }
+
+    .caixa {
+        width: 100%;
+        padding: 36px 28px;
+    }
+
+    .codigo {
+        justify-content: center;
+    }
+}
+
+/* RESPONSIVIDADE (Celular - ≤ 480px) */
+@media (max-width: 480px) {
+    .lateral {
+        padding: 24px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lateral p,
+    .lateral .informacoes {
+        display: none; /* Esconde secundários para não poluir no celular */
+    }
+
+    .lateral h1 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .conteudo {
+        padding: 24px 16px;
+    }
+
+    .caixa {
+        padding: 24px 18px;
+    }
+
+    .caixa h2 {
+        font-size: 20px;
+    }
+
+    .codigo {
+        gap: 6px;
+    }
+
+    .codigo input {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+}

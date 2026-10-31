@@ -1,0 +1,930 @@
+/* Estilos das páginas de Perfil do Doador e da Instituição (Tela 02 e 03) */
+
+/* CABEÇALHO LOGADO */
+.menu-logado nav ul{
+    align-items:center;
+}
+
+.menu-logado nav a.ativo{
+    border-bottom:2px solid #222;
+    padding-bottom:6px;
+}
+
+.avatar-usuario{
+    width:32px;
+    height:32px;
+    border:2px solid #aaa;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    color:#1E293B;
+    font-weight:600;
+    flex-shrink:0;
+}
+
+/* FAIXA DE TOPO DO PERFIL */
+.perfil-topo{
+    background:rgba(245,158,11,.6);
+    border-bottom:2px solid #1E293B;
+    padding:22px 8%;
+}
+
+.perfil-topo .container{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    max-width:1150px;
+    margin:0 auto;
+}
+
+.perfil-avatar{
+    width:70px;
+    height:70px;
+    flex-shrink:0;
+    background:#F8FAFC;
+    border:1px solid #1E293B;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.perfil-avatar svg{
+    width:55px;
+    height:55px;
+}
+
+.perfil-info{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.perfil-info h2{
+    font-size:24px;
+    color:#1E293B;
+}
+
+.perfil-tags{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.perfil-tags span{
+    border:1px solid #aaa;
+    padding:1px 8px;
+    font-size:12px;
+    color:#1E293B;
+}
+
+.perfil-acoes{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.perfil-acoes button{
+    border:2px solid #222;
+    border-radius:20px;
+    padding:8px 16px;
+    font-weight:bold;
+    font-size:14px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.btn-acao-azul{
+    background:#2563EB;
+    color:#fff;
+}
+
+.btn-acao-verde{
+    background:#22C55E;
+    color:#000;
+}
+
+/* ESTATÍSTICAS DO PERFIL */
+.perfil-stats{
+    display:flex;
+    justify-content:center;
+    border-bottom:2px solid #ddd;
+    padding:0 8%;
+}
+
+.perfil-stats > div{
+    flex:1;
+    max-width:220px;
+    text-align:center;
+    padding:12px;
+    border-right:1px solid #ddd;
+}
+
+.perfil-stats > div:last-child{
+    border-right:none;
+}
+
+.perfil-stats h3{
+    font-size:18px;
+    color:#1E293B;
+}
+
+.perfil-stats p{
+    font-size:12px;
+    color:#777;
+}
+
+/* ABAS DO PERFIL */
+.perfil-abas{
+    display:flex;
+    border-bottom:2px solid #ddd;
+    padding:0 8%;
+    gap:4px;
+}
+
+.perfil-abas button{
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:14px 20px;
+    font-size:14px;
+    font-family:'Inter', sans-serif;
+    color:#777;
+}
+
+.perfil-abas button.ativa{
+    color:#1E293B;
+    font-weight:bold;
+    border-bottom:3px solid #222;
+}
+
+/* PAINÉIS */
+.painel{
+    display:none;
+}
+
+.painel.visivel{
+    display:block;
+}
+
+/* ABA HISTÓRICO */
+.tabela-historico{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    border-collapse:collapse;
+    font-size:13px;
+    background:#fff;
+    border:2px solid #1E293B;
+}
+
+.tabela-historico th{
+    background:#2563EB;
+    color:#fff;
+    text-align:left;
+    padding:10px 14px;
+}
+
+.tabela-historico td{
+    border-bottom:1px solid #eee;
+    padding:10px 14px;
+}
+
+/* ABA FAVORITOS */
+.grade-favoritos{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    gap:16px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.item-favorito{
+    border:2px solid #1E293B;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.item-favorito .icone-inst{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#F8FAFC;
+    border:1px solid #1E293B;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.item-favorito .icone-inst svg{
+    width:24px;
+    height:24px;
+}
+
+.item-favorito h5{
+    font-size:14px;
+    color:#1E293B;
+}
+
+.item-favorito p{
+    font-size:12px;
+    color:#777;
+}
+
+/* ABA IMPACTO */
+.grade-impacto{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+    gap:16px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.impacto-numero{
+    background:#2563EB;
+    color:#fff;
+    border:2px solid #1E293B;
+    padding:20px;
+    text-align:center;
+}
+
+.impacto-numero h3{
+    font-size:28px;
+    font-family:'Poppins', sans-serif;
+}
+
+.impacto-numero p{
+    font-size:12px;
+    margin-top:6px;
+    opacity:.9;
+}
+
+/* ABA CONQUISTAS */
+.card-conquistas.card-conquistas-grande{
+    max-width:700px;
+    margin:0 auto;
+}
+
+.card-conquistas-grande .grade-conquistas{
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+}
+
+.card-conquistas-grande .conquista{
+    padding:16px 8px;
+}
+
+.card-conquistas-grande .estrela{
+    font-size:28px;
+}
+
+.card-conquistas-grande p{
+    font-size:11px;
+}
+
+/* CAMPANHAS (aba isolada) */
+#painel-campanhas .card-azul{
+    max-width:900px;
+    margin:0 auto;
+}
+
+/* DUAS COLUNAS */
+.perfil-colunas{
+    display:flex;
+    gap:24px;
+    padding:24px 8%;
+    align-items:flex-start;
+}
+
+.coluna-principal{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    min-width:0;
+}
+
+.coluna-lateral{
+    width:300px;
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* CARD AZUL */
+.card-azul{
+    background:#2563EB;
+    color:#F8FAFC;
+    border:2px solid #1E293B;
+    padding:18px;
+}
+
+.card-azul h4{
+    font-size:17px;
+    border-bottom:2px solid #F8FAFC;
+    padding-bottom:6px;
+    margin-bottom:10px;
+}
+
+.linha-dado{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:6px 0;
+    font-size:13px;
+}
+
+/* LISTA DE CAMPANHAS */
+.campanha-item{
+    background:#F5F5F5;
+    border:1px solid #ccc;
+    padding:13px;
+    margin-top:12px;
+}
+
+.campanha-item:first-of-type{
+    margin-top:0;
+}
+
+.campanha-topo{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    font-weight:bold;
+    color:#222;
+    margin-bottom:8px;
+}
+
+.campanha-topo span{
+    color:#85BB65;
+}
+
+.barra-fundo{
+    background:#C8C8C8;
+    height:8px;
+    border-radius:1px;
+    margin-bottom:5px;
+}
+
+.barra-preenchida{
+    background:#888;
+    height:5px;
+    border-radius:1px;
+}
+
+.campanha-item p{
+    font-size:12px;
+    color:#777;
+    margin-top:8px;
+}
+
+/* CONQUISTAS */
+.card-conquistas{
+    background:#1565C0;
+    color:#fff;
+    border:2px solid #1E293B;
+    padding:18px;
+}
+
+.card-conquistas h4{
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.grade-conquistas{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:8px;
+}
+
+.conquista{
+    background:rgba(255,255,255,.1);
+    border-radius:6px;
+    text-align:center;
+    padding:10px 4px;
+}
+
+.conquista.bloqueada{
+    opacity:.45;
+    filter:grayscale(1);
+}
+
+.conquista .estrela{
+    font-size:20px;
+}
+
+.conquista p{
+    font-size:9px;
+    margin-top:4px;
+}
+
+.conquista .progresso{
+    background:rgba(255,255,255,.2);
+    height:4px;
+    border-radius:3px;
+    margin-top:6px;
+}
+
+.conquista .progresso span{
+    display:block;
+    background:#F59E0B;
+    height:4px;
+    border-radius:3px;
+}
+
+.conquistas-legenda{
+    text-align:center;
+    font-size:9px;
+    color:rgba(255,255,255,.6);
+    margin-top:10px;
+}
+
+/* CARD VERDE */
+.card-verde{
+    background:rgba(34,197,94,.6);
+    border:2px solid #1E293B;
+    padding:18px;
+}
+
+.card-verde h4{
+    font-size:17px;
+    color:#222;
+    border-bottom:2px solid #222;
+    padding-bottom:6px;
+    margin-bottom:12px;
+}
+
+.tabela-mini{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+}
+
+.tabela-mini th{
+    background:#eee;
+    border:1px solid #ddd;
+    text-align:left;
+    padding:6px 9px;
+    color:#1E293B;
+}
+
+.tabela-mini td{
+    border:1px solid #ddd;
+    padding:6px 9px;
+    color:#1E293B;
+}
+
+.status-badge{
+    border:1px solid #aaa;
+    font-size:11px;
+    color:#666;
+    padding:1px 8px;
+    display:inline-block;
+}
+
+/* ── AVATAR DROPDOWN ─────────────────────────────── */
+.avatar-container{
+    position:relative;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.avatar-dropdown{
+    display:none;
+    position:absolute;
+    top:calc(100% + 8px);
+    right:0;
+    background:#fff;
+    border:2px solid #1E293B;
+    border-radius:8px;
+    min-width:220px;
+    box-shadow:0 8px 24px rgba(0,0,0,.15);
+    z-index:100;
+    overflow:hidden;
+}
+
+.avatar-dropdown.visivel{
+    display:block;
+}
+
+.dropdown-info{
+    padding:14px 16px;
+    border-bottom:1px solid #eee;
+}
+
+.dropdown-info strong{
+    display:block;
+    font-size:14px;
+    color:#1E293B;
+}
+
+.dropdown-info span{
+    font-size:12px;
+    color:#777;
+}
+
+.avatar-dropdown a,
+.avatar-dropdown button{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding:12px 16px;
+    font-size:14px;
+    color:#1E293B;
+    text-decoration:none;
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-family:'Inter',sans-serif;
+    transition:background .15s;
+}
+
+.avatar-dropdown a:hover,
+.avatar-dropdown button:hover{
+    background:#F1F5F9;
+}
+
+.dropdown-sair{
+    color:#EF4444 !important;
+    border-top:1px solid #eee !important;
+}
+
+/* ── MODAL ────────────────────────────────────────── */
+.modal-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    z-index:200;
+    justify-content:center;
+    align-items:center;
+    padding:16px;
+}
+
+.modal-overlay.visivel{
+    display:flex;
+}
+
+.modal-conteudo{
+    background:#fff;
+    border:2px solid #1E293B;
+    border-radius:10px;
+    width:100%;
+    max-width:480px;
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+    border-bottom:1px solid #eee;
+}
+
+.modal-header h3{
+    font-size:18px;
+    color:#1E293B;
+}
+
+.modal-fechar{
+    background:none;
+    border:none;
+    font-size:22px;
+    cursor:pointer;
+    color:#777;
+    padding:0 4px;
+    line-height:1;
+}
+
+.modal-fechar:hover{
+    color:#1E293B;
+}
+
+.modal-body{
+    padding:20px;
+}
+
+.modal-body label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    color:#1E293B;
+    margin-bottom:4px;
+    margin-top:14px;
+}
+
+.modal-body label:first-child{
+    margin-top:0;
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="tel"]{
+    width:100%;
+    padding:10px 12px;
+    border:2px solid #ddd;
+    border-radius:6px;
+    font-size:14px;
+    font-family:'Inter',sans-serif;
+    box-sizing:border-box;
+    transition:border-color .2s;
+}
+
+.modal-body input[type="text"]:focus,
+.modal-body input[type="tel"]:focus{
+    border-color:#2563EB;
+    outline:none;
+}
+
+.modal-checkbox-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px solid #f0f0f0;
+}
+
+.modal-checkbox-item:last-child{
+    border-bottom:none;
+}
+
+.modal-checkbox-item input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:#2563EB;
+    cursor:pointer;
+}
+
+.modal-checkbox-item span{
+    font-size:14px;
+    color:#1E293B;
+}
+
+.modal-footer{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+    padding:14px 20px;
+    border-top:1px solid #eee;
+}
+
+.modal-footer button{
+    padding:10px 22px;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    font-family:'Inter',sans-serif;
+    border:2px solid #1E293B;
+}
+
+.modal-cancelar{
+    background:#fff;
+    color:#1E293B;
+}
+
+.modal-cancelar:hover{
+    background:#F1F5F9;
+}
+
+.modal-salvar,
+.modal-confirmar{
+    background:#2563EB;
+    color:#fff;
+}
+
+.modal-salvar:hover,
+.modal-confirmar:hover{
+    background:#1D4ED8;
+}
+
+.modal-mensagem{
+    text-align:center;
+    font-size:13px;
+    padding:0;
+    margin:0 20px;
+    border-radius:6px;
+}
+
+.modal-mensagem:empty{
+    display:none;
+}
+
+.modal-mensagem.erro{
+    background:#FEE2E2;
+    color:#DC2626;
+    padding:10px;
+}
+
+.modal-mensagem.sucesso{
+    background:#DCFCE7;
+    color:#16A34A;
+    padding:10px;
+}
+
+.modal-sucesso{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    text-align:center;
+    gap:16px;
+}
+
+.modal-sucesso .icone-sucesso{
+    width:60px;
+    height:60px;
+    background:#22C55E;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.modal-sucesso .icone-sucesso svg{
+    width:32px;
+    height:32px;
+}
+
+.modal-sucesso h4{
+    font-size:18px;
+    color:#1E293B;
+}
+
+.modal-sucesso p{
+    font-size:14px;
+    color:#777;
+}
+
+.modal-fechar-sucesso{
+    background:#2563EB;
+    color:#fff;
+    border:2px solid #1E293B;
+    border-radius:6px;
+    padding:10px 28px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    font-family:'Inter',sans-serif;
+    margin-top:8px;
+}
+
+.modal-fechar-sucesso:hover{
+    background:#1D4ED8;
+}
+
+/* ── FAVORITAR TOGGLE ────────────────────────────── */
+.btn-acao-verde.favoritado{
+    background:#EF4444;
+    color:#fff;
+    border-color:#EF4444;
+}
+
+/* ── STATUS BADGES COLORIDOS ─────────────────────── */
+.status-badge.status-concluida{
+    background:#DCFCE7;
+    color:#16A34A;
+    border-color:#22C55E;
+}
+
+.status-badge.status-pendente{
+    background:#FEF9C3;
+    color:#CA8A04;
+    border-color:#F59E0B;
+}
+
+.status-badge.status-cancelada{
+    background:#FEE2E2;
+    color:#DC2626;
+    border-color:#EF4444;
+}
+
+/* ── BARRAS DE PROGRESSO ANIMADAS ────────────────── */
+.barra-preenchida{
+    transition:width .8s ease;
+}
+
+.conquista .progresso span{
+    transition:width .8s ease;
+}
+
+/* ── TABELA RESPONSIVA ───────────────────────────── */
+.tabela-responsiva{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+/* ── RESPONSIVO PERFIL ≤900px ────────────────────── */
+@media(max-width:900px){
+    .perfil-colunas{
+        flex-direction:column;
+    }
+    .coluna-lateral{
+        width:100%;
+    }
+    .perfil-topo .container{
+        flex-wrap:wrap;
+    }
+    .perfil-stats{
+        flex-wrap:wrap;
+    }
+    .perfil-stats > div{
+        max-width:none;
+        width:50%;
+        border-right:none;
+        border-bottom:1px solid #ddd;
+    }
+}
+
+/* ── RESPONSIVO PERFIL ≤480px (MOBILE) ───────────── */
+@media(max-width:480px){
+    /* Topo empilhado e centralizado */
+    .perfil-topo .container{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .perfil-info{
+        align-items:center;
+    }
+
+    .perfil-tags{
+        justify-content:center;
+    }
+
+    .perfil-acoes{
+        flex-direction:row;
+        justify-content:center;
+        width:100%;
+    }
+
+    .perfil-acoes button{
+        flex:1;
+        font-size:13px;
+        padding:8px 10px;
+    }
+
+    /* Abas scrolláveis */
+    .perfil-abas{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        flex-wrap:nowrap;
+    }
+
+    .perfil-abas button{
+        white-space:nowrap;
+        flex-shrink:0;
+        padding:12px 14px;
+        font-size:13px;
+    }
+
+    /* Stats 2 colunas */
+    .perfil-stats > div{
+        width:50%;
+    }
+
+    .perfil-stats h3{
+        font-size:16px;
+    }
+
+    /* Conquistas 2 colunas */
+    .grade-conquistas{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .card-conquistas-grande .grade-conquistas{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* Favoritos single column */
+    .grade-favoritos{
+        grid-template-columns:1fr;
+    }
+
+    /* Impacto 2 colunas */
+    .grade-impacto{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* Colunas layout */
+    .perfil-colunas{
+        padding:16px 4%;
+    }
+
+    /* Avatar dropdown */
+    .avatar-dropdown{
+        right:-10px;
+        min-width:200px;
+    }
+}

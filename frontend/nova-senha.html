@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova senha - EducaSolidário</title>
+
+    <!-- Fontes -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/recuperacao.css">
+
+</head>
+
+<body>
+
+    <main class="recuperacao">
+
+        <!-- LADO AZUL -->
+
+        <section class="lateral">
+
+            <div class="logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="img/logoEducaSolidario.jpg"
+                        alt="Logo EducaSolidário">
+
+                </a>
+
+            </div>
+
+            <h1>
+                Recupere o<br>
+                seu acesso.
+            </h1>
+
+            <p>
+                Enviaremos um link de recuperação
+                para o seu e-mail cadastrado.
+            </p>
+
+            <div class="informacoes">
+
+                <h3>Encontre instituições</h3>
+
+                <p>
+                    Descubra escolas e projetos que
+                    precisam do seu apoio
+                </p>
+
+                <h3>Doe com segurança</h3>
+
+                <p>
+                    Transparência total em cada
+                    contribuição realizada
+                </p>
+
+                <h3>Acompanhe o impacto</h3>
+
+                <p>
+                    Veja o resultado das suas doações
+                    em tempo real
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTEÚDO -->
+
+        <section class="conteudo">
+
+            <a href="login_doador.html" class="voltar">
+                ← Voltar ao login
+            </a>
+
+            <div class="caixa">
+
+                <h2>
+                    Nova senha
+                </h2>
+
+                <p class="descricao">
+                    Crie uma senha segura para sua conta.
+                </p>
+
+                <form id="form-nova-senha" action="senha-redefinida.html" novalidate>
+                    <div id="form-msg" class="form-message" role="alert"></div>
+
+                    <label for="senha">
+                        Nova senha
+                    </label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Mínimo 8 caracteres"
+                            minlength="8"
+                            required
+                        >
+                        <button type="button" class="toggle-password" data-target="senha" aria-label="Mostrar senha">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
+                    <span class="field-error" id="senha-error"></span>
+
+                    <label for="confirmar">
+                        Confirmar nova senha
+                    </label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="confirmar"
+                            name="confirmar"
+                            placeholder="Repita a nova senha"
+                            minlength="8"
+                            required
+                        >
+                        <button type="button" class="toggle-password" data-target="confirmar" aria-label="Mostrar senha">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
+                    <span class="field-error" id="confirmar-error"></span>
+
+                    <button
+                        type="submit"
+                        class="botao">
+
+                        Redefinir senha
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/recuperacao.js"></script>
+</body>
+
+</html>

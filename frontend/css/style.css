@@ -1,0 +1,436 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F8FAFC;
+    color:#1E293B;
+    font-family:'Inter', sans-serif;
+}
+/* Responsividade para que toda imagem seja encolhida
+junta com o conteúdo */
+img{
+    max-width:100%;
+    height: auto;
+    display:block;
+}
+
+.titulo h1{
+    font-family:'Poppins', sans-serif;
+    font-size:80px;
+    font-weight:800;
+    line-height:1.05;
+    color:#2563EB;
+}
+
+.titulo h1 span{
+    font-style:italic;
+}
+
+h1,h2,h3,h4{
+    font-family:'Poppins', sans-serif;
+}
+
+p,a,li,button{
+    font-family:'Inter', sans-serif;
+}
+
+/* MENU */
+header{
+    background:white;
+    padding:20px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* Responsividade no logo, colocando unidade flexível em vez 
+de largura fixa */
+.logo img{
+    width:clamp(140px, 18vw, 220px);
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1E293B;
+    font-weight:600;
+}
+
+.botoes-menu{
+    display:flex;
+    gap:15px;
+}
+
+.btn-entrar,
+.btn-cadastrar{
+    padding:12px 28px;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-entrar{
+    background:white;
+    border:2px solid #2563EB;
+    color:#2563EB;
+}
+
+.btn-cadastrar{
+    background:#2563EB;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:70px 8%;
+}
+
+.titulo h1{
+    font-size:58px;
+    line-height:1.1;
+}
+
+.estatisticas{
+    display:flex;
+    gap:60px;
+}
+
+.estatisticas h2{
+    color:#2563EB;
+    font-size:42px;
+}
+
+.estatisticas p{
+    color:#64748B;
+}
+
+/* BANNER */                  /*  */
+.banner {
+    position:relative;
+    overflow: hidden;
+    height:800px;
+}
+
+.banner .slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.banner .slide.active{
+    opacity:1;
+}
+
+/* AÇÕES */
+.acoes{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:50px;
+}
+
+.btn-azul,
+.btn-verde{
+    padding:18px 35px;
+    border-radius:35px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-azul{
+    background:#2563EB;
+    color:white;
+}
+
+.btn-verde{
+    background:#22C55E;
+    color:white;
+}
+
+/* TITULO */
+.titulo-instituicoes{
+    text-align:center;
+    margin-top:20px;
+}
+
+/* Responsividade: Coloquei um clamp no lugar do font-size fixo,
+para o titulo encolher em telas menores */
+.titulo-instituicoes h2{
+    font-size:clamp(28px, 4vw, 36px);
+}
+
+.titulo-instituicoes p{
+    font-size:20px;
+    color:#64748B;
+}
+
+/* CARDS */
+/* Responsividade para que os cards quebrem linha em telas menores */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+    padding:60px 8%;
+}
+
+/* Responsividade para que os cards encolham em telas menores
+antes de quebrar linha */
+.card{
+    flex:1 1 320px;
+    width:340px;
+}
+
+.categoria{
+    background:#22C55E;
+    color:white;
+    text-align:center;
+    padding:12px;
+    border-radius:12px 12px 0 0;
+    font-weight:bold;
+}
+
+.conteudo-card{
+    background:#2563EB;
+    color:white;
+    padding:30px;
+    text-align:center;
+    border-radius:0 0 12px 12px;
+}
+
+.conteudo-card img{
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin: 0 auto 20px; /* Centraliza a imagem no card */
+}
+
+.conteudo-card h4{
+    color:#F59E0B;
+    margin:20px 0;
+}
+
+.botoes-card{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.botoes-card button{
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.botoes-card button:first-child{
+    background:white;
+    color:#2563EB;
+}
+
+.botoes-card button:last-child{
+    background:#22C55E;
+    color:white;
+}
+
+/* RESPONSIVO */
+/* Ajuste fazendo bloco de medias queries, para 
+Desktop Grande, Notebook e Celular*/
+
+/*Para Desktop Grande, acima de 1400px */
+
+@media(min-width: 1400px){
+    .hero,
+    .cards,
+    header{
+        max-width:1400px;
+        margin: auto;
+    }
+}
+
+/* Para Notebook, entre 768px e 1400px */
+@media (max-width: 1024px) {
+    .logo img{
+        width: 180px;
+    }
+    .titulo h1{
+        font-size: 48px;
+    }
+    .hero{
+        gap: 40px;
+    }
+    .banner {
+        height: 500px;
+    }
+}
+
+/* Para Tablets abaixo de 768px */
+@media (max-width: 768px) {
+    header{
+        padding: 20px;
+    }
+    .menu{
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }  
+    
+    .botoes-menu{
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;        
+        padding: 50px 20%;
+    }
+    .titulo h1{
+        font-size:clamp(32px, 5vw, 58px);
+    }
+    .estatisticas {
+        width: 100%;
+        justify-content: center;
+        gap:40px;
+        flex-wrap:wrap;
+    }
+    .estatisticas{
+        width:100%;
+        justify-content:center;
+        gap:40px;
+        flex-wrap:wrap;
+    }
+ 
+    .banner {
+        height:400px;
+    }
+ 
+    .acoes{
+        flex-direction:column;
+        align-items:center;
+        padding:40px 20px;
+    }
+ 
+    .acoes button{
+        width:100%;
+        max-width:350px;
+    }
+ 
+    .cards{
+        flex-direction:column;
+        align-items:center;
+        padding:40px 20px;
+    }
+ 
+    .card{
+        width:100%;
+        max-width:360px;
+    }
+}
+
+/* Para Celulares abaixo de 480px */
+@media (max-width: 480px) {
+    .titulo h1{
+        font-size:32px;
+    }
+    .titulo-instituicoes h2{
+        font-size:28px;
+    }
+    .titulo-instituicoes p{
+        font-size:16px;
+    }
+    .logo img{
+        width: 150px;
+    }
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+        align-items:center;
+    }
+
+    .btn-entrar,
+    .btn-cadastrar,
+    .btn-azul,
+    .btn-verde{
+        width:100%;
+    }
+    .estatisticas{
+        flex-direction:column;
+        gap:25px;
+    }
+    .estatisticas h2{
+        font-size:32px;
+    }
+ 
+    .banner {
+        height:250px;
+    }
+ 
+    .conteudo-card{
+        padding:20px;
+    }
+ 
+    .conteudo-card img{
+        width:160px;
+        height:160px;
+    }
+ 
+    .botoes-card{
+        flex-direction:column;
+    }
+ 
+    .botoes-card button{
+        width:100%;
+    }
+}
+
+/* RODAPÉ */
+footer {
+    width:100%;
+    background:#F8FAFC;
+    padding:30px 0;
+    margin-top:50px;
+}
+
+footer .rodape {
+    width:100%;
+    text-align:center;
+}
+
+footer .rodape p {
+    margin:10px 0;
+    text-align:center;
+    color:#1E293B;
+    font-family:'Inter', sans-serif;
+}
