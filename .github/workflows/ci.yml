@@ -6,13 +6,13 @@ on:
       - main
       - andre
       - linderval
-      - francisco
+      - eduardo
   pull_request:
     branches:
       - main
       - andre
       - linderval
-      - francisco
+      - eduardo
 
 jobs:
   lint-and-test:
