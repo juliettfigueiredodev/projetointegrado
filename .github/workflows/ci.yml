@@ -6,11 +6,13 @@ on:
       - main
       - andre
       - linderval
+      - eduardo
   pull_request:
     branches:
       - main
       - andre
       - linderval
+      - eduardo
 
 jobs:
   lint-and-test:
@@ -43,3 +45,20 @@ jobs:
       - name: Executar testes automatizados (pytest)
         run: |
           pytest -v --tb=short
+
+  validacao-deploy-vercel:
+    name: Verificação de Integridade para Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Verificar arquivos essenciais do Front-end e Deploy
+        run: |
+          echo "Verificando estrutura para o deploy na Vercel..."
+          if [ ! -f "index.html" ] && [ ! -f "package.json" ] && [ ! -f "vercel.json" ] && [ ! -d "src" ]; then
+            echo "Erro: Nenhum ponto de entrada encontrado para o deploy!"
+            exit 1
+          fi
+          echo "Estrutura validada com sucesso!"
