@@ -371,7 +371,7 @@ Com o banco configurado, inicie o sistema:
 
 ### 10.6. Executando os testes e verificações
 
-As mesmas verificações que a esteira de integração contínua executa no GitHub podem ser rodadas localmente antes de enviar o código. Instale as dependências de desenvolvimento e execute os comandos abaixo na raiz do projeto.
+Você pode rodar no seu computador as mesmas verificações da esteira antes de enviar o código. Instale as dependências de desenvolvimento e execute os comandos abaixo na raiz do projeto.
 
 ```bash
   pip install -r requirements.txt -r requirements-dev.txt
@@ -388,13 +388,13 @@ As mesmas verificações que a esteira de integração contínua executa no GitH
 
 ## 11. Integração Contínua e sua importância para quem está aprendendo a programar (Componente Extensionista Sprint #1 PI IV)
 
-Integração contínua, ou CI, é a prática de juntar o trabalho de todos os integrantes no mesmo repositório com frequência, deixando que um robô confira cada mudança automaticamente. Em vez de esperar o fim do projeto para descobrir que o código de uma pessoa quebrou o de outra, a conferência acontece a cada push e a cada pull request, em poucos minutos.
+Integração contínua, ou CI, é o hábito de enviar o código ao repositório com frequência e deixar que um robô confira cada mudança assim que ela chega. O grupo não espera a véspera da entrega para descobrir que a alteração de um colega quebrou a de outro. O aviso chega em poucos minutos, a cada push e a cada pull request.
 
-No EducaSolidário, essa conferência fica a cargo do GitHub Actions, configurado no arquivo `.github/workflows/ci.yml`. Uma máquina virtual limpa baixa o código, instala o Python 3.11 e as dependências e roda o Flake8, que acusa erros de sintaxe e variáveis não definidas. Em seguida, o Mypy verifica os tipos e o pytest executa os testes dos validadores de CPF, e-mail, telefone e doações. Um segundo job confere se os arquivos necessários ao deploy na Vercel estão no lugar. Quando alguma etapa falha, o GitHub marca o commit com um X vermelho e mostra em qual linha está o problema.
+No EducaSolidário, esse robô é o GitHub Actions, configurado em `.github/workflows/ci.yml`. Ele sobe uma máquina virtual limpa, instala o Python 3.11 e as dependências e roda o Flake8, que procura erros de sintaxe e variáveis não definidas. Depois o Mypy confere os tipos e o pytest executa os testes dos validadores de CPF, e-mail, telefone e doações. Um segundo job confere se os arquivos necessários ao deploy na Vercel estão no lugar. Quando uma etapa falha, o GitHub marca o commit com um X vermelho e o log da execução mostra onde está o problema.
 
-Para quem está começando, a CI ajuda porque o erro aparece cedo, com uma mensagem clara, quando ainda é fácil de corrigir. Ela também cria o hábito de escrever testes e de seguir um padrão de código, o que dá segurança para mexer num projeto em equipe sem medo de estragar o que já funcionava.
+Para quem está aprendendo a programar, o erro deixa de ser uma surpresa de última hora. Ele aparece cedo, com uma mensagem clara, quando ainda é simples de corrigir. A CI também empurra para o hábito de escrever testes e de seguir um padrão de código, o que dá coragem para mexer num projeto em grupo sem medo de estragar o que já funcionava.
 
-Quem quiser ver a esteira em ação pode abrir a aba **Actions** do repositório no GitHub, escolher qualquer execução recente e acompanhar cada etapa. Para reproduzir as verificações no próprio computador, basta seguir a seção 10.6.
+Dá para acompanhar a esteira na aba Actions do repositório, abrindo qualquer execução recente. Para rodar as mesmas verificações no seu computador, siga a seção 10.6.
 
 ## 12. Etiquetas
 
