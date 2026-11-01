@@ -42,6 +42,11 @@ jobs:
           # Alertas de estilo PEP8 sem quebrar a pipeline
           flake8 src tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
+      - name: Verificação estática de tipos (Mypy)
+        run: |
+          pip install mypy
+          python -m mypy src/ --explicit-package-bases --ignore-missing-imports
+      
       - name: Executar testes automatizados (pytest)
         run: |
           pytest -v --tb=short
