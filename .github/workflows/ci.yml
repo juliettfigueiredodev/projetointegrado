@@ -45,7 +45,7 @@ jobs:
       - name: Verificação estática de tipos (Mypy)
         run: |
           pip install mypy
-          mypy src/ --ignore-missing-imports
+          python -m mypy src --ignore-missing-imports
       
       - name: Executar testes automatizados (pytest)
         run: |
