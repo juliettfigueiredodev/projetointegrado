@@ -6,11 +6,13 @@ on:
       - main
       - andre
       - linderval
+      - eduardo
   pull_request:
     branches:
       - main
       - andre
       - linderval
+      - eduardo
 
 jobs:
   lint-and-test:
@@ -40,6 +42,28 @@ jobs:
           # Alertas de estilo PEP8 sem quebrar a pipeline
           flake8 src tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
+      - name: Verificação estática de tipos (Mypy)
+        run: |
+          pip install mypy
+          python -m mypy src/ --explicit-package-bases --ignore-missing-imports
+      
       - name: Executar testes automatizados (pytest)
         run: |
           pytest -v --tb=short
+
+  validacao-deploy-vercel:
+    name: Verificação de Integridade para Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Verificar arquivos essenciais do Front-end e Deploy
+        run: |
+          echo "Verificando estrutura para o deploy na Vercel..."
+          if [ ! -f "index.html" ] && [ ! -f "package.json" ] && [ ! -f "vercel.json" ] && [ ! -d "src" ]; then
+            echo "Erro: Nenhum ponto de entrada encontrado para o deploy!"
+            exit 1
+          fi
+          echo "Estrutura validada com sucesso!"
