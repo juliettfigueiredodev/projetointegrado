@@ -14,6 +14,9 @@ on:
       - linderval
       - eduardo
 
+permissions:
+  contents: read
+
 jobs:
   lint-and-test:
     name: Lint & Testes Automatizados
@@ -44,7 +47,6 @@ jobs:
 
       - name: Verificação estática de tipos (Mypy)
         run: |
-          pip install mypy
           python -m mypy src/ --explicit-package-bases --ignore-missing-imports
       
       - name: Executar testes automatizados (pytest)
@@ -54,6 +56,7 @@ jobs:
   validacao-deploy-vercel:
     name: Verificação de Integridade para Deploy
     runs-on: ubuntu-latest
+    needs: lint-and-test
 
     steps:
       - name: Checkout do código
